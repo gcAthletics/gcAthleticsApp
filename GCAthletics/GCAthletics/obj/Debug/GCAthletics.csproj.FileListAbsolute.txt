@@ -1,0 +1,5 @@
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/GCAthletics.dll
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/GCAthletics.pdb
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.csproj.CoreCompileInputs.cache
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.dll
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.pdb

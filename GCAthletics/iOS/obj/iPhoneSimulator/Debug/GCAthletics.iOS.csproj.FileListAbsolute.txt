@@ -1,0 +1,12 @@
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/iOS/bin/iPhoneSimulator/Debug/GCAthletics.iOS.exe
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/iOS/bin/iPhoneSimulator/Debug/GCAthletics.iOS.pdb
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/iOS/bin/iPhoneSimulator/Debug/GCAthletics.dll
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/iOS/bin/iPhoneSimulator/Debug/GCAthletics.pdb
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0/ibtool/_BundleResourceWithLogicalName.items
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0/actool/_PartialAppManifest.items
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0/actool/_BundleResourceWithLogicalName.items
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.0/optimized/
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/iOS/obj/iPhoneSimulator/Debug/GCAthletics.iOS.csprojResolveAssemblyReference.cache
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/iOS/obj/iPhoneSimulator/Debug/GCAthletics.iOS.csproj.CoreCompileInputs.cache
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/iOS/obj/iPhoneSimulator/Debug/GCAthletics.iOS.exe
+/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/iOS/obj/iPhoneSimulator/Debug/GCAthletics.iOS.pdb
