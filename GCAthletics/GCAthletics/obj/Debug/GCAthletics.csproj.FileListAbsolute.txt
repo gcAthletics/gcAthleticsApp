@@ -1,0 +1,5 @@
+/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/GCAthletics.dll
+/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/GCAthletics.pdb
+/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.csproj.CoreCompileInputs.cache
+/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.dll
+/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.pdb
