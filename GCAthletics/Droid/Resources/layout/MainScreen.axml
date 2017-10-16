@@ -48,7 +48,9 @@
         android:columnCount="2"
         android:paddingTop="50dp"
         android:layout_gravity="center"
-        android:paddingBottom="50dp">
+        android:paddingBottom="50dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp">
         <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
             android:id="@+id/alertsButton"
