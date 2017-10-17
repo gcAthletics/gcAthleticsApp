@@ -44,11 +44,11 @@ namespace GCAthletics.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050005
-			public const int alertsButton = 2131034117;
+			// aapt resource value: 0x7f050008
+			public const int alertsButton = 2131034120;
 			
-			// aapt resource value: 0x7f050007
-			public const int calendarButton = 2131034119;
+			// aapt resource value: 0x7f05000a
+			public const int calendarButton = 2131034122;
 			
 			// aapt resource value: 0x7f050000
 			public const int emailField = 2131034112;
@@ -56,20 +56,29 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f050002
 			public const int loginButton = 2131034114;
 			
-			// aapt resource value: 0x7f050004
-			public const int mainScreenGridLayout = 2131034116;
+			// aapt resource value: 0x7f050007
+			public const int mainScreenGridLayout = 2131034119;
 			
 			// aapt resource value: 0x7f050001
 			public const int passwordField = 2131034113;
 			
-			// aapt resource value: 0x7f050008
-			public const int teamButton = 2131034120;
+			// aapt resource value: 0x7f05000b
+			public const int teamButton = 2131034123;
+			
+			// aapt resource value: 0x7f050004
+			public const int textAthleteName = 2131034116;
+			
+			// aapt resource value: 0x7f050006
+			public const int textPosition = 2131034118;
+			
+			// aapt resource value: 0x7f050005
+			public const int textTeam = 2131034117;
 			
 			// aapt resource value: 0x7f050003
 			public const int textWelcome = 2131034115;
 			
-			// aapt resource value: 0x7f050006
-			public const int workoutsButton = 2131034118;
+			// aapt resource value: 0x7f050009
+			public const int workoutsButton = 2131034121;
 			
 			static Id()
 			{
@@ -122,8 +131,17 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f040001
 			public const int app_name = 2130968577;
 			
+			// aapt resource value: 0x7f040002
+			public const int athleteName = 2130968578;
+			
 			// aapt resource value: 0x7f040000
 			public const int hello = 2130968576;
+			
+			// aapt resource value: 0x7f040004
+			public const int position = 2130968580;
+			
+			// aapt resource value: 0x7f040003
+			public const int team = 2130968579;
 			
 			static String()
 			{
