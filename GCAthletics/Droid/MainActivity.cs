@@ -16,6 +16,9 @@ namespace GCAthletics.Droid
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
+            var imageView = FindViewById<ImageView>(Resource.Id.thunderImage);
+            imageView.SetImageResource(Resource.Mipmap.thunder);
+
             // Get our button from the layout resource,
             // and attach an event to it
             //Button button = FindViewById<Button>(Resource.Id.myButton);
