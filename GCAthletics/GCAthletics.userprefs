@@ -1,11 +1,7 @@
 ﻿<Properties StartupConfiguration="{D6D389E4-459B-4075-AFB8-DD4C9A93B8C6}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="GCAthletics.Database/Program.cs">
-    <Files>
-      <File FileName="GCAthletics.Database/Program.cs" Line="12" Column="19" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.GCAthletics.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.609A8586-DB05-4940-8012-F21161892B8E">
+  <MonoDevelop.Ide.ItemProperties.GCAthletics.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7E74ABEC-0815-4AFF-B6F8-A561E3276219">
     <MonoDevelop.MacDev.AppleDevelopmentTeam />
   </MonoDevelop.Ide.ItemProperties.GCAthletics.iOS>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

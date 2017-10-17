@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCAthletics.Droid", "Droid\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCAthletics.iOS", "iOS\GCAthletics.iOS.csproj", "{D6D389E4-459B-4075-AFB8-DD4C9A93B8C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCAthletics.Database", "GCAthletics.Database\GCAthletics.Database.csproj", "{170790F3-BB07-4597-AB75-F0C7E722A22A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,17 +53,5 @@ Global
 		{D6D389E4-459B-4075-AFB8-DD4C9A93B8C6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{D6D389E4-459B-4075-AFB8-DD4C9A93B8C6}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{D6D389E4-459B-4075-AFB8-DD4C9A93B8C6}.Debug|iPhone.Build.0 = Debug|iPhone
-		{170790F3-BB07-4597-AB75-F0C7E722A22A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{170790F3-BB07-4597-AB75-F0C7E722A22A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{170790F3-BB07-4597-AB75-F0C7E722A22A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{170790F3-BB07-4597-AB75-F0C7E722A22A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{170790F3-BB07-4597-AB75-F0C7E722A22A}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{170790F3-BB07-4597-AB75-F0C7E722A22A}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{170790F3-BB07-4597-AB75-F0C7E722A22A}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{170790F3-BB07-4597-AB75-F0C7E722A22A}.Release|iPhone.Build.0 = Release|Any CPU
-		{170790F3-BB07-4597-AB75-F0C7E722A22A}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{170790F3-BB07-4597-AB75-F0C7E722A22A}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{170790F3-BB07-4597-AB75-F0C7E722A22A}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{170790F3-BB07-4597-AB75-F0C7E722A22A}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
