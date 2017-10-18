@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -25,21 +25,24 @@
         android:id="@+id/textAthleteName"
         android:text="@string/athleteName"
         android:gravity="center"
-        android:paddingTop="25dp" />
+        android:paddingTop="25dp"
+        android:layout_below="@id/textWelcome" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textTeam"
         android:text="@string/team"
-        android:gravity="center" />
+        android:gravity="center"
+        android:layout_below="@id/textAthleteName" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textPosition"
         android:text="@string/position"
-        android:gravity="center" />
+        android:gravity="center"
+        android:layout_below="@id/textTeam" />
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,22 +53,43 @@
         android:layout_gravity="center"
         android:paddingBottom="50dp"
         android:paddingLeft="25dp"
-        android:paddingRight="25dp">
+        android:paddingRight="25dp"
+        android:layout_below="@id/textPosition">
         <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
+            android:src="@mipmap/megaphone"
             android:id="@+id/alertsButton"
-            android:theme="@android:style/Widget.Material.Light.Button"
             android:clickable="true"
             android:longClickable="false"
-            android:hapticFeedbackEnabled="false" />
+            android:hapticFeedbackEnabled="false"
+            android:visibility="visible"
+            android:scaleX="0.25"
+            android:scaleY="0.25" />
         <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:id="@+id/workoutsButton" />
+            android:src="@mipmap/dumbell"
+            android:id="@+id/workoutsButton"
+            android:clickable="true"
+            android:longClickable="false"
+            android:hapticFeedbackEnabled="false"
+            android:visibility="visible"
+            android:scaleX="0.25"
+            android:scaleY="0.25" />
         <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:id="@+id/calendarButton" />
+            android:src="@mipmap/ccc"
+            android:id="@+id/calendarButton"
+            android:clickable="true"
+            android:longClickable="false"
+            android:hapticFeedbackEnabled="false"
+            android:visibility="visible"
+            android:scaleX="0.25"
+            android:scaleY="0.25" />
         <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:id="@+id/teamButton" />
+            android:src="@mipmap/people"
+            android:id="@+id/teamButton"
+            android:clickable="true"
+            android:longClickable="false"
+            android:hapticFeedbackEnabled="false"
+            android:visibility="visible"
+            android:scaleX="0.25"
+            android:scaleY="0.25" />
     </GridLayout>
-</LinearLayout>
+</RelativeLayout>

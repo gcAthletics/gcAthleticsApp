@@ -49,3 +49,8 @@ C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug
 C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\res\mipmap-xxhdpi\thunder.png
 C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\res\mipmap-xxxhdpi\thunder.png
 C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\res\layout\homescreen.xml
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\res\mipmap-hdpi\megaphone.png
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\res\mipmap-hdpi\people.png
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\res\mipmap-hdpi\user-1.png
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\res\mipmap-hdpi\dumbell.png
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\res\mipmap-hdpi\ccc.png
