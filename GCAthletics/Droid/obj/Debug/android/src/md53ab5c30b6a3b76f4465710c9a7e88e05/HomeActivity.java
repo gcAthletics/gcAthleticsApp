@@ -16,7 +16,7 @@ public class HomeActivity
 	}
 
 
-	public HomeActivity () throws java.lang.Throwable
+	public HomeActivity ()
 	{
 		super ();
 		if (getClass () == HomeActivity.class)
