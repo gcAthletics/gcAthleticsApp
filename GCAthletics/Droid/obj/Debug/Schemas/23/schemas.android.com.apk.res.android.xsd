@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>10/17/2017 9:53:26 PM</xs:documentation>
+    <xs:documentation>10/18/2017 12:23:18 AM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -16711,7 +16711,6 @@
             <xs:enumeration value="@id/calendarButton" />
             <xs:enumeration value="@id/emailField" />
             <xs:enumeration value="@id/loginButton" />
-            <xs:enumeration value="@id/mainScreenGridLayout" />
             <xs:enumeration value="@id/passwordField" />
             <xs:enumeration value="@id/teamButton" />
             <xs:enumeration value="@id/textAthleteName" />
@@ -19583,7 +19582,6 @@
             <xs:enumeration value="@id/calendarButton" />
             <xs:enumeration value="@id/emailField" />
             <xs:enumeration value="@id/loginButton" />
-            <xs:enumeration value="@id/mainScreenGridLayout" />
             <xs:enumeration value="@id/passwordField" />
             <xs:enumeration value="@id/teamButton" />
             <xs:enumeration value="@id/textAthleteName" />
@@ -19670,7 +19668,6 @@
             <xs:enumeration value="@id/calendarButton" />
             <xs:enumeration value="@id/emailField" />
             <xs:enumeration value="@id/loginButton" />
-            <xs:enumeration value="@id/mainScreenGridLayout" />
             <xs:enumeration value="@id/passwordField" />
             <xs:enumeration value="@id/teamButton" />
             <xs:enumeration value="@id/textAthleteName" />
@@ -19757,7 +19754,6 @@
             <xs:enumeration value="@id/calendarButton" />
             <xs:enumeration value="@id/emailField" />
             <xs:enumeration value="@id/loginButton" />
-            <xs:enumeration value="@id/mainScreenGridLayout" />
             <xs:enumeration value="@id/passwordField" />
             <xs:enumeration value="@id/teamButton" />
             <xs:enumeration value="@id/textAthleteName" />
@@ -19844,7 +19840,6 @@
             <xs:enumeration value="@id/calendarButton" />
             <xs:enumeration value="@id/emailField" />
             <xs:enumeration value="@id/loginButton" />
-            <xs:enumeration value="@id/mainScreenGridLayout" />
             <xs:enumeration value="@id/passwordField" />
             <xs:enumeration value="@id/teamButton" />
             <xs:enumeration value="@id/textAthleteName" />
@@ -19931,7 +19926,6 @@
             <xs:enumeration value="@id/calendarButton" />
             <xs:enumeration value="@id/emailField" />
             <xs:enumeration value="@id/loginButton" />
-            <xs:enumeration value="@id/mainScreenGridLayout" />
             <xs:enumeration value="@id/passwordField" />
             <xs:enumeration value="@id/teamButton" />
             <xs:enumeration value="@id/textAthleteName" />
@@ -20258,7 +20252,6 @@
             <xs:enumeration value="@id/calendarButton" />
             <xs:enumeration value="@id/emailField" />
             <xs:enumeration value="@id/loginButton" />
-            <xs:enumeration value="@id/mainScreenGridLayout" />
             <xs:enumeration value="@id/passwordField" />
             <xs:enumeration value="@id/teamButton" />
             <xs:enumeration value="@id/textAthleteName" />
@@ -20345,7 +20338,6 @@
             <xs:enumeration value="@id/calendarButton" />
             <xs:enumeration value="@id/emailField" />
             <xs:enumeration value="@id/loginButton" />
-            <xs:enumeration value="@id/mainScreenGridLayout" />
             <xs:enumeration value="@id/passwordField" />
             <xs:enumeration value="@id/teamButton" />
             <xs:enumeration value="@id/textAthleteName" />
@@ -20432,7 +20424,6 @@
             <xs:enumeration value="@id/calendarButton" />
             <xs:enumeration value="@id/emailField" />
             <xs:enumeration value="@id/loginButton" />
-            <xs:enumeration value="@id/mainScreenGridLayout" />
             <xs:enumeration value="@id/passwordField" />
             <xs:enumeration value="@id/teamButton" />
             <xs:enumeration value="@id/textAthleteName" />
@@ -20559,7 +20550,6 @@
             <xs:enumeration value="@id/calendarButton" />
             <xs:enumeration value="@id/emailField" />
             <xs:enumeration value="@id/loginButton" />
-            <xs:enumeration value="@id/mainScreenGridLayout" />
             <xs:enumeration value="@id/passwordField" />
             <xs:enumeration value="@id/teamButton" />
             <xs:enumeration value="@id/textAthleteName" />
@@ -21088,7 +21078,6 @@
             <xs:enumeration value="@id/calendarButton" />
             <xs:enumeration value="@id/emailField" />
             <xs:enumeration value="@id/loginButton" />
-            <xs:enumeration value="@id/mainScreenGridLayout" />
             <xs:enumeration value="@id/passwordField" />
             <xs:enumeration value="@id/teamButton" />
             <xs:enumeration value="@id/textAthleteName" />
@@ -21175,7 +21164,6 @@
             <xs:enumeration value="@id/calendarButton" />
             <xs:enumeration value="@id/emailField" />
             <xs:enumeration value="@id/loginButton" />
-            <xs:enumeration value="@id/mainScreenGridLayout" />
             <xs:enumeration value="@id/passwordField" />
             <xs:enumeration value="@id/teamButton" />
             <xs:enumeration value="@id/textAthleteName" />
@@ -21262,7 +21250,6 @@
             <xs:enumeration value="@id/calendarButton" />
             <xs:enumeration value="@id/emailField" />
             <xs:enumeration value="@id/loginButton" />
-            <xs:enumeration value="@id/mainScreenGridLayout" />
             <xs:enumeration value="@id/passwordField" />
             <xs:enumeration value="@id/teamButton" />
             <xs:enumeration value="@id/textAthleteName" />
@@ -21349,7 +21336,6 @@
             <xs:enumeration value="@id/calendarButton" />
             <xs:enumeration value="@id/emailField" />
             <xs:enumeration value="@id/loginButton" />
-            <xs:enumeration value="@id/mainScreenGridLayout" />
             <xs:enumeration value="@id/passwordField" />
             <xs:enumeration value="@id/teamButton" />
             <xs:enumeration value="@id/textAthleteName" />

@@ -44,26 +44,23 @@ namespace GCAthletics.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050005
-			public const int alertsButton = 2131034117;
-			
-			// aapt resource value: 0x7f050007
-			public const int calendarButton = 2131034119;
-			
-			// aapt resource value: 0x7f05000a
-			public const int emailField = 2131034122;
-			
-			// aapt resource value: 0x7f05000c
-			public const int loginButton = 2131034124;
-			
 			// aapt resource value: 0x7f050004
-			public const int mainScreenGridLayout = 2131034116;
+			public const int alertsButton = 2131034116;
+			
+			// aapt resource value: 0x7f050006
+			public const int calendarButton = 2131034118;
+			
+			// aapt resource value: 0x7f050009
+			public const int emailField = 2131034121;
 			
 			// aapt resource value: 0x7f05000b
-			public const int passwordField = 2131034123;
+			public const int loginButton = 2131034123;
 			
-			// aapt resource value: 0x7f050008
-			public const int teamButton = 2131034120;
+			// aapt resource value: 0x7f05000a
+			public const int passwordField = 2131034122;
+			
+			// aapt resource value: 0x7f050007
+			public const int teamButton = 2131034119;
 			
 			// aapt resource value: 0x7f050001
 			public const int textAthleteName = 2131034113;
@@ -77,11 +74,11 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f050000
 			public const int textWelcome = 2131034112;
 			
-			// aapt resource value: 0x7f050009
-			public const int thunderImage = 2131034121;
+			// aapt resource value: 0x7f050008
+			public const int thunderImage = 2131034120;
 			
-			// aapt resource value: 0x7f050006
-			public const int workoutsButton = 2131034118;
+			// aapt resource value: 0x7f050005
+			public const int workoutsButton = 2131034117;
 			
 			static Id()
 			{
