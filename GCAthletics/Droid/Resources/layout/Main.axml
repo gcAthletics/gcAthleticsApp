@@ -8,7 +8,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/thunderImage"
         android:src="@mipmap/thunder"
-        android:scaleType="fitCenter" />
+        android:scaleType="fitCenter"
+        android:paddingTop="35dp"
+        android:paddingBottom="25dp" />
     <EditText
         android:inputType="textEmailAddress"
         android:layout_width="match_parent"
@@ -37,7 +39,7 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:gravity="center"
-        android:enabled="false"
+        android:enabled="true"
         android:editable="false"
         android:textIsSelectable="false"
         android:scrollHorizontally="false"

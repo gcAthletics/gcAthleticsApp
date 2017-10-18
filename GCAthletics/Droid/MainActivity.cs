@@ -21,7 +21,12 @@ namespace GCAthletics.Droid
 
             // Get our button from the layout resource,
             // and attach an event to it
-            //Button button = FindViewById<Button>(Resource.Id.myButton);
+            Button loginButton = FindViewById<Button>(Resource.Id.loginButton);
+
+            loginButton.Click += (sender, e) =>
+            {
+                SetContentView(Resource.Layout.HomeScreen);
+            };
 
             //button.Click += delegate { button.Text = $"{count++} clicks!"; };
         }
