@@ -76,6 +76,10 @@ namespace gcAthletics.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void AlertBtn_TouchUpInside (UIKit.UIButton sender);
 
+        [Action ("CalendarBtn_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void CalendarBtn_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (AlertBtn != null) {

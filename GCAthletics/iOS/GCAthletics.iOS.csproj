@@ -114,6 +114,18 @@
     <Compile Include="AnnounceController.designer.cs">
       <DependentUpon>AnnounceController.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalendarController.cs" />
+    <Compile Include="CalendarController.designer.cs">
+      <DependentUpon>CalendarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskDetailViewController.cs" />
+    <Compile Include="TaskDetailViewController.designer.cs">
+      <DependentUpon>TaskDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeightController.cs" />
+    <Compile Include="WeightController.designer.cs">
+      <DependentUpon>WeightController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\2823292_mktg_logo.png" />

@@ -120,6 +120,8 @@
                         <outlet property="Password" destination="529" id="name-outlet-529"/>
                         <outlet property="LoginButton" destination="602" id="name-outlet-602"/>
                         <outlet property="ForgotPaswrd" destination="691" id="name-outlet-691"/>
+                        <outlet property="EmailTxt" destination="1281" id="name-outlet-1281"/>
+                        <outlet property="PaswdTxt" destination="1327" id="name-outlet-1327"/>
                     </connections>
                     <navigationItem title="GC Athletics" id="913" key="navigationItem"/>
                 </viewController>
