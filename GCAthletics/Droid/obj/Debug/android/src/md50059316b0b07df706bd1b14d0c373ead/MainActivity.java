@@ -1,7 +1,7 @@
-package md53ab5c30b6a3b76f4465710c9a7e88e05;
+package md50059316b0b07df706bd1b14d0c373ead;
 
 
-public class HomeActivity
+public class MainActivity
 	extends android.app.Activity
 	implements
 		mono.android.IGCUserPeer
@@ -12,15 +12,15 @@ public class HomeActivity
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
 			"";
-		mono.android.Runtime.register ("GCAthletics.Droid.HomeActivity, GCAthletics.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", HomeActivity.class, __md_methods);
+		mono.android.Runtime.register ("GCAthletics.Droid.MainActivity, GCAthletics.Droid, Version=1.0.6500.41589, Culture=neutral, PublicKeyToken=null", MainActivity.class, __md_methods);
 	}
 
 
-	public HomeActivity () throws java.lang.Throwable
+	public MainActivity ()
 	{
 		super ();
-		if (getClass () == HomeActivity.class)
-			mono.android.TypeManager.Activate ("GCAthletics.Droid.HomeActivity, GCAthletics.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+		if (getClass () == MainActivity.class)
+			mono.android.TypeManager.Activate ("GCAthletics.Droid.MainActivity, GCAthletics.Droid, Version=1.0.6500.41589, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

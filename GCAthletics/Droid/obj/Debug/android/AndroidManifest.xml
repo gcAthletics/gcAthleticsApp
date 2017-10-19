@@ -6,8 +6,8 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="GC Athletics" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
-    <activity android:icon="@mipmap/icon" android:label="HomeActivity" android:name="md53ab5c30b6a3b76f4465710c9a7e88e05.HomeActivity" />
-    <activity android:icon="@mipmap/icon" android:label="GC Athletics" android:name="md53ab5c30b6a3b76f4465710c9a7e88e05.MainActivity">
+    <activity android:icon="@mipmap/icon" android:label="HomeActivity" android:name="md510e3ca3ee27b8fc316187f43bead0868.HomeActivity" />
+    <activity android:icon="@mipmap/icon" android:label="GC Athletics" android:name="md510e3ca3ee27b8fc316187f43bead0868.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
