@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{D6D389E4-459B-4075-AFB8-DD4C9A93B8C6}</ProjectGuid>
+    <ProjectGuid>{0EFF7E82-073D-464B-BBDA-EF48146D69CF}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>GCAthletics.iOS</RootNamespace>
-    <AssemblyName>GCAthletics.iOS</AssemblyName>
+    <RootNamespace>gcAthletics.iOS</RootNamespace>
+    <AssemblyName>gcAthletics.iOS</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
@@ -22,7 +22,7 @@
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchFastDev>true</MtouchFastDev>
-    <IOSDebuggerPort>52523</IOSDebuggerPort>
+    <IOSDebuggerPort>31686</IOSDebuggerPort>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
@@ -70,7 +70,7 @@
     <MtouchFastDev>true</MtouchFastDev>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <IOSDebuggerPort>26971</IOSDebuggerPort>
+    <IOSDebuggerPort>39807</IOSDebuggerPort>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
@@ -83,9 +83,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GCAthletics\GCAthletics.csproj">
-      <Project>{218F2848-4305-4125-BC3F-0FF6C6238DDC}</Project>
-      <Name>GCAthletics</Name>
+    <ProjectReference Include="..\gcAthletics\gcAthletics.csproj">
+      <Project>{9C6D64E9-9E27-423C-81C0-9D3091F23338}</Project>
+      <Name>gcAthletics</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +110,21 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="AnnouncementController.cs" />
+    <Compile Include="AnnouncementController.designer.cs">
+      <DependentUpon>AnnouncementController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\2823292_mktg_logo.png" />
+    <BundleResource Include="empty_avatar.jpg" />
+    <BundleResource Include="alert.png" />
+    <BundleResource Include="announcement_grey_192x192.png" />
+    <BundleResource Include="calendar-icon-big-e1bda272669953ade8c0bcd99562c81682539e17b0c681625764375feaff927d.png" />
+    <BundleResource Include="calendar1600.png" />
+    <BundleResource Include="vacation_18-512.png" />
+    <BundleResource Include="simple-08-512.png" />
+    <BundleResource Include="FEZ-04-512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
