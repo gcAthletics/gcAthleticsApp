@@ -110,9 +110,9 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="AnnouncementController.cs" />
-    <Compile Include="AnnouncementController.designer.cs">
-      <DependentUpon>AnnouncementController.cs</DependentUpon>
+    <Compile Include="AnnounceController.cs" />
+    <Compile Include="AnnounceController.designer.cs">
+      <DependentUpon>AnnounceController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
