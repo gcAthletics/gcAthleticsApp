@@ -3,6 +3,7 @@ using System.IO;
 using SQLite;
 using Xamarin.Forms;
 
+[assembly: Dependency(typeof(GCAthletics.iOS.SqliteService))]
 namespace GCAthletics.iOS
 {
     public class SqliteService : ISqliteService

@@ -15,7 +15,7 @@
       <File FileName="GCAthletics/Password.cs" Line="16" Column="1" />
       <File FileName="GCAthletics/Exercise.cs" Line="4" Column="37" />
       <File FileName="GCAthletics/Event.cs" Line="17" Column="6" />
-      <File FileName="GCAthletics/Announcements.cs" Line="6" Column="20" />
+      <File FileName="GCAthletics/Announcements.cs" Line="14" Column="173" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
