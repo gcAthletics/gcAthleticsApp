@@ -14,5 +14,25 @@ namespace gcAthletics.iOS
     [Register ("AnnounceController")]
     partial class AnnounceController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableViewController dataSource { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableViewController @delegate { get; set; }
+
+        void ReleaseDesignerOutlets ()
+        {
+            if (dataSource != null) {
+                dataSource.Dispose ();
+                dataSource = null;
+            }
+
+            if (@delegate != null) {
+                @delegate.Dispose ();
+                @delegate = null;
+            }
+        }
     }
 }

@@ -14,5 +14,25 @@ namespace gcAthletics.iOS
     [Register ("TaskDetailViewController")]
     partial class TaskDetailViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        gcAthletics.iOS.WeightController dataSource { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        gcAthletics.iOS.WeightController @delegate { get; set; }
+
+        void ReleaseDesignerOutlets ()
+        {
+            if (dataSource != null) {
+                dataSource.Dispose ();
+                dataSource = null;
+            }
+
+            if (@delegate != null) {
+                @delegate.Dispose ();
+                @delegate = null;
+            }
+        }
     }
 }
