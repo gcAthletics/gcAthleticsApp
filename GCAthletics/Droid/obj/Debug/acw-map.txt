@@ -1,8 +1,8 @@
-GCAthletics.Droid.HomeActivity, GCAthletics.Droid;md510e3ca3ee27b8fc316187f43bead0868.HomeActivity
-GCAthletics.Droid.HomeActivity, GCAthletics.Droid, Version=1.0.6500.42339, Culture=neutral, PublicKeyToken=null;md510e3ca3ee27b8fc316187f43bead0868.HomeActivity
-GCAthletics.Droid.HomeActivity;md510e3ca3ee27b8fc316187f43bead0868.HomeActivity
-gcathletics.droid.HomeActivity;md510e3ca3ee27b8fc316187f43bead0868.HomeActivity
-GCAthletics.Droid.MainActivity, GCAthletics.Droid;md510e3ca3ee27b8fc316187f43bead0868.MainActivity
-GCAthletics.Droid.MainActivity, GCAthletics.Droid, Version=1.0.6500.42339, Culture=neutral, PublicKeyToken=null;md510e3ca3ee27b8fc316187f43bead0868.MainActivity
-GCAthletics.Droid.MainActivity;md510e3ca3ee27b8fc316187f43bead0868.MainActivity
-gcathletics.droid.MainActivity;md510e3ca3ee27b8fc316187f43bead0868.MainActivity
+GCAthletics.Droid.HomeActivity, GCAthletics.Droid;md5692e2cd513558939536b430a4e08c8e6.HomeActivity
+GCAthletics.Droid.HomeActivity, GCAthletics.Droid, Version=1.0.6501.37859, Culture=neutral, PublicKeyToken=null;md5692e2cd513558939536b430a4e08c8e6.HomeActivity
+GCAthletics.Droid.HomeActivity;md5692e2cd513558939536b430a4e08c8e6.HomeActivity
+gcathletics.droid.HomeActivity;md5692e2cd513558939536b430a4e08c8e6.HomeActivity
+GCAthletics.Droid.MainActivity, GCAthletics.Droid;md5692e2cd513558939536b430a4e08c8e6.MainActivity
+GCAthletics.Droid.MainActivity, GCAthletics.Droid, Version=1.0.6501.37859, Culture=neutral, PublicKeyToken=null;md5692e2cd513558939536b430a4e08c8e6.MainActivity
+GCAthletics.Droid.MainActivity;md5692e2cd513558939536b430a4e08c8e6.MainActivity
+gcathletics.droid.MainActivity;md5692e2cd513558939536b430a4e08c8e6.MainActivity
