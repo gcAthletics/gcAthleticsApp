@@ -11,23 +11,34 @@ public final class R {
     public static final class attr {
     }
     public static final class id {
-        public static final int alertsImgBtn=0x7f050005;
-        public static final int avatarImgBtn=0x7f050001;
-        public static final int calendarImgBtn=0x7f050007;
-        public static final int emailField=0x7f05000a;
-        public static final int loginButton=0x7f05000c;
-        public static final int passwordField=0x7f05000b;
-        public static final int rosterImgBtn=0x7f050008;
-        public static final int textName=0x7f050002;
-        public static final int textPosition=0x7f050004;
-        public static final int textTeam=0x7f050003;
-        public static final int textWelcome=0x7f050000;
-        public static final int thunderImage=0x7f050009;
-        public static final int workoutImgBtn=0x7f050006;
+        public static final int alertsImgBtn=0x7f05000e;
+        public static final int announcementsText=0x7f050001;
+        public static final int avatarImgBtn=0x7f05000a;
+        public static final int calendarImgBtn=0x7f050010;
+        public static final int calendarView=0x7f050004;
+        public static final int emailField=0x7f050013;
+        public static final int linearLayout1=0x7f050000;
+        public static final int listView1=0x7f050002;
+        public static final int loginButton=0x7f050015;
+        public static final int passwordField=0x7f050014;
+        public static final int relativeLayout1=0x7f050003;
+        public static final int rosterImgBtn=0x7f050011;
+        public static final int tableLayout1=0x7f050005;
+        public static final int tableRow1=0x7f050006;
+        public static final int tableRow2=0x7f050007;
+        public static final int tableRow3=0x7f050008;
+        public static final int textName=0x7f05000b;
+        public static final int textPosition=0x7f05000d;
+        public static final int textTeam=0x7f05000c;
+        public static final int textWelcome=0x7f050009;
+        public static final int thunderImage=0x7f050012;
+        public static final int workoutImgBtn=0x7f05000f;
     }
     public static final class layout {
-        public static final int homescreen=0x7f030000;
-        public static final int main=0x7f030001;
+        public static final int alertscreen=0x7f030000;
+        public static final int calendarscreen=0x7f030001;
+        public static final int homescreen=0x7f030002;
+        public static final int main=0x7f030003;
     }
     public static final class mipmap {
         public static final int ccc=0x7f020000;

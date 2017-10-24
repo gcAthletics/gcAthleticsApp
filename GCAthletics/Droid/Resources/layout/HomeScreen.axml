@@ -10,8 +10,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/textWelcome"
         android:layout_centerHorizontal="true"
-        android:paddingTop="12dp"
-        android:textSize="47dp" />
+        android:paddingTop="8dp"
+        android:textSize="35dp" />
     <ImageView
         android:src="@mipmap/user"
         android:layout_width="100dp"
@@ -32,7 +32,7 @@
         android:layout_below="@id/avatarImgBtn"
         android:id="@+id/textName"
         android:layout_centerHorizontal="true"
-        android:textSize="25dp" />
+        android:textSize="18dp" />
     <TextView
         android:text="@string/team"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -41,7 +41,7 @@
         android:layout_below="@id/textName"
         android:id="@+id/textTeam"
         android:layout_centerHorizontal="true"
-        android:textSize="20dp" />
+        android:textSize="15dp" />
     <TextView
         android:text="@string/position"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -50,14 +50,14 @@
         android:layout_below="@id/textTeam"
         android:id="@+id/textPosition"
         android:layout_centerHorizontal="true"
-        android:textSize="20dp" />
+        android:textSize="15dp" />
     <RelativeLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textPosition"
         android:layout_centerHorizontal="true"
-        android:paddingTop="50dp">
+        android:paddingTop="15dp">
         <ImageButton
             android:src="@mipmap/megaphone"
             android:layout_width="50dp"

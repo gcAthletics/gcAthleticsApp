@@ -5,9 +5,11 @@
   <uses-permission android:name="android.permission.CALL_PHONE" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-  <application android:label="GC Athletics" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
-    <activity android:icon="@mipmap/icon" android:label="HomeActivity" android:name="md5692e2cd513558939536b430a4e08c8e6.HomeActivity" />
-    <activity android:icon="@mipmap/icon" android:label="GC Athletics" android:name="md5692e2cd513558939536b430a4e08c8e6.MainActivity">
+  <application android:label="GC Athletics" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="Activity1" android:name="md5128392d26eeaa3a32fb8f364f8d6763f.AlertsActivity" />
+    <activity android:label="CalendarActivity" android:name="md5128392d26eeaa3a32fb8f364f8d6763f.CalendarActivity" />
+    <activity android:label="HomeActivity" android:name="md5128392d26eeaa3a32fb8f364f8d6763f.HomeActivity" />
+    <activity android:icon="@mipmap/icon" android:label="GC Athletics" android:name="md5128392d26eeaa3a32fb8f364f8d6763f.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

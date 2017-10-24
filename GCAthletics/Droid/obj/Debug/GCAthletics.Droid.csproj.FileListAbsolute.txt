@@ -65,3 +65,5 @@ C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\bin\Debug
 C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\bin\Debug\GCAthletics.Droid.dll.mdb
 C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\android\assets\GCAthletics.dll.mdb
 C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\android\assets\GCAthletics.Droid.dll.mdb
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\res\layout\calendarscreen.xml
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\res\layout\alertscreen.xml
