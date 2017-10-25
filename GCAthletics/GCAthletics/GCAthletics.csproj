@@ -29,6 +29,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+    <Compile Include="Team.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Coach.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="Announcement.cs" />
+    <Compile Include="Workout.cs" />
+    <Compile Include="Exercise.cs" />
+    <Compile Include="User.cs" />
+=======
     <Compile Include="ISqliteService.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Models\AnnouncementsModel.cs" />
@@ -39,6 +49,7 @@
     <Compile Include="Models\TeamModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\WorkoutModel.cs" />
+>>>>>>> c3999d220093fd3ba27d83f2f3e63329ee6c91bd
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLite-net">
