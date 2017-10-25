@@ -2,7 +2,4 @@
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">GCAthletics.Droid</string>
-  <string name="athleteName">Athlete Name</string>
-  <string name="team">Team</string>
-  <string name="position">Position</string>
 </resources>
