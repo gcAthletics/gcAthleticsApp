@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace gcAthletics.iOS
+namespace GCAthletics.iOS
 {
     public class Application
     {
