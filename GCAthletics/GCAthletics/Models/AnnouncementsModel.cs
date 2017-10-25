@@ -1,8 +1,11 @@
 ﻿using System;
+using SQLite;
+
 namespace GCAthletics
 {
     public class AnnouncementsModel
     {
+        [PrimaryKey, AutoIncrement]
         public int AnnouncementID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

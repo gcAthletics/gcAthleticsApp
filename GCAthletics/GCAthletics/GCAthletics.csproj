@@ -32,7 +32,6 @@
     <Compile Include="ISqliteService.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Models\AnnouncementsModel.cs" />
-    <Compile Include="Models\BaseItemModel.cs" />
     <Compile Include="Models\EventModel.cs" />
     <Compile Include="Models\ExerciseModel.cs" />
     <Compile Include="Models\PasswordModel.cs" />

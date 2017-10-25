@@ -1,8 +1,11 @@
 ﻿using System;
+using SQLite;
+
 namespace GCAthletics
 {
     public class WorkoutModel
     {
+        [PrimaryKey, AutoIncrement]
         public int WorkoutID { get; set; }
         public string Date { get; set; }
         public int Completed { get; set; }
