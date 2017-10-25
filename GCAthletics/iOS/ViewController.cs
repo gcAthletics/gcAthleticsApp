@@ -2,7 +2,7 @@
 
 using UIKit;
 
-namespace GCAthletics.iOS
+namespace gcAthletics.iOS
 {
     public partial class ViewController : UIViewController
     {
