@@ -1,9 +1,11 @@
 ﻿using System;
+using GCAthletics.Models;
+
 namespace GCAthletics
 {
-    public class EventModel
+    public class EventModel : BaseItemModel
     {
-        public int EventID { get; set; }
+        // ID provided by BaseItemModel
         public int UserID { get; set; }
         public string Date { get; set; }
         public string Description { get; set; }
@@ -12,7 +14,7 @@ namespace GCAthletics
 
         public override string ToString()
         {
-            return string.Format("[Event: EventID={0}, UserID={1}, Date={2}, Description={3}, SendsAlerts={4}, Name={5}]", EventID, UserID, Date, Description, SendsAlerts, Name);
+            return string.Format("[Event: EventID={0}, UserID={1}, Date={2}, Description={3}, SendsAlerts={4}, Name={5}]", ID, UserID, Date, Description, SendsAlerts, Name);
         }
     }
 }

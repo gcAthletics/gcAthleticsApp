@@ -6,15 +6,17 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="GC Athletics" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
-    <activity android:label="Activity1" android:name="md5128392d26eeaa3a32fb8f364f8d6763f.AlertsActivity" />
-    <activity android:label="CalendarActivity" android:name="md5128392d26eeaa3a32fb8f364f8d6763f.CalendarActivity" />
-    <activity android:label="HomeActivity" android:name="md5128392d26eeaa3a32fb8f364f8d6763f.HomeActivity" />
-    <activity android:icon="@mipmap/icon" android:label="GC Athletics" android:name="md5128392d26eeaa3a32fb8f364f8d6763f.MainActivity">
+    <activity android:label="Activity1" android:name="md5646fffe2cf08be18c4f47fdda21233ea.AlertsActivity" />
+    <activity android:label="CalendarActivity" android:name="md5646fffe2cf08be18c4f47fdda21233ea.CalendarActivity" />
+    <activity android:label="HomeActivity" android:name="md5646fffe2cf08be18c4f47fdda21233ea.HomeActivity" />
+    <activity android:icon="@mipmap/icon" android:label="GC Athletics" android:name="md5646fffe2cf08be18c4f47fdda21233ea.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:label="Web Authenticator" android:name="md5901e742fdf284ed0df9a9602f1963168.FormAuthenticatorActivity" />
+    <activity android:label="Web Authenticator" android:name="md5901e742fdf284ed0df9a9602f1963168.WebAuthenticatorActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.bobcats.gcsu.edu.GC_Athletics.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">

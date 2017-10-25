@@ -1,16 +1,36 @@
 ﻿<Properties StartupConfiguration="{DE629BE8-13F9-4220-89BF-40C4BF42C94E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="GCAthletics/Models/EventModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../Library/Frameworks/Mono.framework/Versions/5.4.0/lib/mono/msbuild/15.0/bin/Microsoft.Common.CurrentVersion.targets">
     <Files>
       <File FileName="iOS/Main.storyboard" />
-      <File FileName="GCAthletics/Database.cs" Line="41" Column="25" />
-      <File FileName="GCAthletics/Models/AnnouncementsModel.cs" Line="8" Column="35" />
-      <File FileName="GCAthletics/Models/ExerciseModel.cs" Line="8" Column="36" />
-      <File FileName="GCAthletics/Models/PasswordModel.cs" Line="9" Column="16" />
-      <File FileName="GCAthletics/Models/TeamModel.cs" Line="3" Column="1" />
-      <File FileName="GCAthletics/Models/UserModel.cs" Line="8" Column="36" />
-      <File FileName="GCAthletics/Models/WorkoutModel.cs" Line="8" Column="36" />
-      <File FileName="GCAthletics/Models/EventModel.cs" Line="1" Column="1" />
+      <File FileName="GCAthletics/Database.cs" Line="45" Column="9" />
+      <File FileName="GCAthletics/Models/AnnouncementsModel.cs" Line="17" Column="124" />
+      <File FileName="GCAthletics/Models/ExerciseModel.cs" Line="19" Column="139" />
+      <File FileName="GCAthletics/Models/PasswordModel.cs" Line="18" Column="92" />
+      <File FileName="GCAthletics/Models/TeamModel.cs" Line="17" Column="23" />
+      <File FileName="GCAthletics/Models/UserModel.cs" Line="18" Column="110" />
+      <File FileName="GCAthletics/Models/WorkoutModel.cs" Line="17" Column="114" />
+      <File FileName="GCAthletics/Models/EventModel.cs" Line="17" Column="124" />
+      <File FileName="iOS/Main.cs" Line="6" Column="13" />
+      <File FileName="iOS/SqliteService.cs" Line="13" Column="10" />
+      <File FileName="Droid/SqliteService.cs" Line="9" Column="40" />
+      <File FileName="GCAthletics/Models/BaseItemModel.cs" Line="12" Column="1" />
+      <File FileName="../../../../../../Library/Frameworks/Mono.framework/Versions/5.4.0/lib/mono/msbuild/15.0/bin/Microsoft.Common.CurrentVersion.targets" Line="2001" Column="17" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GCAthletics" expanded="True">
+            <Node name="GCAthletics" expanded="True">
+              <Node name="Models" expanded="True" />
+            </Node>
+            <Node name="GCAthletics.Droid" expanded="True" />
+            <Node name="GCAthletics.iOS" expanded="True">
+              <Node name="Main.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.GCAthletics.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7E74ABEC-0815-4AFF-B6F8-A561E3276219">

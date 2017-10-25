@@ -1,9 +1,12 @@
 ﻿using System;
+using GCAthletics.Models;
+using SQLite;
+
 namespace GCAthletics
 {
-    public class UserModel
+    public class UserModel : BaseItemModel
     {
-        public int UserID { get; set; }
+        // ID provided by BaseItemModel
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Role { get; set; }
@@ -12,7 +15,7 @@ namespace GCAthletics
 
         public override string ToString()
         {
-            return string.Format("[User: UserID={0}, Phone={1}, Email={2}, Role={3}, Name={4}, TeamID={5}]", UserID, Phone, Email, Role, Name, TeamID);
+            return string.Format("[User: UserID={0}, Phone={1}, Email={2}, Role={3}, Name={4}, TeamID={5}]", ID, Phone, Email, Role, Name, TeamID);
         }
     }
 }

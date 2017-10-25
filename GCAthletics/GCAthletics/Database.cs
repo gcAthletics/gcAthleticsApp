@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using GCAthletics.Models;
 using SQLite;
 using Xamarin.Forms;
 
@@ -34,12 +35,19 @@ namespace GCAthletics
         }
 
         // make insert item
+        /*public void InsertItem<T>(T item)
+        {
+            lock (locker)
+            {
+                var id 
+            }
+        }*/
 
         public int SaveItem<T>(T item)
         {
             lock (locker)
             {
-                var id = ((BaseItem)(object)item).ID;
+                var id = ((BaseItemModel)(object)item).ID;
                 if (id != 0)
                 {
                     connection.Update(item);

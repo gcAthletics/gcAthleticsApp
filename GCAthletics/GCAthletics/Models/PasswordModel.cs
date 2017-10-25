@@ -1,10 +1,12 @@
 ﻿using System;
+using GCAthletics.Models;
 using SQLite;
 
 namespace GCAthletics
 {
-    public class PasswordModel
+    public class PasswordModel : BaseItemModel
     {
+        // ID provided by BaseItemModel
         [Unique]
         public string PasswordHash { get; set; }
         [Unique]

@@ -1,9 +1,12 @@
 ﻿using System;
+using GCAthletics.Models;
+using SQLite;
+
 namespace GCAthletics
 {
-    public class TeamModel
+    public class TeamModel : BaseItemModel
     {
-        public int TeamID { get; set; }
+        // ID provided BaseItemModel
         public string Name { get; set; }
         public int Wins { get; set; }
         public int Losses { get; set; }
@@ -11,7 +14,7 @@ namespace GCAthletics
 
         public override string ToString()
         {
-            return $"{TeamID}, {Name}, {Wins}, {Losses}, {Sport}";
+            return $"{ID}, {Name}, {Wins}, {Losses}, {Sport}";
         }
     }
 }

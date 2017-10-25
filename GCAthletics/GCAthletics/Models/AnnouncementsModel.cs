@@ -1,12 +1,12 @@
 ﻿using System;
+using GCAthletics.Models;
 using SQLite;
 
 namespace GCAthletics
 {
-    public class AnnouncementsModel
+    public class AnnouncementsModel : BaseItemModel
     {
-        [PrimaryKey, AutoIncrement]
-        public int AnnouncementID { get; set; }
+        // ID is provided from BaseItemModel
         public string Name { get; set; }
         public string Description { get; set; }
         public string Date { get; set; }
@@ -14,7 +14,7 @@ namespace GCAthletics
 
         public override string ToString()
         {
-            return string.Format("[Announcements: AnnouncementID={0}, Name={1}, Description={2}, Date={3}, EventID={4}]", AnnouncementID, Name, Description, Date, EventID);
+            return string.Format("[Announcements: AnnouncementID={0}, Name={1}, Description={2}, Date={3}, EventID={4}]", ID, Name, Description, Date, EventID);
         }
     }
 }

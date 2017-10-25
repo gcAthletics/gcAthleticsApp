@@ -38,6 +38,7 @@
     <Compile Include="Models\TeamModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\WorkoutModel.cs" />
+    <Compile Include="Models\BaseItemModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLite-net">
