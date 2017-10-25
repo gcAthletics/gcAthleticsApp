@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>gcAthletics</string>
+	<string>GC Athletics</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.gcAthletics</string>
+	<string>com.bobcats.gcsu.edu.GC-Athletics</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

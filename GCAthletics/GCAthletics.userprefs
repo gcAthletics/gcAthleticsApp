@@ -1,6 +1,5 @@
 ﻿<Properties StartupConfiguration="{DE629BE8-13F9-4220-89BF-40C4BF42C94E}|Default">
 <<<<<<< HEAD
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="iOS/SqliteService.cs">
     <Files>
       <File FileName="GCAthletics/ISqliteService.cs" Line="8" Column="26" />
@@ -24,18 +23,6 @@
       <File FileName="iOS/Main.storyboard" />
       <File FileName="iOS/LaunchScreen.storyboard" />
 >>>>>>> 10820d685ef49aebce3185ad3e6f3c07c2101cd0
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="GCAthletics/Team.cs">
-    <Files>
-      <File FileName="iOS/Main.storyboard" />
-      <File FileName="iOS/LaunchScreen.storyboard" />
-      <File FileName="GCAthletics/Team.cs" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workbench>
-    <Files>
-      <File FileName="Droid/HomeActivity.cs" Line="1" Column="1" />
->>>>>>> d3cd678e819b23f1ddef174f8b4aed5e41ab98c6
->>>>>>> 8212361be4d500f36529eda4fbbbc7b0110020c6
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -43,14 +30,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-<<<<<<< HEAD
   <MonoDevelop.Ide.ItemProperties.GCAthletics.Droid PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.ItemProperties.GCAthletics.Droid PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
-=======
-  <MonoDevelop.Ide.ItemProperties.GCAthletics.Droid AndroidDesignerPreferredDevice="Nexus 5" PreferredExecutionTarget="Android.Pixel_XL_API_26" AndroidDesignerPreferredTheme="Theme.Material.Light" />
->>>>>>> d3cd678e819b23f1ddef174f8b4aed5e41ab98c6
->>>>>>> 8212361be4d500f36529eda4fbbbc7b0110020c6
   <MultiItemStartupConfigurations />
 </Properties>
