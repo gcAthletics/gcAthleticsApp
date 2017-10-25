@@ -5,6 +5,14 @@ using GCAthletics.Models;
 using SQLite;
 using Xamarin.Forms;
 
+/*
+ * Here is some database info from the azure service
+ * username: gcAdmin
+ * password: ADMINpassword1!
+ * Server=tcp:gcathletics.database.windows.net,1433;Initial Catalog=GCathleticsDB;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+ * 
+ */
+
 namespace GCAthletics
 {
     public class Database
