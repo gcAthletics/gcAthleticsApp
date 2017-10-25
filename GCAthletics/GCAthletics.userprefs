@@ -1,9 +1,7 @@
 ﻿<Properties StartupConfiguration="{DE629BE8-13F9-4220-89BF-40C4BF42C94E}|Default">
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="GCAthletics/User.cs">
     <Files>
       <File FileName="GCAthletics/Team.cs" Line="25" Column="13" />
-      <File FileName="iOS/Main.storyboard" />
       <File FileName="GCAthletics/Player.cs" Line="4" Column="31" />
       <File FileName="GCAthletics/Coach.cs" Line="4" Column="26" />
       <File FileName="GCAthletics/Event.cs" Line="10" Column="39" />
@@ -11,32 +9,6 @@
       <File FileName="GCAthletics/Workout.cs" Line="17" Column="42" />
       <File FileName="GCAthletics/Exercise.cs" Line="10" Column="44" />
       <File FileName="GCAthletics/User.cs" Line="1" Column="1" />
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/SqliteService.cs">
-    <Files>
-      <File FileName="GCAthletics/ISqliteService.cs" Line="8" Column="26" />
-      <File FileName="iOS/packages.config" Line="1" Column="1" />
-      <File FileName="iOS/ViewController.cs" Line="1" Column="1" />
-      <File FileName="iOS/SqliteService.cs" Line="29" Column="27" />
-      <File FileName="Droid/SqliteService.cs" Line="16" Column="10" />
-      <File FileName="GCAthletics/Database.cs" Line="36" Column="28" />
-      <File FileName="GCAthletics/packages.config" Line="1" Column="1" />
-      <File FileName="GCAthletics/Models/BaseItem.cs" Line="1" Column="1" />
-      <File FileName="GCAthletics/Models/Team.cs" Line="1" Column="1" />
-      <File FileName="GCAthletics/Models/User.cs" Line="1" Column="1" />
-      <File FileName="GCAthletics/Models/Workout.cs" Line="1" Column="1" />
-      <File FileName="GCAthletics/Models/Password.cs" Line="1" Column="1" />
-      <File FileName="GCAthletics/Models/Exercise.cs" Line="1" Column="1" />
-      <File FileName="GCAthletics/Models/Event.cs" Line="1" Column="1" />
-      <File FileName="GCAthletics/Models/Announcements.cs" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.storyboard">
-    <Files>
-      <File FileName="iOS/Main.storyboard" />
-      <File FileName="iOS/LaunchScreen.storyboard" />
->>>>>>> 10820d685ef49aebce3185ad3e6f3c07c2101cd0
->>>>>>> c3999d220093fd3ba27d83f2f3e63329ee6c91bd
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -44,6 +16,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.GCAthletics.Droid PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
+  <MonoDevelop.Ide.ItemProperties.GCAthletics.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
   <MultiItemStartupConfigurations />
 </Properties>
