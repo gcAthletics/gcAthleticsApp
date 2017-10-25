@@ -1,7 +1,7 @@
 ﻿using System;
 namespace GCAthletics
 {
-    public class Password : BaseItem
+    public class PasswordModel
     {
         public string PasswordHash { get; set; }
         public int UserID { get; set; }

@@ -1,7 +1,7 @@
 ﻿using System;
 namespace GCAthletics
 {
-    public class Team : BaseItem
+    public class TeamModel
     {
         public int TeamID { get; set; }
         public string Name { get; set; }
