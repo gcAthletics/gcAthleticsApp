@@ -1,12 +1,35 @@
-﻿<Properties StartupConfiguration="{D6D389E4-459B-4075-AFB8-DD4C9A93B8C6}|Default">
-  <MonoDevelop.Ide.Workbench />
+﻿<Properties StartupConfiguration="{DE629BE8-13F9-4220-89BF-40C4BF42C94E}|Default">
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/SqliteService.cs">
+    <Files>
+      <File FileName="GCAthletics/ISqliteService.cs" Line="8" Column="26" />
+      <File FileName="iOS/packages.config" Line="1" Column="1" />
+      <File FileName="iOS/ViewController.cs" Line="1" Column="1" />
+      <File FileName="iOS/SqliteService.cs" Line="29" Column="27" />
+      <File FileName="Droid/SqliteService.cs" Line="16" Column="10" />
+      <File FileName="GCAthletics/Database.cs" Line="36" Column="28" />
+      <File FileName="GCAthletics/packages.config" Line="1" Column="1" />
+      <File FileName="GCAthletics/Models/BaseItem.cs" Line="1" Column="1" />
+      <File FileName="GCAthletics/Models/Team.cs" Line="1" Column="1" />
+      <File FileName="GCAthletics/Models/User.cs" Line="1" Column="1" />
+      <File FileName="GCAthletics/Models/Workout.cs" Line="1" Column="1" />
+      <File FileName="GCAthletics/Models/Password.cs" Line="1" Column="1" />
+      <File FileName="GCAthletics/Models/Exercise.cs" Line="1" Column="1" />
+      <File FileName="GCAthletics/Models/Event.cs" Line="1" Column="1" />
+      <File FileName="GCAthletics/Models/Announcements.cs" Line="1" Column="1" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.storyboard">
+    <Files>
+      <File FileName="iOS/Main.storyboard" />
+      <File FileName="iOS/LaunchScreen.storyboard" />
+>>>>>>> 10820d685ef49aebce3185ad3e6f3c07c2101cd0
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.GCAthletics.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7E74ABEC-0815-4AFF-B6F8-A561E3276219">
-    <MonoDevelop.MacDev.AppleDevelopmentTeam />
-  </MonoDevelop.Ide.ItemProperties.GCAthletics.iOS>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.GCAthletics.Droid PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
   <MultiItemStartupConfigurations />
 </Properties>
