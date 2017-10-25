@@ -1,5 +1,9 @@
 ﻿<Properties StartupConfiguration="{DE629BE8-13F9-4220-89BF-40C4BF42C94E}|Default">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="Droid/HomeActivity.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.GCAthletics.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7E74ABEC-0815-4AFF-B6F8-A561E3276219">
     <MonoDevelop.MacDev.AppleDevelopmentTeam />
@@ -8,6 +12,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.GCAthletics.Droid AndroidDesignerPreferredDevice="Nexus 6P" PreferredExecutionTarget="Android.Pixel_XL_API_26" />
+  <MonoDevelop.Ide.ItemProperties.GCAthletics.Droid AndroidDesignerPreferredDevice="Nexus 5" PreferredExecutionTarget="Android.Pixel_XL_API_26" AndroidDesignerPreferredTheme="Theme.Material.Light" />
   <MultiItemStartupConfigurations />
 </Properties>
