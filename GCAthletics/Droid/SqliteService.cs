@@ -28,5 +28,11 @@ namespace GCAthletics.Droid
         {
             return new SQLiteConnection(GetPath(dbName));
         }
+
+        public long GetSize(string databaseName)
+        {
+            var fileInfo = new FileInfo(GetPath(databaseName));
+            return fileInfo != null ? fileInfo.Length : 0;
+        }
     }
 }
