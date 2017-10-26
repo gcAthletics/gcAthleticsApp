@@ -15,7 +15,7 @@ namespace gcAthleticsAPI.Controllers
         [HttpPost]
         [ActionName("GCATHLETICS_REG")]
         // POST: api/Login  
-        public HttpResponseMessage Xamarin_reg(string username, string password)
+        public HttpResponseMessage gcAthleticsAPI_reg(string username, string password)
         {
             Login login = new Login();
             login.Username = username;
@@ -27,7 +27,7 @@ namespace gcAthleticsAPI.Controllers
         [HttpGet]
         [ActionName("GCATHLETICS_Login")]
         // GET: api/Login/5  
-        public HttpResponseMessage Xamarin_login(string username, string password)
+        public HttpResponseMessage gcAthleticsAPI_login(string username, string password)
         {
             var user = db.Logins.Where(x => x.Username == username && x.Pasword == password).FirstOrDefault();
             if (user == null)
