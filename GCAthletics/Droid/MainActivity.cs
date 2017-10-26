@@ -2,6 +2,10 @@
 using Android.Widget;
 using Android.OS;
 using Android.Content;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.Net.Http.Headers;
+using System.Net.Http;
 
 namespace GCAthletics.Droid
 {
