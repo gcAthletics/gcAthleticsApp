@@ -12,6 +12,16 @@ namespace gcAthleticsAPI.Controllers
 {
     public class UsersController : ApiController
     {
+        // create entity object, which holds the connection to the db
+        gcDBentity db = new gcDBentity();
+
+        [HttpGet]
+        [ActionName:("LOGIN")]
+        public HttpResponseMessage Login(string email, string password)
+        {
+
+        }
+
         // GET: api/Users
         public IEnumerable<string> Get()
         {
