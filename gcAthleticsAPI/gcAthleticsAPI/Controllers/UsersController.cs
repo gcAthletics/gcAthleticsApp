@@ -10,7 +10,7 @@ using System.Security.Cryptography;
 
 namespace gcAthleticsAPI.Controllers
 {
-    [Route("api/[controller")]
+    [Route("api/[controller]")]
     public class UsersController : ApiController
     {
         // create entity object which is the connection to the db
@@ -25,6 +25,7 @@ namespace gcAthleticsAPI.Controllers
 
         // GET: api/Users/5
         [HttpGet]
+        [ActionName("GetUser")]
         public IQueryable<User> GetUser(int id)
         {
             var user = db.Users.Where(x => x.UserID == id);
