@@ -23,9 +23,10 @@ namespace gcAthleticsAPI.Controllers
             return new string[] { "value1", "value2" };
         }
 
+        // -> /api/Users/GetUser?id=1
         // GET: api/Users/5
         [HttpGet]
-        [ActionName("GetUser")]
+        //[ActionName("GetUser")]
         public IQueryable<User> GetUser(int id)
         {
             var user = db.Users.Where(x => x.UserID == id);
