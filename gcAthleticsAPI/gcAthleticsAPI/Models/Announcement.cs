@@ -12,10 +12,14 @@ namespace gcAthleticsAPI.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Login
+    public partial class Announcement
     {
-        public int Id { get; set; }
-        public string Username { get; set; }
-        public string Pasword { get; set; }
+        public int AnnouncementID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public System.DateTime DateTime { get; set; }
+        public int EventID { get; set; }
+    
+        public virtual Event Event { get; set; }
     }
 }

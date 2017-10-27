@@ -13,10 +13,10 @@ namespace gcAthleticsAPI.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class GCathleticsDBEntities : DbContext
+    public partial class gcDBentity : DbContext
     {
-        public GCathleticsDBEntities()
-            : base("name=GCathleticsDBEntities")
+        public gcDBentity()
+            : base("name=gcDBentity")
         {
         }
     
@@ -25,6 +25,11 @@ namespace gcAthleticsAPI.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Login> Logins { get; set; }
+        public virtual DbSet<Announcement> Announcements { get; set; }
+        public virtual DbSet<Event> Events { get; set; }
+        public virtual DbSet<Exercise> Exercises { get; set; }
+        public virtual DbSet<Team> Teams { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Workout> Workouts { get; set; }
     }
 }
