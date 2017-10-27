@@ -10,43 +10,61 @@ using System.Security.Cryptography;
 
 namespace gcAthleticsAPI.Controllers
 {
+    [Route("api/[controller")]
     public class UsersController : ApiController
     {
-        // create entity object, which holds the connection to the db
+        // create entity object which is the connection to the db
         gcDBentity db = new gcDBentity();
 
-        [HttpGet]
-        [ActionName:("LOGIN")]
-        public HttpResponseMessage Login(string email, string password)
-        {
-
-        }
-
         // GET: api/Users
-        public IEnumerable<string> Get()
+        [HttpGet]
+        public IEnumerable<string> GetAllUsers()
         {
             return new string[] { "value1", "value2" };
         }
 
         // GET: api/Users/5
-        public string Get(int id)
+        [HttpGet]
+        public string GetUser(int id)
         {
+            User user = new User();
+
             return "value";
         }
 
         // POST: api/Users
-        public void Post([FromBody]string value)
+        [HttpPost]
+        public void InsertUser([FromBody]string value)
         {
+
         }
 
         // PUT: api/Users/5
-        public void Put(int id, [FromBody]string value)
+        [HttpPut]
+        public void UpdateUser(int id, [FromBody]string value)
         {
+            
         }
 
         // DELETE: api/Users/5
-        public void Delete(int id)
+        [HttpDelete]
+        public void DeleteUser(int id)
         {
+            
+        }
+
+        [HttpGet]
+        public HttpResponseMessage Login(string username, string password)
+        {
+            var user = db.Users.Where(x => (x.Email == username) && (x.PasswordHash == passwordHash(password)));
+            if(user == null)
+            {
+                return Request.CreateResponse(HttpStatusCode.Unauthorized, "Please enter valid username and password");
+            }
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.Accepted, "Success"); 
+            }
         }
 
         // Method to hash the password
