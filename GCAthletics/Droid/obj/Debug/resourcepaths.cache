@@ -1,13 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
-  <AdditionalAndroidResourcePaths>
-    <AdditionalAndroidResourcePath>/Users/awetstone56/.local/share/Xamarin/Xamarin.Android.Support.CustomTabs/23.3.0.0/embedded</AdditionalAndroidResourcePath>
-    <AdditionalAndroidResourcePath>/Users/awetstone56/.local/share/Xamarin/Xamarin.Android.Support.v4/23.3.0.0/embedded</AdditionalAndroidResourcePath>
-  </AdditionalAndroidResourcePaths>
-  <AdditionalJavaLibraryReferences>
-    <AdditionalJavaLibraryReference>/Users/awetstone56/.local/share/Xamarin/Xamarin.Android.Support.CustomTabs/23.3.0.0/embedded/classes.jar</AdditionalJavaLibraryReference>
-    <AdditionalJavaLibraryReference>/Users/awetstone56/.local/share/Xamarin/Xamarin.Android.Support.v4/23.3.0.0/embedded/classes.jar</AdditionalJavaLibraryReference>
-    <AdditionalJavaLibraryReference>/Users/awetstone56/.local/share/Xamarin/Xamarin.Android.Support.v4/23.3.0.0/embedded/libs/internal_impl-23.3.0.jar</AdditionalJavaLibraryReference>
-  </AdditionalJavaLibraryReferences>
+  <AdditionalAndroidResourcePaths />
+  <AdditionalJavaLibraryReferences />
   <AdditionalNativeLibraryReferences />
 </Paths>

@@ -36,6 +36,7 @@ namespace GCAthletics.Droid
 			global::Xamarin.Auth._MobileServices.Resource.String.title_activity_webview = global::GCAthletics.Droid.Resource.String.title_activity_webview;
 			global::PCLCrypto.Resource.String.ApplicationName = global::GCAthletics.Droid.Resource.String.ApplicationName;
 			global::PCLCrypto.Resource.String.Hello = global::GCAthletics.Droid.Resource.String.Hello;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::GCAthletics.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation

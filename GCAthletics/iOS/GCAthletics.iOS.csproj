@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -96,9 +96,7 @@
       <InProject>false</InProject>
     </ImageAsset>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
@@ -130,7 +128,6 @@
     <Compile Include="WeightController.designer.cs">
       <DependentUpon>WeightController.cs</DependentUpon>
     </Compile>
-    <Compile Include="SqliteService.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\2823292_mktg_logo.png" />

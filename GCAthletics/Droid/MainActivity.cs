@@ -6,6 +6,10 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using System.Net.Http;
+using System.Data.SqlClient;
+using System;
+using System.Text;
+using System.Security.Cryptography;
 
 namespace GCAthletics.Droid
 {
@@ -38,16 +42,69 @@ namespace GCAthletics.Droid
                 var email = emailField.Text;
                 var password = passwordField.Text;
 
-                var uri = string.Format("http://gcathleticsapi.azurewebsites.net/api/Users/Login/{0}/{1}", email, password);
+                try
+                {
+                    SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+                    builder.DataSource = "gcathletics.database.windows.net";
+                    builder.UserID = "gcAdmin";
+                    builder.Password = "ADMINpassword1!";
+                    builder.InitialCatalog = "GCathleticsDB";
 
-                HttpClient client = new HttpClient();
-                var response = await client.GetAsync(uri);
+                    SqlConnection connection = new SqlConnection(builder.ConnectionString);
+                    connection.Open();
+                    StringBuilder query = new StringBuilder();
+                    query.Append("SELECT Email, PasswordHash FROM Users ");
+                    query.Append("WHERE Email = '");
+                    query.Append(email);
+                    query.Append("';");
+                    string sql = query.ToString();
 
-                if (isCorrectLogin) {
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Console.WriteLine(reader.GetString(1));
+                                if (reader.GetString(1).Equals(passwordHash(password), StringComparison.InvariantCultureIgnoreCase))
+                                {
+                                    isCorrectLogin = true;
+                                }
+                            }
+                        }
+                    }
+
+
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+
+                if (isCorrectLogin)
+                {
                     var intent = new Intent(this, typeof(HomeActivity));
                     StartActivity(intent);
                 }
             };
+        }
+
+        // Method to hash the password
+        // returns a 256 bit hash value as a string
+        public static string passwordHash(string value)
+        {
+            StringBuilder Sb = new StringBuilder();
+
+            using (var hash = SHA256.Create())
+            {
+                Encoding enc = Encoding.UTF8;
+                Byte[] result = hash.ComputeHash(enc.GetBytes(value));
+
+                foreach (Byte b in result)
+                    Sb.Append(b.ToString("x2"));
+            }
+
+            return Sb.ToString();
         }
     }
 }
