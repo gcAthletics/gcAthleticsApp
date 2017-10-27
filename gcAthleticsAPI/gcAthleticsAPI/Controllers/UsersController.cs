@@ -5,6 +5,8 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using gcAthleticsAPI.Models;
+using System.Text;
+using System.Security.Cryptography;
 
 namespace gcAthleticsAPI.Controllers
 {
@@ -35,6 +37,24 @@ namespace gcAthleticsAPI.Controllers
         // DELETE: api/Users/5
         public void Delete(int id)
         {
+        }
+
+        // Method to hash the password
+        // returns a 256 bit hash value as a string
+        public static string passwordHash(string value)
+        {
+            StringBuilder Sb = new StringBuilder();
+
+            using (var hash = SHA256.Create())
+            {
+                Encoding enc = Encoding.UTF8;
+                Byte[] result = hash.ComputeHash(enc.GetBytes(value));
+
+                foreach (Byte b in result)
+                    Sb.Append(b.ToString("x2"));
+            }
+
+            return Sb.ToString();
         }
     }
 }
