@@ -1,6 +1,5 @@
 ﻿using System;
 using GCAthletics.Models;
-using SQLite;
 
 namespace GCAthletics
 {

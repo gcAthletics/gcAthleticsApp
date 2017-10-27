@@ -1,15 +1,11 @@
 ﻿using System;
 using GCAthletics.Models;
-using SQLite;
 
 namespace GCAthletics
 {
     public class PasswordModel : BaseItemModel
     {
-        // ID provided by BaseItemModel
-        [Unique]
         public string PasswordHash { get; set; }
-        [Unique]
         public int UserID { get; set; }
         public int IsInitial { get; set; }
 
