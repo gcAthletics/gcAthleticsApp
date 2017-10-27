@@ -25,11 +25,17 @@ namespace gcAthleticsAPI.Controllers
 
         // GET: api/Users/5
         [HttpGet]
-        public string GetUser(int id)
+        public IQueryable<User> GetUser(int id)
         {
-            User user = new User();
-
-            return "value";
+            var user = db.Users.Where(x => x.UserID == id);
+            if(user == null)
+            {
+                return null;
+            }
+            else
+            {
+                return user;
+            }
         }
 
         // POST: api/Users
@@ -54,6 +60,7 @@ namespace gcAthleticsAPI.Controllers
         }
 
         [HttpGet]
+        [ActionName("Login")]
         public HttpResponseMessage Login(string username, string password)
         {
             var user = db.Users.Where(x => (x.Email == username) && (x.PasswordHash == passwordHash(password)));
