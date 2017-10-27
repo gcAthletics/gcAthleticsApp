@@ -10,38 +10,30 @@ namespace gcAthleticsAPI.Controllers
 {
     public class AnnoucementsController : ApiController
     {
-        // create entity object which is the connection to the db
-        gcDBentity db = new gcDBentity();
-
         // GET: api/Annoucements
-        [HttpGet]
-        public IEnumerable<string> GetAllAnnouncements()
+        public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
         // GET: api/Annoucements/5
-        [HttpGet]
-        public string GetAnnouncement(int id)
+        public string Get(int id)
         {
             return "value";
         }
 
         // POST: api/Annoucements
-        [HttpPost]
-        public void InsertAnnouncement([FromBody]string value)
+        public void Post([FromBody]string value)
         {
         }
 
         // PUT: api/Annoucements/5
-        [HttpPut]
-        public void UpdateAnnouncement(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]string value)
         {
         }
 
         // DELETE: api/Annoucements/5
-        [HttpDelete]
-        public void DeleteAnnouncement(int id)
+        public void Delete(int id)
         {
         }
     }
