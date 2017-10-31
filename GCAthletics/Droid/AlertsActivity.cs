@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace GCAthletics.Droid
 {
-    [Activity(Label = "Activity1", MainLauncher = false)]
+    [Activity(Label = "Announcements", MainLauncher = false)]
     public class AlertsActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

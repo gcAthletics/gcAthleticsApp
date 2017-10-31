@@ -9,7 +9,7 @@ using System.Net.Http;
 using System.Data.SqlClient;
 using System;
 using System.Text;
-using System.Security.Cryptography;
+using Android.Accounts;
 
 namespace GCAthletics.Droid
 {
@@ -35,7 +35,7 @@ namespace GCAthletics.Droid
 
             // when login button is clicked, open up HomeScreen.axml (the app home screen)
             // also start activity HomeActivity.cs (activity controlling actions for the app home screen)
-            loginButton.Click += async (sender, e) =>
+            loginButton.Click += (sender, e) =>
             {
                 bool isCorrectLogin = false;
 
@@ -44,37 +44,12 @@ namespace GCAthletics.Droid
 
                 try
                 {
-                    SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                    builder.DataSource = "gcathletics.database.windows.net";
-                    builder.UserID = "gcAdmin";
-                    builder.Password = "ADMINpassword1!";
-                    builder.InitialCatalog = "GCathleticsDB";
+                    DButility dbu = new DButility();
+                    SqlConnection connection = dbu.createConnection();
 
-                    SqlConnection connection = new SqlConnection(builder.ConnectionString);
-                    connection.Open();
-                    StringBuilder query = new StringBuilder();
-                    query.Append("SELECT Email, PasswordHash FROM Users ");
-                    query.Append("WHERE Email = '");
-                    query.Append(email);
-                    query.Append("';");
-                    string sql = query.ToString();
+                    isCorrectLogin = dbu.appLogin(email, password);
 
-                    using (SqlCommand command = new SqlCommand(sql, connection))
-                    {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                Console.WriteLine(reader.GetString(1));
-                                if (reader.GetString(1).Equals(passwordHash(password), StringComparison.InvariantCultureIgnoreCase))
-                                {
-                                    isCorrectLogin = true;
-                                }
-                            }
-                        }
-                    }
-
-
+                    connection.Close();
                 }
                 catch (SqlException ex)
                 {
@@ -86,25 +61,11 @@ namespace GCAthletics.Droid
                     var intent = new Intent(this, typeof(HomeActivity));
                     StartActivity(intent);
                 }
+                else
+                {
+                    Toast.MakeText(this, "Incorrect Email/Password Combination", ToastLength.Long).Show();
+                }
             };
-        }
-
-        // Method to hash the password
-        // returns a 256 bit hash value as a string
-        public static string passwordHash(string value)
-        {
-            StringBuilder Sb = new StringBuilder();
-
-            using (var hash = SHA256.Create())
-            {
-                Encoding enc = Encoding.UTF8;
-                Byte[] result = hash.ComputeHash(enc.GetBytes(value));
-
-                foreach (Byte b in result)
-                    Sb.Append(b.ToString("x2"));
-            }
-
-            return Sb.ToString();
         }
     }
 }

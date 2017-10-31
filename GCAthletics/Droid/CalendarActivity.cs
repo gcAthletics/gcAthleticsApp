@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace GCAthletics.Droid
 {
-    [Activity(Label = "CalendarActivity", MainLauncher = false)]
+    [Activity(Label = "Calendar", MainLauncher = false)]
     public class CalendarActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

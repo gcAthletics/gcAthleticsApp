@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace GCAthletics.Droid
 {
-    [Activity(Label = "HomeActivity", MainLauncher = false)]
+    [Activity(Label = "Home", MainLauncher = false)]
     public class HomeActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
