@@ -62,10 +62,6 @@ namespace gcAthletics.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton WeightsBtn { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel Welcome { get; set; }
 
         [Outlet]
@@ -135,11 +131,6 @@ namespace gcAthletics.iOS
             if (TeamListBtn != null) {
                 TeamListBtn.Dispose ();
                 TeamListBtn = null;
-            }
-
-            if (WeightsBtn != null) {
-                WeightsBtn.Dispose ();
-                WeightsBtn = null;
             }
 
             if (Welcome != null) {
