@@ -21,7 +21,7 @@ using System.Data.SqlClient;
 
 namespace GCAthletics.Droid
 {
-    [Activity(Label = "Alerts", MainLauncher = false)]
+    [Activity(Label = "Announcements", MainLauncher = false)]
     public class AlertsActivity : Activity
     {
         List<TableItem> tableItems = new List<TableItem>();
@@ -29,6 +29,7 @@ namespace GCAthletics.Droid
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            Console.WriteLine("Im here");
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.AlertsScreen);

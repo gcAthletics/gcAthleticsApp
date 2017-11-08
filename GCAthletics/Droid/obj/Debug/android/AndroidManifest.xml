@@ -6,10 +6,10 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="GC Athletics" android:theme="@android:style/Theme.Material.Light" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
-    <activity android:label="Alerts" android:name="md54ce22c079b67bb666f223db9fc3646ab.AlertsActivity" />
-    <activity android:label="Calendar" android:name="md54ce22c079b67bb666f223db9fc3646ab.CalendarActivity" />
-    <activity android:label="Home" android:name="md54ce22c079b67bb666f223db9fc3646ab.HomeActivity" />
-    <activity android:icon="@mipmap/icon" android:label="GC Athletics" android:name="md54ce22c079b67bb666f223db9fc3646ab.MainActivity">
+    <activity android:label="Announcements" android:name="md5bc33391ed6cac737de2349f298a8396f.AlertsActivity" />
+    <activity android:label="Calendar" android:name="md5bc33391ed6cac737de2349f298a8396f.CalendarActivity" />
+    <activity android:label="Home" android:name="md5bc33391ed6cac737de2349f298a8396f.HomeActivity" />
+    <activity android:icon="@mipmap/icon" android:label="GC Athletics" android:name="md5bc33391ed6cac737de2349f298a8396f.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
