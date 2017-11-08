@@ -17,6 +17,7 @@ using Android.Views;
 using Android.Widget;
 using CustomRowView;
 using BuiltInViews;
+using System.Data.SqlClient;
 
 namespace GCAthletics.Droid
 {
@@ -34,8 +35,20 @@ namespace GCAthletics.Droid
 
             listView = FindViewById<ListView>(Resource.Id.alertListView);
 
-            //to add items to listView
-            //tableItems.Add(new TableItem() { Heading = "", SubHeading = "", ImageResourceId = Resouce.MipMap.whatever }); 
+            try
+            {
+                DButility dbu = new DButility();
+                SqlConnection connection = dbu.createConnection();
+
+                List<AnnouncementsModel> sqlList = dbu.getAllAnnouncements().ToList();
+
+                foreach(var announcement in sqlList){
+                    tableItems.Add(new TableItem() { Heading = announcement.Name, SubHeading = announcement.Description });
+                }
+            }
+            catch (SqlException ex){
+                Console.WriteLine(ex.ToString());
+            }
 
             listView.Adapter = new AlertsActivityAdapter(this, tableItems);
 
