@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,12 +11,13 @@ using Android.Views;
 using Android.Widget;
 using Android.Support.Design.Widget;
 using CustomRowView;
+using Android;
 
 namespace BuiltInViews {
-    public class HomeScreenAdapter : BaseAdapter<TableItem> {
+    public class AlertsActivityAdapter : BaseAdapter<TableItem> {
         List<TableItem> items;
         Activity context;
-        public HomeScreenAdapter(Activity context, List<TableItem> items): base()
+        public AlertsActivityAdapter(Activity context, List<TableItem> items): base()
         {
             this.context = context;
             this.items = items;
@@ -39,12 +40,12 @@ namespace BuiltInViews {
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             var item = items[position];
-
             View view = convertView;
-            if (view == null)
-                view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem1, null);
-            view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Heading;
-            
+            if (view == null) // no view to re-use, create new
+                view = context.LayoutInflater.Inflate(GCAthletics.Droid.Resource.Layout.AlertLayout, null);
+            view.FindViewById<TextView>(Resource.Id.Text1).Text = item.Heading;
+            view.FindViewById<TextView>(Resource.Id.Text2).Text = item.SubHeading;
+            //sview.FindViewById<ImageView>(GCAthletics.Droid.Resource.Id.Image).SetImageResource(item.ImageResourceId);
             return view;
         }
     }

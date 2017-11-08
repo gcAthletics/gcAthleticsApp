@@ -16,6 +16,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using CustomRowView;
+using BuiltInViews;
 
 namespace GCAthletics.Droid
 {

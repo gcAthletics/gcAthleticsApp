@@ -193,6 +193,7 @@
     </AndroidResource>
     <None Include="packages.config" />
     <AndroidResource Include="Resources\layout\AlertsScreen.axml" />
+    <AndroidResource Include="Resources\layout\AlertLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
