@@ -8,7 +8,7 @@ namespace GCAthletics
         // ID is provided from BaseItemModel
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Date { get; set; }
+        public DateTime DateTime { get; set; }
         public int EventID { get; set; }
 
         public override string ToString()

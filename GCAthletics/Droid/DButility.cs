@@ -15,6 +15,7 @@ namespace GCAthletics.Droid
         private SqlConnectionStringBuilder sqlConBuilder = new SqlConnectionStringBuilder();
 
         static SqlConnection connection = null;
+        private SqlCommand command = null;
 
         public SqlConnection createConnection() {
             sqlConBuilder.DataSource = "gcathletics.database.windows.net";
@@ -98,6 +99,82 @@ namespace GCAthletics.Droid
             }
 
             return builder.ToString();
+        }
+
+        public void insertAnnouncement(AnnouncementsModel announcement)
+        {
+            StringBuilder queryBuilder = new StringBuilder();
+            queryBuilder.Append("INSERT INTO Announcements (Name, Description, DateTime, EventID" +
+                                "VALUES ('");
+            queryBuilder.Append(announcement.Name + "','");
+            queryBuilder.Append(announcement.Description + "','");
+            queryBuilder.Append(announcement.DateTime.ToString() + "','");
+            queryBuilder.Append(announcement.EventID.ToString() + "');");
+
+            string query = queryBuilder.ToString();
+
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+            else if (connection.State == System.Data.ConnectionState.Open)
+            {
+                using (command = new SqlCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public IEnumerable<AnnouncementsModel> getAllAnnouncements()
+        {
+            StringBuilder queryBuilder = new StringBuilder();
+            queryBuilder.Append("SELECT AnnouncementID, Name, Description, DateTime, EventID" +
+                                "FROM Announcements");
+
+            string query = queryBuilder.ToString();
+            List<AnnouncementsModel> rc = null;
+
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+            else if (connection.State == System.Data.ConnectionState.Open)
+            {
+                using (command = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        AnnouncementsModel announcement = new AnnouncementsModel();
+                        while (reader.HasRows)
+                        {
+                            reader.Read();
+                            announcement.ID = reader.GetInt32(0);
+                            announcement.Name = reader.GetString(1);
+                            announcement.Description = reader.GetString(2);
+                            announcement.DateTime = reader.GetDateTime(3);
+                            announcement.EventID = reader.GetInt32(4);
+                            rc.Add(announcement);
+                        }
+                    }
+                }
+            }
+
+            return rc;
         }
 
     }
