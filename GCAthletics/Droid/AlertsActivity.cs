@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ *  Check this out
+ *  https://developer.xamarin.com/guides/android/user_interface/layouts/list-view/part-3-customizing-list-view-appearance/
+ * 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
