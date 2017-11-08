@@ -22,10 +22,6 @@ namespace gcAthletics.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton AlertButton { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel AthleteName { get; set; }
 
         [Outlet]
@@ -35,6 +31,10 @@ namespace gcAthletics.iOS
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView ContactImg { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        gcAthletics.iOS.TaskDetailViewController HomePage { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -76,16 +76,15 @@ namespace gcAthletics.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void CalendarBtn_TouchUpInside (UIKit.UIButton sender);
 
+        [Action ("TeamListBtn_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void TeamListBtn_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (AlertBtn != null) {
                 AlertBtn.Dispose ();
                 AlertBtn = null;
-            }
-
-            if (AlertButton != null) {
-                AlertButton.Dispose ();
-                AlertButton = null;
             }
 
             if (AthleteName != null) {
@@ -101,6 +100,11 @@ namespace gcAthletics.iOS
             if (ContactImg != null) {
                 ContactImg.Dispose ();
                 ContactImg = null;
+            }
+
+            if (HomePage != null) {
+                HomePage.Dispose ();
+                HomePage = null;
             }
 
             if (Name != null) {

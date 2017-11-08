@@ -11,11 +11,8 @@ using UIKit;
 
 namespace gcAthletics.iOS
 {
-    [Register ("TaskDetailViewController")]
-    partial class TaskDetailViewController
+    [Register ("AnnouncementController")]
+    partial class AnnouncementController
     {
-        void ReleaseDesignerOutlets ()
-        {
-        }
     }
 }
