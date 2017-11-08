@@ -36,8 +36,7 @@ namespace GCAthletics.Droid
             // when login button is clicked, open up HomeScreen.axml (the app home screen)
             // also start activity HomeActivity.cs (activity controlling actions for the app home screen)
             loginButton.Click += (sender, e) =>
-            {
-                bool isCorrectLogin = false;
+            {    
 
                 var email = emailField.Text;
                 var password = passwordField.Text;

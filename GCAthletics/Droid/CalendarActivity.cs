@@ -23,7 +23,7 @@ namespace GCAthletics.Droid
             // Create your application here
         }
 
-        //when back button is pressed, go to log in screen
+        //when back button is pressed, go to home screen
         public override void OnBackPressed()
         {
             var intent = new Intent(this, typeof(HomeActivity));
