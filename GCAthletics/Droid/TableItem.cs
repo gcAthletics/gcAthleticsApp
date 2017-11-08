@@ -14,6 +14,7 @@ namespace CustomRowView {
     public class TableItem {
         public string Heading { get; set; }
         public string SubHeading { get; set; }
+        public string DateHeading { get; set; }
         public int ImageResourceId { get; set; }
     }
 }

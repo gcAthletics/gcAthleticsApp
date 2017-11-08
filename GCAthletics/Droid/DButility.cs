@@ -136,11 +136,10 @@ namespace GCAthletics.Droid
         public IEnumerable<AnnouncementsModel> getAllAnnouncements()
         {
             StringBuilder queryBuilder = new StringBuilder();
-            queryBuilder.Append("SELECT AnnouncementID, Name, Description, DateTime, EventID" +
-                                "FROM Announcements");
+            queryBuilder.Append("SELECT AnnouncementID, Name, Description, DateTime, EventID FROM Announcements");
 
             string query = queryBuilder.ToString();
-            List<AnnouncementsModel> rc = null;
+            List<AnnouncementsModel> rc = new List<AnnouncementsModel>();
 
             if (connection.State == System.Data.ConnectionState.Closed)
             {
@@ -159,10 +158,9 @@ namespace GCAthletics.Droid
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        AnnouncementsModel announcement = new AnnouncementsModel();
-                        while (reader.HasRows)
+                        while (reader.Read())
                         {
-                            reader.Read();
+                            AnnouncementsModel announcement = new AnnouncementsModel();
                             announcement.ID = reader.GetInt32(0);
                             announcement.Name = reader.GetString(1);
                             announcement.Description = reader.GetString(2);

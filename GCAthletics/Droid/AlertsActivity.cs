@@ -18,6 +18,7 @@ using Android.Widget;
 using CustomRowView;
 using BuiltInViews;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace GCAthletics.Droid
 {
@@ -29,7 +30,6 @@ namespace GCAthletics.Droid
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            Console.WriteLine("Im here");
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.AlertsScreen);
@@ -44,7 +44,10 @@ namespace GCAthletics.Droid
                 List<AnnouncementsModel> sqlList = dbu.getAllAnnouncements().ToList();
 
                 foreach(var announcement in sqlList){
-                    tableItems.Add(new TableItem() { Heading = announcement.Name, SubHeading = announcement.Description });
+                    DateTime dt;
+                    if (DateTime.TryParse(announcement.DateTime.ToString(), CultureInfo.CreateSpecificCulture("en-US"), DateTimeStyles.AssumeLocal, out dt))
+                        Console.WriteLine("successfully converted date");
+                    tableItems.Add(new TableItem() { Heading = announcement.Name, SubHeading = announcement.Description, DateHeading = dt.ToString() });
                 }
             }
             catch (SqlException ex){

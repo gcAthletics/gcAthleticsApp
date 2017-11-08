@@ -43,8 +43,12 @@ namespace BuiltInViews {
             View view = convertView;
             if (view == null) // no view to re-use, create new
                 view = context.LayoutInflater.Inflate(GCAthletics.Droid.Resource.Layout.AlertLayout, null);
-            view.FindViewById<TextView>(Resource.Id.Text1).Text = item.Heading;
-            view.FindViewById<TextView>(Resource.Id.Text2).Text = item.SubHeading;
+            var text1 = view.FindViewById<TextView>(GCAthletics.Droid.Resource.Id.headerTxt);
+            text1.Text = item.Heading;
+            var text2 = view.FindViewById<TextView>(GCAthletics.Droid.Resource.Id.bodyTxt);
+            text2.Text = item.SubHeading;
+            var text3 = view.FindViewById<TextView>(GCAthletics.Droid.Resource.Id.dateTxt);
+            text3.Text = item.DateHeading;
             //sview.FindViewById<ImageView>(GCAthletics.Droid.Resource.Id.Image).SetImageResource(item.ImageResourceId);
             return view;
         }
