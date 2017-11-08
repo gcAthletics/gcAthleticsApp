@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool-link/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib">
+      <LogicalName>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Release/ibtool-link/LaunchScreen.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool-link/LaunchScreen.storyboardc/Info.plist">
+      <LogicalName>LaunchScreen.storyboardc/Info.plist</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Release/ibtool-link/LaunchScreen.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool-link/LaunchScreen.storyboardc/UINavigationController-788.nib">
+      <LogicalName>LaunchScreen.storyboardc/UINavigationController-788.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Release/ibtool-link/LaunchScreen.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc/2703-view-2704.nib">
+      <LogicalName>Main.storyboardc/2703-view-2704.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc/4176-view-4177.nib">
+      <LogicalName>Main.storyboardc/4176-view-4177.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc/6770-view-6771.nib">
+      <LogicalName>Main.storyboardc/6770-view-6771.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib">
+      <LogicalName>Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc/Info.plist">
+      <LogicalName>Main.storyboardc/Info.plist</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc/MainViewController.nib">
+      <LogicalName>Main.storyboardc/MainViewController.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc/RosterViewController.nib">
+      <LogicalName>Main.storyboardc/RosterViewController.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc/UINavigationController-1035.nib">
+      <LogicalName>Main.storyboardc/UINavigationController-1035.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc/UITableViewController-2703.nib">
+      <LogicalName>Main.storyboardc/UITableViewController-2703.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc/UITableViewController-4176.nib">
+      <LogicalName>Main.storyboardc/UITableViewController-4176.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Release/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+  </ItemGroup>
+</Project>
