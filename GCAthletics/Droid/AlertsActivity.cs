@@ -12,23 +12,14 @@ using Android.Widget;
 
 namespace GCAthletics.Droid
 {
-    [Activity(Label = "Announcements", MainLauncher = false)]
+    [Activity(Label = "AlertsActivity")]
     public class AlertsActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.AlertScreen);
-
             // Create your application here
-        }
-
-        //when back button is pressed, go to log in screen
-        public override void OnBackPressed()
-        {
-            var intent = new Intent(this, typeof(HomeActivity));
-            StartActivity(intent);
         }
     }
 }

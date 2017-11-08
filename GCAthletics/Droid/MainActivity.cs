@@ -47,24 +47,23 @@ namespace GCAthletics.Droid
                     DButility dbu = new DButility();
                     SqlConnection connection = dbu.createConnection();
 
-                    isCorrectLogin = dbu.appLogin(email, password);
-
-                    connection.Close();
+                    //if login is successful, close db connection and go to home screen
+                    if (dbu.appLogin(email, password))
+                    {
+                        connection.Close();
+                        var intent = new Intent(this, typeof(HomeActivity));
+                        StartActivity(intent);
+                    }
+                    //if login isn't successful, display toast error message
+                    else
+                    {
+                        Toast.MakeText(this, "Incorrect Email/Password Combination", ToastLength.Long).Show();
+                    }
                 }
                 catch (SqlException ex)
                 {
                     Console.WriteLine(ex.ToString());
-                }
-
-                if (isCorrectLogin)
-                {
-                    var intent = new Intent(this, typeof(HomeActivity));
-                    StartActivity(intent);
-                }
-                else
-                {
-                    Toast.MakeText(this, "Incorrect Email/Password Combination", ToastLength.Long).Show();
-                }
+                }               
             };
         }
     }
