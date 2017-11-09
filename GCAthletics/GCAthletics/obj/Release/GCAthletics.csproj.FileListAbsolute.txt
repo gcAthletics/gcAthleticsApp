@@ -1,0 +1,3 @@
+/Users/dbernstein15/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Release/GCAthletics.dll
+/Users/dbernstein15/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/obj/Release/GCAthletics.csproj.CoreCompileInputs.cache
+/Users/dbernstein15/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/obj/Release/GCAthletics.dll

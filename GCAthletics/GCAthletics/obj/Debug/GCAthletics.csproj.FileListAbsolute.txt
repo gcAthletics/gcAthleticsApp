@@ -16,3 +16,12 @@ C:/Users/Max/Documents/Codes/GCathApp/gcAthleticsApp/GCAthletics/GCAthletics/obj
 C:/Users/Max/Documents/Codes/GCathApp/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.csproj.CoreCompileInputs.cache
 C:/Users/Max/Documents/Codes/GCathApp/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.dll
 C:/Users/Max/Documents/Codes/GCathApp/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.pdb
+<<<<<<< HEAD
+=======
+/Users/dbernstein15/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/GCAthletics.dll
+/Users/dbernstein15/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/GCAthletics.pdb
+/Users/dbernstein15/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.csprojResolveAssemblyReference.cache
+/Users/dbernstein15/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.csproj.CoreCompileInputs.cache
+/Users/dbernstein15/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.dll
+/Users/dbernstein15/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.pdb
+>>>>>>> 3c24bfb40a8971438c41f658c50989ff086d98a7

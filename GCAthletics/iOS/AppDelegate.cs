@@ -8,6 +8,10 @@ namespace gcAthletics.iOS
     [Register("AppDelegate")]
     public class AppDelegate : UIApplicationDelegate
     {
+        UIWindow window;
+        public static UIStoryboard Storyboard = UIStoryboard.FromName("Main", null);
+        public static UIViewController initialViewController;
+
         // class-level declarations
 
         public override UIWindow Window
@@ -21,6 +25,12 @@ namespace gcAthletics.iOS
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
 
+            window = new UIWindow(UIScreen.MainScreen.Bounds);
+
+            initialViewController = Storyboard.InstantiateInitialViewController() as UIViewController;
+
+            window.RootViewController = initialViewController;
+            window.MakeKeyAndVisible();
             return true;
         }
 
