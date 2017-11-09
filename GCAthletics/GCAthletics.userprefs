@@ -1,25 +1,24 @@
 ﻿<Properties StartupConfiguration="{DE629BE8-13F9-4220-89BF-40C4BF42C94E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GCAthletics/Models/EventModel.cs">
     <Files>
-      <File FileName="Droid/DButility.cs" Line="135" Column="9" />
-      <File FileName="GCAthletics/Models/AnnouncementsModel.cs" Line="19" Column="2" />
-      <File FileName="Droid/HomeActivity.cs" Line="1" Column="1" />
-      <File FileName="Droid/MainActivity.cs" Line="29" Column="1" />
-      <File FileName="Droid/AlertsActivity.cs" Line="32" Column="39" NotebookId="1" />
+      <File FileName="Droid/DButility.cs" Line="501" Column="91" />
+      <File FileName="GCAthletics/Models/UserModel.cs" Line="18" Column="172" />
+      <File FileName="GCAthletics/Models/AnnouncementsModel.cs" Line="13" Column="39" />
+      <File FileName="GCAthletics/Models/EventModel.cs" Line="14" Column="10" />
+      <File FileName="GCAthletics/Models/TeamModel.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/Droid/DButility.cs" relfile="Droid/DButility.cs" line="141" column="1" />
-      <Breakpoint file="/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/Droid/AlertsActivity.cs" relfile="Droid/AlertsActivity.cs" line="44" column="1" />
-      <Breakpoint file="/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/Droid/AlertsActivity.cs" relfile="Droid/AlertsActivity.cs" line="31" column="1" />
-      <Breakpoint file="/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/Droid/HomeActivity.cs" relfile="Droid/HomeActivity.cs" line="45" column="1" />
-      <Breakpoint file="/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/Droid/HomeActivity.cs" relfile="Droid/HomeActivity.cs" line="29" column="1" />
-      <Breakpoint file="/Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/Droid/MainActivity.cs" relfile="Droid/MainActivity.cs" line="29" column="1" />
+      <Breakpoint file="/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/Droid/AlertsActivity.cs" relfile="Droid/AlertsActivity.cs" line="44" column="1" />
+      <Breakpoint file="/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/Droid/AlertsActivity.cs" relfile="Droid/AlertsActivity.cs" line="31" column="1" />
+      <Breakpoint file="/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/Droid/HomeActivity.cs" relfile="Droid/HomeActivity.cs" line="45" column="1" />
+      <Breakpoint file="/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/Droid/HomeActivity.cs" relfile="Droid/HomeActivity.cs" line="29" column="1" />
+      <Breakpoint file="/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/Droid/MainActivity.cs" relfile="Droid/MainActivity.cs" line="29" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.GCAthletics.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus_6_API_26" AndroidDesignerPreferredTheme="Theme.Material.Light" />
+  <MonoDevelop.Ide.ItemProperties.GCAthletics.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" AndroidDesignerPreferredTheme="Theme.Material.Light" />
   <MultiItemStartupConfigurations />
 </Properties>

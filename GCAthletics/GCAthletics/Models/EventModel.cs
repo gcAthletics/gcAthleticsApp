@@ -7,14 +7,15 @@ namespace GCAthletics
     {
         // ID provided by BaseItemModel
         public int UserID { get; set; }
-        public string Date { get; set; }
+        public DateTime DateTime { get; set; }
         public string Description { get; set; }
-        public int SendsAlerts { get; set; }
+        public bool SendAlert { get; set; }
         public string Name { get; set; }
+        public int TeamID { get; set; }
 
         public override string ToString()
         {
-            return string.Format("[Event: EventID={0}, UserID={1}, Date={2}, Description={3}, SendsAlerts={4}, Name={5}]", ID, UserID, Date, Description, SendsAlerts, Name);
+            return string.Format("[Event: EventID={0}, UserID={1}, DateTime={2}, Description={3}, SendsAlerts={4}, Name={5}]", ID, UserID, DateTime, Description, SendAlert, Name);
         }
     }
 }

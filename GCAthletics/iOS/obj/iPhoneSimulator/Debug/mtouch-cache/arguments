@@ -1,6 +1,6 @@
-# Version: 11.2.0.11 (d15-4-xi: 2f8bbec0)
+# Version: 11.2.0.0 (d15-4-xi: 12e80e01)
 # [first argument, ignore] # --cache
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.2.0.11/lib/mtouch/mtouch.exe \
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.2.1.0/lib/mtouch/mtouch.exe \
 	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
 	--sim \
 	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/iOS/bin/iPhoneSimulator/Debug/gcAthletics.iOS.app \
@@ -25,29 +25,11 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/sqlite-net-pcl.1.4.118/lib/netstandard1.1/SQLite-net.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/SQLitePCLRaw.bundle_green.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/SQLitePCLRaw.bundle_green.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/SQLitePCLRaw.core.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.core.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll \
-	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
 	-r \
@@ -326,92 +308,6 @@
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
 	-r \
 	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/GCAthletics.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/sqlite-net-pcl.1.4.118/lib/netstandard1.1/SQLite-net.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/SQLitePCLRaw.bundle_green.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/SQLitePCLRaw.bundle_green.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/SQLitePCLRaw.core.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.core.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/ca/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/cs/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/da/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/de/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/el/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/es/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/fi/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/fr/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/he/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/hi/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/hr/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/hu/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/id/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/it/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/ja/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/ko/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/ms/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/nb/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/nl/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/ro/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/ru/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/sk/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/sv/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/th/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/tr/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/uk/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/vi/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll \
-	-r \
-	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/packages/Xamarin.Forms.2.4.0.18342/lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll \
 	--target-framework \
 	'Xamarin.iOS,v1.0' \
 	/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/iOS/bin/iPhoneSimulator/Debug/gcAthletics.iOS.exe \

@@ -10,6 +10,7 @@ namespace GCAthletics
         public string Description { get; set; }
         public DateTime DateTime { get; set; }
         public int EventID { get; set; }
+        public int TeamID { get; set; }
 
         public override string ToString()
         {

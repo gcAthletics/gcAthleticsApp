@@ -11,10 +11,11 @@ namespace GCAthletics
         public string Role { get; set; }
         public string Name { get; set; }
         public int TeamID { get; set; }
+        public bool IsInitial { get; set; }
 
         public override string ToString()
         {
-            return string.Format("[User: UserID={0}, Phone={1}, Email={2}, Role={3}, Name={4}, TeamID={5}]", ID, Phone, Email, Role, Name, TeamID);
+            return string.Format("[User: UserID={0}, Phone={1}, Email={2}, Role={3}, Name={4}, TeamID={5}, IsInitial={6}]", ID, Phone, Email, Role, Name, TeamID, IsInitial);
         }
     }
 }

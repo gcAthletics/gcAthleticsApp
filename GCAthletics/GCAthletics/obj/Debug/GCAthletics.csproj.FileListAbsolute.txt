@@ -2,22 +2,6 @@
 /Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.csproj.CoreCompileInputs.cache
 /Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/GCAthletics.dll
 /Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/GCAthletics.pdb
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/SQLite-net.dll
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/SQLitePCLRaw.batteries_green.dll
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/SQLitePCLRaw.batteries_v2.dll
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/SQLitePCLRaw.core.dll
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/Xamarin.Forms.Core.dll
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/Xamarin.Forms.Platform.dll
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/Xamarin.Forms.Xaml.dll
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/SQLite-net.pdb
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/SQLite-net.xml
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/Xamarin.Forms.Core.pdb
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/Xamarin.Forms.Core.dll.mdb
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/Xamarin.Forms.Core.xml
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/Xamarin.Forms.Platform.pdb
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/Xamarin.Forms.Xaml.pdb
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/Xamarin.Forms.Xaml.dll.mdb
-/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/Xamarin.Forms.Xaml.xml
 /Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.dll
 /Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.pdb
 /Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.csprojResolveAssemblyReference.cache
@@ -26,9 +10,9 @@
 /Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.pdb
 /Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/GCAthletics.dll
 /Users/Max/Documents/School/Fall 2017/Software Engineering/App/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/GCAthletics.pdb
-C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\GCAthletics\bin\Debug\GCAthletics.dll
-C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\GCAthletics\bin\Debug\GCAthletics.pdb
-C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\GCAthletics\obj\Debug\GCAthletics.csprojResolveAssemblyReference.cache
-C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\GCAthletics\obj\Debug\GCAthletics.csproj.CoreCompileInputs.cache
-C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\GCAthletics\obj\Debug\GCAthletics.dll
-C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\GCAthletics\obj\Debug\GCAthletics.pdb
+C:/Users/Max/Documents/Codes/GCathApp/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/GCAthletics.dll
+C:/Users/Max/Documents/Codes/GCathApp/gcAthleticsApp/GCAthletics/GCAthletics/bin/Debug/GCAthletics.pdb
+C:/Users/Max/Documents/Codes/GCathApp/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.csprojResolveAssemblyReference.cache
+C:/Users/Max/Documents/Codes/GCathApp/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.csproj.CoreCompileInputs.cache
+C:/Users/Max/Documents/Codes/GCathApp/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.dll
+C:/Users/Max/Documents/Codes/GCathApp/gcAthleticsApp/GCAthletics/GCAthletics/obj/Debug/GCAthletics.pdb
