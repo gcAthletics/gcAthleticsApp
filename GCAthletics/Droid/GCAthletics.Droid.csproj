@@ -172,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlertsActivity.cs" />
+    <Compile Include="AlertsActivityAdapter.cs" />
     <Compile Include="Android_SQL.cs" />
     <Compile Include="CalendarActivity.cs" />
     <Compile Include="DButility.cs" />
@@ -179,7 +180,8 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AlertsActivityAdapter.cs" />
+    <Compile Include="RosterActivity.cs" />
+    <Compile Include="RosterActivityAdapter.cs" />
     <Compile Include="TableItem.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +195,12 @@
     <None Include="packages.config" />
     <AndroidResource Include="Resources\layout\AlertsScreen.axml" />
     <AndroidResource Include="Resources\layout\AlertLayout.axml" />
+    <AndroidResource Include="Resources\layout\RosterScreen.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\RosterLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">

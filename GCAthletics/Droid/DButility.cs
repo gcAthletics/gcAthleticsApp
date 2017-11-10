@@ -137,7 +137,8 @@ namespace GCAthletics.Droid
         public IEnumerable<AnnouncementsModel> getAllAnnouncements()
         {
             StringBuilder queryBuilder = new StringBuilder();
-            queryBuilder.Append("SELECT AnnouncementID, Name, Description, DateTime, EventID FROM Announcements");
+            queryBuilder.Append("SELECT AnnouncementID, Name, Description, DateTime, EventID FROM Announcements ");
+            queryBuilder.Append("ORDER BY DateTime DESC");
 
             string query = queryBuilder.ToString();
             List<AnnouncementsModel> rc = new List<AnnouncementsModel>();
@@ -215,7 +216,7 @@ namespace GCAthletics.Droid
             queryBuilder.Append("WHERE TeamID = " + id.ToString() + ";");
 
             string query = queryBuilder.ToString();
-            TeamModel rc = null;
+            TeamModel rc = new TeamModel();
 
             if (connection.State == System.Data.ConnectionState.Closed)
             {
@@ -287,12 +288,12 @@ namespace GCAthletics.Droid
         public IEnumerable<UserModel> getAllUsersByTeamID(int id)
         {
             StringBuilder queryBuilder = new StringBuilder();
-            queryBuilder.Append("SELECT UserID, Phone, Email, Role, Name, TeamID FROM Users ");
-            queryBuilder.Append("WHERE TeamID = " + id.ToString() + ";");
+            queryBuilder.Append("SELECT UserId, Phone, Email, Role, Name, TeamID, IsInitial FROM Users ");
+            queryBuilder.Append("WHERE TeamID = " + id + ";");
 
             string query = queryBuilder.ToString();
-            List<UserModel> rc = null;
-            UserModel user = null;
+            List<UserModel> rc = new List<UserModel>();
+            UserModel user = new UserModel();
 
             if (connection.State == System.Data.ConnectionState.Closed)
             {
@@ -309,18 +310,69 @@ namespace GCAthletics.Droid
             {
                 using (command = new SqlCommand(query, connection))
                 {
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    Object result = command.ExecuteScalar();
+
+                    if (result != null)
                     {
-                        while (reader.Read())
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            user = new UserModel();
-                            user.ID = reader.GetInt32(0);
-                            user.Phone = reader.GetString(1);
-                            user.Email = reader.GetString(2);
-                            user.Role = reader.GetString(3);
-                            user.Name = reader.GetString(4);
-                            user.TeamID = reader.GetInt32(5);
-                            rc.Add(user);
+                            while (reader.Read())
+                            {
+                                user = new UserModel();
+                                user.ID = reader.GetInt32(0);
+                                user.Phone = reader.GetInt32(1);
+                                user.Email = reader.GetString(2);
+                                user.Role = reader.GetString(3);
+                                user.Name = reader.GetString(4);
+                                user.TeamID = reader.GetInt32(5);
+                                rc.Add(user);
+                            }
+                        }
+                    }
+                }
+            }
+
+            return rc;
+        }
+
+        public UserModel getUserByEmail(string email)
+        {
+            StringBuilder queryBuilder = new StringBuilder();
+            queryBuilder.Append("SELECT UserId, Phone, Email, Role, Name, TeamID, IsInitial FROM Users ");
+            queryBuilder.Append("WHERE Email = '" + email + "';");
+
+            string query = queryBuilder.ToString();
+            UserModel rc = new UserModel();
+
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+            else if (connection.State == System.Data.ConnectionState.Open)
+            {
+                using(command = new SqlCommand(query, connection))
+                {
+                    Object result = command.ExecuteScalar();
+
+                    if(result != null)
+                    {
+                        using(SqlDataReader reader = command.ExecuteReader())
+                        {
+                            reader.Read();
+                            rc.ID = reader.GetInt32(0);
+                            rc.Phone = reader.GetInt32(1);
+                            rc.Email = reader.GetString(2);
+                            rc.Role = reader.GetString(3);
+                            rc.Name = reader.GetString(4);
+                            rc.TeamID = reader.GetInt32(5);
+                            rc.IsInitial = reader.GetBoolean(6);
                         }
                     }
                 }
@@ -333,7 +385,7 @@ namespace GCAthletics.Droid
         {
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("SELECT UserID, Phone, Email, Role, Name, TeamID, IsInitial FROM Users ");
-            queryBuilder.Append("WHERE UserID = " + id.ToString() + ";");
+            queryBuilder.Append("WHERE UserID = " + id + ";");
 
             string query = queryBuilder.ToString();
             UserModel rc = null;
@@ -361,7 +413,7 @@ namespace GCAthletics.Droid
                         {
                             reader.Read();
                             rc.ID = reader.GetInt32(0);
-                            rc.Phone = reader.GetString(1);
+                            rc.Phone = reader.GetInt32(1);
                             rc.Email = reader.GetString(2);
                             rc.Role = reader.GetString(3);
                             rc.Name = reader.GetString(4);

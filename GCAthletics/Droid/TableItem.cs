@@ -15,6 +15,7 @@ namespace CustomRowView {
         public string Heading { get; set; }
         public string SubHeading { get; set; }
         public string DateHeading { get; set; }
+        public int phoneNumber { get; set; }
         public int ImageResourceId { get; set; }
     }
 }

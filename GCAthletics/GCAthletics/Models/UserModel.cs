@@ -6,7 +6,7 @@ namespace GCAthletics
     public class UserModel : BaseItemModel
     {
         // ID provided by BaseItemModel
-        public string Phone { get; set; }
+        public int Phone { get; set; }
         public string Email { get; set; }
         public string Role { get; set; }
         public string Name { get; set; }

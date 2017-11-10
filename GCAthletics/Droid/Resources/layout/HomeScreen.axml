@@ -42,20 +42,11 @@
         android:id="@+id/textTeam"
         android:layout_centerHorizontal="true"
         android:textSize="15dp" />
-    <TextView
-        android:text="@string/position"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textTeam"
-        android:id="@+id/textPosition"
-        android:layout_centerHorizontal="true"
-        android:textSize="15dp" />
     <RelativeLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textPosition"
+        android:layout_below="@id/textTeam"
         android:layout_centerHorizontal="true"
         android:paddingTop="15dp">
         <ImageButton

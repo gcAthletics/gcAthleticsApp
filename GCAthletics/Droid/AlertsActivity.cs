@@ -28,9 +28,13 @@ namespace GCAthletics.Droid
         List<TableItem> tableItems = new List<TableItem>();
         ListView listView;
 
+        string email = null;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            email = Intent.Extras.GetString("email");
 
             SetContentView(Resource.Layout.AlertsScreen);
 
@@ -72,6 +76,7 @@ namespace GCAthletics.Droid
         public override void OnBackPressed()
         {
             var intent = new Intent(this, typeof(HomeActivity));
+            intent.PutExtra("email", email);
             StartActivity(intent);
         }
     }

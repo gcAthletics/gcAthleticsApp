@@ -6,15 +6,16 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="GC Athletics" android:theme="@android:style/Theme.Material.Light" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
-    <activity android:label="Announcements" android:name="md50254b974def521a33cd8800136e72d56.AlertsActivity" />
-    <activity android:label="Calendar" android:name="md50254b974def521a33cd8800136e72d56.CalendarActivity" />
-    <activity android:label="Home" android:name="md50254b974def521a33cd8800136e72d56.HomeActivity" />
-    <activity android:icon="@mipmap/icon" android:label="GC Athletics" android:name="md50254b974def521a33cd8800136e72d56.MainActivity">
+    <activity android:label="Announcements" android:name="md581ff7d0e9c1f1fd2045503165d744443.AlertsActivity" />
+    <activity android:label="Calendar" android:name="md581ff7d0e9c1f1fd2045503165d744443.CalendarActivity" />
+    <activity android:label="Home" android:name="md581ff7d0e9c1f1fd2045503165d744443.HomeActivity" />
+    <activity android:icon="@mipmap/icon" android:label="GC Athletics" android:name="md581ff7d0e9c1f1fd2045503165d744443.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:label="Roster" android:name="md581ff7d0e9c1f1fd2045503165d744443.RosterActivity" />
     <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.FormAuthenticatorActivity" />
     <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorActivity" />
     <activity android:label="Web Authenticator Native Broswer" android:launchMode="singleTop" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorNativeBrowserActivity" />

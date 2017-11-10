@@ -49,8 +49,11 @@ namespace GCAthletics.Droid
                     //if login is successful, close db connection and go to home screen
                     if (dbu.appLogin(email, password))
                     {
+                        UserModel usrModel = dbu.getUserByEmail(email);
                         connection.Close();
                         var intent = new Intent(this, typeof(HomeActivity));
+                        intent.PutExtra("email", email);
+                        intent.PutExtra("TeamID", usrModel.TeamID);
                         StartActivity(intent);
                     }
                     //if login isn't successful, display toast error message
