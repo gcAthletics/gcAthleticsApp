@@ -51,7 +51,15 @@ namespace GCAthletics.Droid
                     {
                         UserModel usrModel = dbu.getUserByEmail(email);
                         connection.Close();
-                        var intent = new Intent(this, typeof(HomeActivity));
+                        var intent = new Intent();
+                        if (usrModel.IsInitial)
+                        {
+                            intent = new Intent(this, typeof(PasswordActivity));
+                        }
+                        else
+                        {
+                            intent = new Intent(this, typeof(HomeActivity));
+                        }
                         intent.PutExtra("email", email);
                         intent.PutExtra("teamID", usrModel.TeamID);
                         StartActivity(intent);

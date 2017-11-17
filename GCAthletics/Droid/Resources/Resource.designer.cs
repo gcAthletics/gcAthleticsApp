@@ -3149,8 +3149,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09002b
 			public const int add = 2131296299;
 			
-			// aapt resource value: 0x7f0900e8
-			public const int addPlayerBtn = 2131296488;
+			// aapt resource value: 0x7f0900ec
+			public const int addPlayerBtn = 2131296492;
 			
 			// aapt resource value: 0x7f090096
 			public const int alertListView = 2131296406;
@@ -3212,6 +3212,9 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090046
 			public const int center_vertical = 2131296326;
 			
+			// aapt resource value: 0x7f0900e3
+			public const int changePwdText = 2131296483;
+			
 			// aapt resource value: 0x7f090072
 			public const int checkbox = 2131296370;
 			
@@ -3226,6 +3229,9 @@ namespace GCAthletics.Droid
 			
 			// aapt resource value: 0x7f090038
 			public const int collapseActionView = 2131296312;
+			
+			// aapt resource value: 0x7f0900e4
+			public const int confirmPwdText = 2131296484;
 			
 			// aapt resource value: 0x7f09009e
 			public const int container = 2131296414;
@@ -3275,8 +3281,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f0900b3
 			public const int emailField = 2131296435;
 			
-			// aapt resource value: 0x7f0900e6
-			public const int emailTxt = 2131296486;
+			// aapt resource value: 0x7f0900ea
+			public const int emailTxt = 2131296490;
 			
 			// aapt resource value: 0x7f09002f
 			public const int end = 2131296303;
@@ -3365,20 +3371,23 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09001c
 			public const int listMode = 2131296284;
 			
+			// aapt resource value: 0x7f0900e6
+			public const int listView1 = 2131296486;
+			
 			// aapt resource value: 0x7f090060
 			public const int list_item = 2131296352;
 			
 			// aapt resource value: 0x7f0900b5
 			public const int loginButton = 2131296437;
 			
-			// aapt resource value: 0x7f0900ec
-			public const int masked = 2131296492;
+			// aapt resource value: 0x7f0900f0
+			public const int masked = 2131296496;
 			
 			// aapt resource value: 0x7f0900d6
 			public const int media_actions = 2131296470;
 			
-			// aapt resource value: 0x7f0900ea
-			public const int message = 2131296490;
+			// aapt resource value: 0x7f0900ee
+			public const int message = 2131296494;
 			
 			// aapt resource value: 0x7f090030
 			public const int middle = 2131296304;
@@ -3464,8 +3473,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090026
 			public const int multiply = 2131296294;
 			
-			// aapt resource value: 0x7f0900e5
-			public const int nameTxt = 2131296485;
+			// aapt resource value: 0x7f0900e9
+			public const int nameTxt = 2131296489;
 			
 			// aapt resource value: 0x7f0900a4
 			public const int navigation_header_container = 2131296420;
@@ -3500,8 +3509,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f0900b4
 			public const int passwordField = 2131296436;
 			
-			// aapt resource value: 0x7f0900e7
-			public const int phoneTxt = 2131296487;
+			// aapt resource value: 0x7f0900eb
+			public const int phoneTxt = 2131296491;
 			
 			// aapt resource value: 0x7f09004c
 			public const int pin = 2131296332;
@@ -3518,8 +3527,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090091
 			public const int relativeLayout1 = 2131296401;
 			
-			// aapt resource value: 0x7f0900e3
-			public const int relativeLayout2 = 2131296483;
+			// aapt resource value: 0x7f0900e7
+			public const int relativeLayout2 = 2131296487;
 			
 			// aapt resource value: 0x7f090049
 			public const int right = 2131296329;
@@ -3533,11 +3542,11 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f0900b1
 			public const int rosterImgBtn = 2131296433;
 			
-			// aapt resource value: 0x7f0900e9
-			public const int rosterListView = 2131296489;
+			// aapt resource value: 0x7f0900ed
+			public const int rosterListView = 2131296493;
 			
-			// aapt resource value: 0x7f0900e4
-			public const int rosterRelLayout = 2131296484;
+			// aapt resource value: 0x7f0900e8
+			public const int rosterRelLayout = 2131296488;
 			
 			// aapt resource value: 0x7f09000c
 			public const int save_image_matrix = 2131296268;
@@ -3740,14 +3749,17 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090009
 			public const int up = 2131296265;
 			
+			// aapt resource value: 0x7f0900e5
+			public const int updatePwdBtn = 2131296485;
+			
 			// aapt resource value: 0x7f090025
 			public const int useLogo = 2131296293;
 			
 			// aapt resource value: 0x7f090016
 			public const int view_offset_helper = 2131296278;
 			
-			// aapt resource value: 0x7f0900eb
-			public const int visible = 2131296491;
+			// aapt resource value: 0x7f0900ef
+			public const int visible = 2131296495;
 			
 			// aapt resource value: 0x7f0900c8
 			public const int volume_item_container = 2131296456;
@@ -4056,25 +4068,28 @@ namespace GCAthletics.Droid
 			public const int notification_template_part_time = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int RosterLayout = 2130968645;
+			public const int PasswordLayout = 2130968645;
 			
 			// aapt resource value: 0x7f040046
-			public const int RosterScreen = 2130968646;
+			public const int RosterLayout = 2130968646;
 			
 			// aapt resource value: 0x7f040047
-			public const int select_dialog_item_material = 2130968647;
+			public const int RosterScreen = 2130968647;
 			
 			// aapt resource value: 0x7f040048
-			public const int select_dialog_multichoice_material = 2130968648;
+			public const int select_dialog_item_material = 2130968648;
 			
 			// aapt resource value: 0x7f040049
-			public const int select_dialog_singlechoice_material = 2130968649;
+			public const int select_dialog_multichoice_material = 2130968649;
 			
 			// aapt resource value: 0x7f04004a
-			public const int support_simple_spinner_dropdown_item = 2130968650;
+			public const int select_dialog_singlechoice_material = 2130968650;
 			
 			// aapt resource value: 0x7f04004b
-			public const int tooltip = 2130968651;
+			public const int support_simple_spinner_dropdown_item = 2130968651;
+			
+			// aapt resource value: 0x7f04004c
+			public const int tooltip = 2130968652;
 			
 			static Layout()
 			{

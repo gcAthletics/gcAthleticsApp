@@ -469,6 +469,39 @@ namespace GCAthletics.Droid
             }
         }
 
+        public void changePassword(string pwd, string email)
+        {
+            String hashPassword = passwordHash(pwd);
+
+            StringBuilder queryBuilder = new StringBuilder();
+            queryBuilder.Append("UPDATE Users ");
+            queryBuilder.Append("SET PasswordHash = '");
+            queryBuilder.Append(hashPassword + "' ");
+            queryBuilder.Append("WHERE Email = '");
+            queryBuilder.Append(email + "'");
+
+            string query = queryBuilder.ToString();
+
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+            else if (connection.State == System.Data.ConnectionState.Open)
+            {
+                using (command = new SqlCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
         // waiting on DB change to include TeamId
         public IEnumerable<AnnouncementsModel> getAnnouncementsByTeamId(int teamId)
         {

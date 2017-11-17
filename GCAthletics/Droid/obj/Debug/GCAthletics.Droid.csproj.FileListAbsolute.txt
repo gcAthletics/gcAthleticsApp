@@ -274,3 +274,4 @@ C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug
 C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\Droid\obj\Debug\res\layout\passwordlayout.xml
