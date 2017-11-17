@@ -171,6 +171,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAlertActivity.cs" />
     <Compile Include="AddPlayerActivity.cs" />
     <Compile Include="AlertsActivity.cs" />
     <Compile Include="AlertsActivityAdapter.cs" />
@@ -207,6 +208,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\PasswordLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AddAlertLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -105,12 +105,13 @@ namespace GCAthletics.Droid
         public void insertAnnouncement(AnnouncementsModel announcement)
         {
             StringBuilder queryBuilder = new StringBuilder();
-            queryBuilder.Append("INSERT INTO Announcements (Name, Description, DateTime, EventID" +
+            queryBuilder.Append("INSERT INTO Announcements (Name, Description, DateTime, EventID, TeamID)" +
                                 "VALUES ('");
             queryBuilder.Append(announcement.Name + "','");
             queryBuilder.Append(announcement.Description + "','");
-            queryBuilder.Append(announcement.DateTime.ToString() + "','");
-            queryBuilder.Append(announcement.EventID.ToString() + "');");
+            queryBuilder.Append(announcement.DateTime.ToString() + "', ");
+            queryBuilder.Append(announcement.EventID + ", ");
+            queryBuilder.Append(announcement.TeamID + ");");
 
             string query = queryBuilder.ToString();
 

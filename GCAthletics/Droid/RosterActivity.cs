@@ -28,18 +28,26 @@ namespace GCAthletics.Droid
             base.OnCreate(savedInstanceState);
 
             email = Intent.Extras.GetString("email");
-            int teamID = Intent.Extras.GetInt("TeamID");
+            teamID = Intent.Extras.GetInt("TeamID");
 
             SetContentView(Resource.Layout.RosterScreen);
 
             listView = FindViewById<ListView>(Resource.Id.rosterListView);
 
             Button addPlayerBtn = FindViewById<Button>(Resource.Id.addPlayerBtn);
+            addPlayerBtn.Visibility = ViewStates.Gone;
 
             try
             {
                 DButility dbu = new DButility();
                 SqlConnection connection = dbu.createConnection();
+
+                UserModel usrModel = dbu.getUserByEmail(email);
+
+                if(usrModel.Role.Equals("coach", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    addPlayerBtn.Visibility = ViewStates.Visible;
+                }
 
                 List<UserModel> sqlList = dbu.getAllUsersByTeamID(teamID).ToList();
 
@@ -69,6 +77,7 @@ namespace GCAthletics.Droid
         {
             var intent = new Intent(this, typeof(HomeActivity));
             intent.PutExtra("email", email);
+            intent.PutExtra("teamID", teamID);
             StartActivity(intent);
         }
     }

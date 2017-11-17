@@ -40,12 +40,22 @@ namespace GCAthletics.Droid
 
             SetContentView(Resource.Layout.AlertsScreen);
 
+            Button newAlertBtn = FindViewById<Button>(Resource.Id.newAlertBtn);
+            newAlertBtn.Visibility = ViewStates.Gone;
+
             listView = FindViewById<ListView>(Resource.Id.alertListView);
 
             try
             {
                 DButility dbu = new DButility();
                 SqlConnection connection = dbu.createConnection();
+
+                UserModel usrModel = dbu.getUserByEmail(email);
+
+                if(usrModel.Role.Equals("coach", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    newAlertBtn.Visibility = ViewStates.Visible;
+                }
 
                 List<AnnouncementsModel> sqlList = dbu.getAllAnnouncements().ToList();
 
@@ -63,6 +73,14 @@ namespace GCAthletics.Droid
             listView.Adapter = new AlertsActivityAdapter(this, tableItems);
 
             listView.ItemClick += OnListItemClick;
+
+            newAlertBtn.Click += (sender, e) =>
+            {
+                var intent = new Intent(this, typeof(AddAlertActivity));
+                intent.PutExtra("email", email);
+                intent.PutExtra("teamID", teamID);
+                StartActivity(intent);
+            };
 
         }
 
