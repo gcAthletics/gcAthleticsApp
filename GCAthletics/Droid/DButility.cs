@@ -476,7 +476,8 @@ namespace GCAthletics.Droid
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("UPDATE Users ");
             queryBuilder.Append("SET PasswordHash = '");
-            queryBuilder.Append(hashPassword + "' ");
+            queryBuilder.Append(hashPassword + "', ");
+            queryBuilder.Append("IsInitial = 0 ");
             queryBuilder.Append("WHERE Email = '");
             queryBuilder.Append(email + "'");
 
