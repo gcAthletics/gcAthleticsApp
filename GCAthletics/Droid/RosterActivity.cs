@@ -21,6 +21,7 @@ namespace GCAthletics.Droid
         ListView listView;
 
         string email = null;
+        int teamID = -1;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -32,6 +33,8 @@ namespace GCAthletics.Droid
             SetContentView(Resource.Layout.RosterScreen);
 
             listView = FindViewById<ListView>(Resource.Id.rosterListView);
+
+            Button addPlayerBtn = FindViewById<Button>(Resource.Id.addPlayerBtn);
 
             try
             {
@@ -51,6 +54,14 @@ namespace GCAthletics.Droid
             }
 
             listView.Adapter = new RosterActivityAdapter(this, tableItems);
+
+            addPlayerBtn.Click += (sender, e) =>
+            {
+                var intent = new Intent(this, typeof(AddPlayerActivity));
+                intent.PutExtra("email", email);
+                intent.PutExtra("teamID", teamID);
+                StartActivity(intent);
+            };
             
         }
 

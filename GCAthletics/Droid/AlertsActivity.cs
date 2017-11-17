@@ -29,12 +29,14 @@ namespace GCAthletics.Droid
         ListView listView;
 
         string email = null;
+        int teamID = -1;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             email = Intent.Extras.GetString("email");
+            teamID = Intent.Extras.GetInt("teamID");
 
             SetContentView(Resource.Layout.AlertsScreen);
 
@@ -77,6 +79,7 @@ namespace GCAthletics.Droid
         {
             var intent = new Intent(this, typeof(HomeActivity));
             intent.PutExtra("email", email);
+            intent.PutExtra("teamID", teamID);
             StartActivity(intent);
         }
     }

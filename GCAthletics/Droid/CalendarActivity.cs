@@ -15,9 +15,15 @@ namespace GCAthletics.Droid
     [Activity(Label = "Calendar", MainLauncher = false)]
     public class CalendarActivity : Activity
     {
+        string email = null;
+        int teamID = -1;        
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            email = Intent.Extras.GetString("email");
+            teamID = Intent.Extras.GetInt("teamID");
 
             SetContentView(Resource.Layout.CalendarScreen);
             // Create your application here
@@ -27,6 +33,8 @@ namespace GCAthletics.Droid
         public override void OnBackPressed()
         {
             var intent = new Intent(this, typeof(HomeActivity));
+            Intent.PutExtra("email", email);
+            Intent.PutExtra("teamID", teamID);
             StartActivity(intent);
         }
     }

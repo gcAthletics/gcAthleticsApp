@@ -21,7 +21,7 @@ namespace GCAthletics.Droid
             base.OnCreate(savedInstanceState);
 
             var email = Intent.Extras.GetString("email");
-            int teamID = -1;
+            int teamID = Intent.Extras.GetInt("teamID");
 
             SetContentView(Resource.Layout.HomeScreen);
             // Create your application here
@@ -47,8 +47,6 @@ namespace GCAthletics.Droid
 
                 nameTxt.Text = usrModel.Name;
                 teamTxt.Text = teamModel.Name;
-
-                teamID = usrModel.TeamID;
             }
             catch (SqlException ex)
             {
@@ -62,6 +60,7 @@ namespace GCAthletics.Droid
             {
                 var intent = new Intent(this, typeof(CalendarActivity));
                 intent.PutExtra("email", email);
+                intent.PutExtra("teamID", teamID);
                 StartActivity(intent);
             };
 
@@ -71,6 +70,7 @@ namespace GCAthletics.Droid
             {
                 var intent = new Intent(this, typeof(AlertsActivity));
                 intent.PutExtra("email", email);
+                intent.PutExtra("teamID", teamID);
                 StartActivity(intent);
             };
 

@@ -320,7 +320,7 @@ namespace GCAthletics.Droid
                             {
                                 user = new UserModel();
                                 user.ID = reader.GetInt32(0);
-                                user.Phone = reader.GetInt32(1);
+                                user.Phone = reader.GetString(1);
                                 user.Email = reader.GetString(2);
                                 user.Role = reader.GetString(3);
                                 user.Name = reader.GetString(4);
@@ -367,7 +367,7 @@ namespace GCAthletics.Droid
                         {
                             reader.Read();
                             rc.ID = reader.GetInt32(0);
-                            rc.Phone = reader.GetInt32(1);
+                            rc.Phone = reader.GetString(1);
                             rc.Email = reader.GetString(2);
                             rc.Role = reader.GetString(3);
                             rc.Name = reader.GetString(4);
@@ -413,7 +413,7 @@ namespace GCAthletics.Droid
                         {
                             reader.Read();
                             rc.ID = reader.GetInt32(0);
-                            rc.Phone = reader.GetInt32(1);
+                            rc.Phone = reader.GetString(1);
                             rc.Email = reader.GetString(2);
                             rc.Role = reader.GetString(3);
                             rc.Name = reader.GetString(4);
@@ -427,9 +427,16 @@ namespace GCAthletics.Droid
             return rc;
         }
 
-        public void insertUser(UserModel user, string pwd)
+        public void insertUser(UserModel user)
         {
             StringBuilder queryBuilder = new StringBuilder();
+            string pwd = "gobobcats1";
+            int initial = -1;
+            if (user.IsInitial)
+                initial = 1;
+            else
+                initial = 0;
+
             queryBuilder.Append("INSERT INTO Users (Name, PasswordHash, Phone, Email, Role, TeamID, IsInitial) " +
                                 "VALUES ('");
             queryBuilder.Append(user.Name + "', '");
@@ -438,7 +445,7 @@ namespace GCAthletics.Droid
             queryBuilder.Append(user.Email + "', '");
             queryBuilder.Append(user.Role + "', ");
             queryBuilder.Append(user.TeamID + ", ");
-            queryBuilder.Append(user.IsInitial + ");");
+            queryBuilder.Append(initial + ");");
 
             string query = queryBuilder.ToString();
 

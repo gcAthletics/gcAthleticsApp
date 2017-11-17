@@ -53,7 +53,7 @@ namespace GCAthletics.Droid
                         connection.Close();
                         var intent = new Intent(this, typeof(HomeActivity));
                         intent.PutExtra("email", email);
-                        intent.PutExtra("TeamID", usrModel.TeamID);
+                        intent.PutExtra("teamID", usrModel.TeamID);
                         StartActivity(intent);
                     }
                     //if login isn't successful, display toast error message
