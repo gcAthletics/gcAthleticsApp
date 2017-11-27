@@ -13,7 +13,7 @@ using System.Data.SqlClient;
 
 namespace GCAthletics.Droid
 {
-    [Activity(Label = "AddAlertActivity")]
+    [Activity(Label = "Add Announcement")]
     public class AddAlertActivity : Activity
     {
         string email = null;
@@ -46,7 +46,7 @@ namespace GCAthletics.Droid
                     announcement.DateTime = DateTime.SpecifyKind(now, DateTimeKind.Local);
                     announcement.TeamID = teamID;
                     //TODO: change this to reflect an actual ID
-                    announcement.EventID = 1;
+                    announcement.EventID = 3;
 
                     dbu.insertAnnouncement(announcement);
 

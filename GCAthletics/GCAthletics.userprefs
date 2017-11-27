@@ -1,22 +1,13 @@
 ﻿<Properties StartupConfiguration="{DE629BE8-13F9-4220-89BF-40C4BF42C94E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="GCAthletics/Models/EventModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/DButility.cs">
     <Files>
-      <File FileName="Droid/DButility.cs" Line="501" Column="91" />
-      <File FileName="GCAthletics/Models/UserModel.cs" Line="18" Column="172" />
-      <File FileName="GCAthletics/Models/AnnouncementsModel.cs" Line="13" Column="39" />
-      <File FileName="GCAthletics/Models/EventModel.cs" Line="14" Column="10" />
-      <File FileName="GCAthletics/Models/TeamModel.cs" Line="1" Column="1" />
+      <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="Droid/DButility.cs" Line="105" Column="27" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/Droid/AlertsActivity.cs" relfile="Droid/AlertsActivity.cs" line="44" column="1" />
-      <Breakpoint file="/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/Droid/AlertsActivity.cs" relfile="Droid/AlertsActivity.cs" line="31" column="1" />
-      <Breakpoint file="/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/Droid/HomeActivity.cs" relfile="Droid/HomeActivity.cs" line="45" column="1" />
-      <Breakpoint file="/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/Droid/HomeActivity.cs" relfile="Droid/HomeActivity.cs" line="29" column="1" />
-      <Breakpoint file="/Users/awetstone56/Documents/GitHub/gcAthleticsApp/GCAthletics/Droid/MainActivity.cs" relfile="Droid/MainActivity.cs" line="29" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.GCAthletics.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" AndroidDesignerPreferredTheme="Theme.Material.Light" />

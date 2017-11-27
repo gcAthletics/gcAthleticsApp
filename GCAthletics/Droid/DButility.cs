@@ -19,10 +19,10 @@ namespace GCAthletics.Droid
 
         public SqlConnection createConnection()
         {
-            sqlConBuilder.DataSource = "gcathletics.database.windows.net";
-            sqlConBuilder.UserID = "gcAdmin";
-            sqlConBuilder.Password = "ADMINpassword1!";
-            sqlConBuilder.InitialCatalog = "GCathleticsDB";
+            sqlConBuilder.DataSource = "den1.mssql2.gear.host";
+            sqlConBuilder.UserID = "gcathletics";
+            sqlConBuilder.Password = "Bobcats1!";
+            sqlConBuilder.InitialCatalog = "gcathletics";
 
             try
             {

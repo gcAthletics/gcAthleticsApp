@@ -13,7 +13,7 @@ using System.Data.SqlClient;
 
 namespace GCAthletics.Droid
 {
-    [Activity(Label = "PasswordActivity")]
+    [Activity(Label = "Change Password")]
     public class PasswordActivity : Activity
     {
         string email;
