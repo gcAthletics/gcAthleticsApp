@@ -186,6 +186,7 @@
     <Compile Include="RosterActivity.cs" />
     <Compile Include="RosterActivityAdapter.cs" />
     <Compile Include="TableItem.cs" />
+    <Compile Include="CalendarActivityAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

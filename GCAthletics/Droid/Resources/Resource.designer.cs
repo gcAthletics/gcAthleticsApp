@@ -3086,8 +3086,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090036
 			public const int SYM = 2131296310;
 			
-			// aapt resource value: 0x7f0900d7
-			public const int action0 = 2131296471;
+			// aapt resource value: 0x7f0900d4
+			public const int action0 = 2131296468;
 			
 			// aapt resource value: 0x7f09007b
 			public const int action_bar = 2131296379;
@@ -3110,17 +3110,17 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090059
 			public const int action_bar_title = 2131296345;
 			
-			// aapt resource value: 0x7f0900d4
-			public const int action_container = 2131296468;
+			// aapt resource value: 0x7f0900d1
+			public const int action_container = 2131296465;
 			
 			// aapt resource value: 0x7f09007c
 			public const int action_context_bar = 2131296380;
 			
-			// aapt resource value: 0x7f0900db
-			public const int action_divider = 2131296475;
+			// aapt resource value: 0x7f0900d8
+			public const int action_divider = 2131296472;
 			
-			// aapt resource value: 0x7f0900d5
-			public const int action_image = 2131296469;
+			// aapt resource value: 0x7f0900d2
+			public const int action_image = 2131296466;
 			
 			// aapt resource value: 0x7f090003
 			public const int action_menu_divider = 2131296259;
@@ -3137,11 +3137,11 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09005b
 			public const int action_mode_close_button = 2131296347;
 			
-			// aapt resource value: 0x7f0900d6
-			public const int action_text = 2131296470;
+			// aapt resource value: 0x7f0900d3
+			public const int action_text = 2131296467;
 			
-			// aapt resource value: 0x7f0900e4
-			public const int actions = 2131296484;
+			// aapt resource value: 0x7f0900e1
+			public const int actions = 2131296481;
 			
 			// aapt resource value: 0x7f09005c
 			public const int activity_chooser_view_content = 2131296348;
@@ -3149,8 +3149,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09002b
 			public const int add = 2131296299;
 			
-			// aapt resource value: 0x7f0900f0
-			public const int addPlayerBtn = 2131296496;
+			// aapt resource value: 0x7f0900ed
+			public const int addPlayerBtn = 2131296493;
 			
 			// aapt resource value: 0x7f09009a
 			public const int alertListView = 2131296410;
@@ -3161,8 +3161,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09006f
 			public const int alertTitle = 2131296367;
 			
-			// aapt resource value: 0x7f0900b2
-			public const int alertsImgBtn = 2131296434;
+			// aapt resource value: 0x7f0900af
+			public const int alertsImgBtn = 2131296431;
 			
 			// aapt resource value: 0x7f090051
 			public const int all = 2131296337;
@@ -3176,8 +3176,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090043
 			public const int auto = 2131296323;
 			
-			// aapt resource value: 0x7f0900af
-			public const int avatarImgBtn = 2131296431;
+			// aapt resource value: 0x7f0900ac
+			public const int avatarImgBtn = 2131296428;
 			
 			// aapt resource value: 0x7f09002e
 			public const int beginning = 2131296302;
@@ -3194,14 +3194,14 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090062
 			public const int buttonPanel = 2131296354;
 			
-			// aapt resource value: 0x7f0900b4
-			public const int calendarImgBtn = 2131296436;
+			// aapt resource value: 0x7f0900b1
+			public const int calendarImgBtn = 2131296433;
 			
 			// aapt resource value: 0x7f09009b
 			public const int calendarView = 2131296411;
 			
-			// aapt resource value: 0x7f0900d8
-			public const int cancel_action = 2131296472;
+			// aapt resource value: 0x7f0900d5
+			public const int cancel_action = 2131296469;
 			
 			// aapt resource value: 0x7f090044
 			public const int center = 2131296324;
@@ -3212,14 +3212,14 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090046
 			public const int center_vertical = 2131296326;
 			
-			// aapt resource value: 0x7f0900e7
-			public const int changePwdText = 2131296487;
+			// aapt resource value: 0x7f0900e4
+			public const int changePwdText = 2131296484;
 			
 			// aapt resource value: 0x7f090072
 			public const int checkbox = 2131296370;
 			
-			// aapt resource value: 0x7f0900e0
-			public const int chronometer = 2131296480;
+			// aapt resource value: 0x7f0900dd
+			public const int chronometer = 2131296477;
 			
 			// aapt resource value: 0x7f09004d
 			public const int clip_horizontal = 2131296333;
@@ -3230,17 +3230,17 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090038
 			public const int collapseActionView = 2131296312;
 			
-			// aapt resource value: 0x7f0900e8
-			public const int confirmPwdText = 2131296488;
+			// aapt resource value: 0x7f0900e5
+			public const int confirmPwdText = 2131296485;
 			
-			// aapt resource value: 0x7f0900a2
-			public const int container = 2131296418;
+			// aapt resource value: 0x7f09009f
+			public const int container = 2131296415;
 			
 			// aapt resource value: 0x7f090065
 			public const int contentPanel = 2131296357;
 			
-			// aapt resource value: 0x7f0900a3
-			public const int coordinator = 2131296419;
+			// aapt resource value: 0x7f0900a0
+			public const int coordinator = 2131296416;
 			
 			// aapt resource value: 0x7f09006c
 			public const int custom = 2131296364;
@@ -3257,20 +3257,20 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09005f
 			public const int default_activity_button = 2131296351;
 			
-			// aapt resource value: 0x7f0900a5
-			public const int design_bottom_sheet = 2131296421;
-			
-			// aapt resource value: 0x7f0900ac
-			public const int design_menu_item_action_area = 2131296428;
-			
-			// aapt resource value: 0x7f0900ab
-			public const int design_menu_item_action_area_stub = 2131296427;
-			
-			// aapt resource value: 0x7f0900aa
-			public const int design_menu_item_text = 2131296426;
+			// aapt resource value: 0x7f0900a2
+			public const int design_bottom_sheet = 2131296418;
 			
 			// aapt resource value: 0x7f0900a9
-			public const int design_navigation_view = 2131296425;
+			public const int design_menu_item_action_area = 2131296425;
+			
+			// aapt resource value: 0x7f0900a8
+			public const int design_menu_item_action_area_stub = 2131296424;
+			
+			// aapt resource value: 0x7f0900a7
+			public const int design_menu_item_text = 2131296423;
+			
+			// aapt resource value: 0x7f0900a6
+			public const int design_navigation_view = 2131296422;
 			
 			// aapt resource value: 0x7f09001f
 			public const int disableHome = 2131296287;
@@ -3278,23 +3278,26 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09007d
 			public const int edit_query = 2131296381;
 			
-			// aapt resource value: 0x7f0900b7
-			public const int emailField = 2131296439;
+			// aapt resource value: 0x7f0900b4
+			public const int emailField = 2131296436;
 			
-			// aapt resource value: 0x7f0900ee
-			public const int emailTxt = 2131296494;
+			// aapt resource value: 0x7f0900eb
+			public const int emailTxt = 2131296491;
 			
 			// aapt resource value: 0x7f09002f
 			public const int end = 2131296303;
 			
-			// aapt resource value: 0x7f0900e6
-			public const int end_padder = 2131296486;
+			// aapt resource value: 0x7f0900e3
+			public const int end_padder = 2131296483;
 			
 			// aapt resource value: 0x7f09003e
 			public const int enterAlways = 2131296318;
 			
 			// aapt resource value: 0x7f09003f
 			public const int enterAlwaysCollapsed = 2131296319;
+			
+			// aapt resource value: 0x7f09009c
+			public const int eventListView = 2131296412;
 			
 			// aapt resource value: 0x7f090040
 			public const int exitUntilCollapsed = 2131296320;
@@ -3335,8 +3338,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090061
 			public const int icon = 2131296353;
 			
-			// aapt resource value: 0x7f0900e5
-			public const int icon_group = 2131296485;
+			// aapt resource value: 0x7f0900e2
+			public const int icon_group = 2131296482;
 			
 			// aapt resource value: 0x7f090039
 			public const int ifRoom = 2131296313;
@@ -3344,8 +3347,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09005e
 			public const int image = 2131296350;
 			
-			// aapt resource value: 0x7f0900e1
-			public const int info = 2131296481;
+			// aapt resource value: 0x7f0900de
+			public const int info = 2131296478;
 			
 			// aapt resource value: 0x7f090058
 			public const int italic = 2131296344;
@@ -3353,8 +3356,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090000
 			public const int item_touch_helper_previous_elevation = 2131296256;
 			
-			// aapt resource value: 0x7f0900a1
-			public const int largeLabel = 2131296417;
+			// aapt resource value: 0x7f09009e
+			public const int largeLabel = 2131296414;
 			
 			// aapt resource value: 0x7f090048
 			public const int left = 2131296328;
@@ -3371,23 +3374,23 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09001c
 			public const int listMode = 2131296284;
 			
-			// aapt resource value: 0x7f0900ea
-			public const int listView1 = 2131296490;
+			// aapt resource value: 0x7f0900e7
+			public const int listView1 = 2131296487;
 			
 			// aapt resource value: 0x7f090060
 			public const int list_item = 2131296352;
 			
-			// aapt resource value: 0x7f0900b9
-			public const int loginButton = 2131296441;
+			// aapt resource value: 0x7f0900b6
+			public const int loginButton = 2131296438;
 			
-			// aapt resource value: 0x7f0900f4
-			public const int masked = 2131296500;
+			// aapt resource value: 0x7f0900f1
+			public const int masked = 2131296497;
 			
-			// aapt resource value: 0x7f0900da
-			public const int media_actions = 2131296474;
+			// aapt resource value: 0x7f0900d7
+			public const int media_actions = 2131296471;
 			
-			// aapt resource value: 0x7f0900f2
-			public const int message = 2131296498;
+			// aapt resource value: 0x7f0900ef
+			public const int message = 2131296495;
 			
 			// aapt resource value: 0x7f090030
 			public const int middle = 2131296304;
@@ -3395,89 +3398,89 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090052
 			public const int mini = 2131296338;
 			
-			// aapt resource value: 0x7f0900c6
-			public const int mr_art = 2131296454;
+			// aapt resource value: 0x7f0900c3
+			public const int mr_art = 2131296451;
+			
+			// aapt resource value: 0x7f0900b8
+			public const int mr_chooser_list = 2131296440;
 			
 			// aapt resource value: 0x7f0900bb
-			public const int mr_chooser_list = 2131296443;
+			public const int mr_chooser_route_desc = 2131296443;
 			
-			// aapt resource value: 0x7f0900be
-			public const int mr_chooser_route_desc = 2131296446;
-			
-			// aapt resource value: 0x7f0900bc
-			public const int mr_chooser_route_icon = 2131296444;
-			
-			// aapt resource value: 0x7f0900bd
-			public const int mr_chooser_route_name = 2131296445;
+			// aapt resource value: 0x7f0900b9
+			public const int mr_chooser_route_icon = 2131296441;
 			
 			// aapt resource value: 0x7f0900ba
-			public const int mr_chooser_title = 2131296442;
+			public const int mr_chooser_route_name = 2131296442;
 			
-			// aapt resource value: 0x7f0900c3
-			public const int mr_close = 2131296451;
-			
-			// aapt resource value: 0x7f0900c9
-			public const int mr_control_divider = 2131296457;
-			
-			// aapt resource value: 0x7f0900cf
-			public const int mr_control_playback_ctrl = 2131296463;
-			
-			// aapt resource value: 0x7f0900d2
-			public const int mr_control_subtitle = 2131296466;
-			
-			// aapt resource value: 0x7f0900d1
-			public const int mr_control_title = 2131296465;
-			
-			// aapt resource value: 0x7f0900d0
-			public const int mr_control_title_container = 2131296464;
-			
-			// aapt resource value: 0x7f0900c4
-			public const int mr_custom_control = 2131296452;
-			
-			// aapt resource value: 0x7f0900c5
-			public const int mr_default_control = 2131296453;
+			// aapt resource value: 0x7f0900b7
+			public const int mr_chooser_title = 2131296439;
 			
 			// aapt resource value: 0x7f0900c0
-			public const int mr_dialog_area = 2131296448;
+			public const int mr_close = 2131296448;
 			
-			// aapt resource value: 0x7f0900bf
-			public const int mr_expandable_area = 2131296447;
+			// aapt resource value: 0x7f0900c6
+			public const int mr_control_divider = 2131296454;
 			
-			// aapt resource value: 0x7f0900d3
-			public const int mr_group_expand_collapse = 2131296467;
+			// aapt resource value: 0x7f0900cc
+			public const int mr_control_playback_ctrl = 2131296460;
 			
-			// aapt resource value: 0x7f0900c7
-			public const int mr_media_main_control = 2131296455;
-			
-			// aapt resource value: 0x7f0900c2
-			public const int mr_name = 2131296450;
-			
-			// aapt resource value: 0x7f0900c8
-			public const int mr_playback_control = 2131296456;
-			
-			// aapt resource value: 0x7f0900c1
-			public const int mr_title_bar = 2131296449;
-			
-			// aapt resource value: 0x7f0900ca
-			public const int mr_volume_control = 2131296458;
-			
-			// aapt resource value: 0x7f0900cb
-			public const int mr_volume_group_list = 2131296459;
-			
-			// aapt resource value: 0x7f0900cd
-			public const int mr_volume_item_icon = 2131296461;
+			// aapt resource value: 0x7f0900cf
+			public const int mr_control_subtitle = 2131296463;
 			
 			// aapt resource value: 0x7f0900ce
-			public const int mr_volume_slider = 2131296462;
+			public const int mr_control_title = 2131296462;
+			
+			// aapt resource value: 0x7f0900cd
+			public const int mr_control_title_container = 2131296461;
+			
+			// aapt resource value: 0x7f0900c1
+			public const int mr_custom_control = 2131296449;
+			
+			// aapt resource value: 0x7f0900c2
+			public const int mr_default_control = 2131296450;
+			
+			// aapt resource value: 0x7f0900bd
+			public const int mr_dialog_area = 2131296445;
+			
+			// aapt resource value: 0x7f0900bc
+			public const int mr_expandable_area = 2131296444;
+			
+			// aapt resource value: 0x7f0900d0
+			public const int mr_group_expand_collapse = 2131296464;
+			
+			// aapt resource value: 0x7f0900c4
+			public const int mr_media_main_control = 2131296452;
+			
+			// aapt resource value: 0x7f0900bf
+			public const int mr_name = 2131296447;
+			
+			// aapt resource value: 0x7f0900c5
+			public const int mr_playback_control = 2131296453;
+			
+			// aapt resource value: 0x7f0900be
+			public const int mr_title_bar = 2131296446;
+			
+			// aapt resource value: 0x7f0900c7
+			public const int mr_volume_control = 2131296455;
+			
+			// aapt resource value: 0x7f0900c8
+			public const int mr_volume_group_list = 2131296456;
+			
+			// aapt resource value: 0x7f0900ca
+			public const int mr_volume_item_icon = 2131296458;
+			
+			// aapt resource value: 0x7f0900cb
+			public const int mr_volume_slider = 2131296459;
 			
 			// aapt resource value: 0x7f090026
 			public const int multiply = 2131296294;
 			
-			// aapt resource value: 0x7f0900ed
-			public const int nameTxt = 2131296493;
+			// aapt resource value: 0x7f0900ea
+			public const int nameTxt = 2131296490;
 			
-			// aapt resource value: 0x7f0900a8
-			public const int navigation_header_container = 2131296424;
+			// aapt resource value: 0x7f0900a5
+			public const int navigation_header_container = 2131296421;
 			
 			// aapt resource value: 0x7f09003a
 			public const int never = 2131296314;
@@ -3497,14 +3500,14 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09001d
 			public const int normal = 2131296285;
 			
-			// aapt resource value: 0x7f0900e3
-			public const int notification_background = 2131296483;
+			// aapt resource value: 0x7f0900e0
+			public const int notification_background = 2131296480;
 			
-			// aapt resource value: 0x7f0900dd
-			public const int notification_main_column = 2131296477;
+			// aapt resource value: 0x7f0900da
+			public const int notification_main_column = 2131296474;
 			
-			// aapt resource value: 0x7f0900dc
-			public const int notification_main_column_container = 2131296476;
+			// aapt resource value: 0x7f0900d9
+			public const int notification_main_column_container = 2131296473;
 			
 			// aapt resource value: 0x7f09004b
 			public const int parallax = 2131296331;
@@ -3515,11 +3518,11 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09000b
 			public const int parent_matrix = 2131296267;
 			
-			// aapt resource value: 0x7f0900b8
-			public const int passwordField = 2131296440;
+			// aapt resource value: 0x7f0900b5
+			public const int passwordField = 2131296437;
 			
-			// aapt resource value: 0x7f0900ef
-			public const int phoneTxt = 2131296495;
+			// aapt resource value: 0x7f0900ec
+			public const int phoneTxt = 2131296492;
 			
 			// aapt resource value: 0x7f09004c
 			public const int pin = 2131296332;
@@ -3539,26 +3542,26 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090094
 			public const int relativeLayout1 = 2131296404;
 			
-			// aapt resource value: 0x7f0900eb
-			public const int relativeLayout2 = 2131296491;
+			// aapt resource value: 0x7f0900e8
+			public const int relativeLayout2 = 2131296488;
 			
 			// aapt resource value: 0x7f090049
 			public const int right = 2131296329;
 			
-			// aapt resource value: 0x7f0900e2
-			public const int right_icon = 2131296482;
+			// aapt resource value: 0x7f0900df
+			public const int right_icon = 2131296479;
 			
-			// aapt resource value: 0x7f0900de
-			public const int right_side = 2131296478;
+			// aapt resource value: 0x7f0900db
+			public const int right_side = 2131296475;
 			
-			// aapt resource value: 0x7f0900b5
-			public const int rosterImgBtn = 2131296437;
+			// aapt resource value: 0x7f0900b2
+			public const int rosterImgBtn = 2131296434;
 			
-			// aapt resource value: 0x7f0900f1
-			public const int rosterListView = 2131296497;
+			// aapt resource value: 0x7f0900ee
+			public const int rosterListView = 2131296494;
 			
-			// aapt resource value: 0x7f0900ec
-			public const int rosterRelLayout = 2131296492;
+			// aapt resource value: 0x7f0900e9
+			public const int rosterRelLayout = 2131296489;
 			
 			// aapt resource value: 0x7f09000c
 			public const int save_image_matrix = 2131296268;
@@ -3632,14 +3635,14 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090024
 			public const int showTitle = 2131296292;
 			
-			// aapt resource value: 0x7f0900a0
-			public const int smallLabel = 2131296416;
+			// aapt resource value: 0x7f09009d
+			public const int smallLabel = 2131296413;
 			
-			// aapt resource value: 0x7f0900a7
-			public const int snackbar_action = 2131296423;
+			// aapt resource value: 0x7f0900a4
+			public const int snackbar_action = 2131296420;
 			
-			// aapt resource value: 0x7f0900a6
-			public const int snackbar_text = 2131296422;
+			// aapt resource value: 0x7f0900a3
+			public const int snackbar_text = 2131296419;
 			
 			// aapt resource value: 0x7f090042
 			public const int snap = 2131296322;
@@ -3662,8 +3665,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09004a
 			public const int start = 2131296330;
 			
-			// aapt resource value: 0x7f0900d9
-			public const int status_bar_latest_event_content = 2131296473;
+			// aapt resource value: 0x7f0900d6
+			public const int status_bar_latest_event_content = 2131296470;
 			
 			// aapt resource value: 0x7f090075
 			public const int submenuarrow = 2131296373;
@@ -3674,26 +3677,14 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09001e
 			public const int tabMode = 2131296286;
 			
-			// aapt resource value: 0x7f09009c
-			public const int tableLayout1 = 2131296412;
-			
-			// aapt resource value: 0x7f09009d
-			public const int tableRow1 = 2131296413;
-			
-			// aapt resource value: 0x7f09009e
-			public const int tableRow2 = 2131296414;
-			
-			// aapt resource value: 0x7f09009f
-			public const int tableRow3 = 2131296415;
-			
 			// aapt resource value: 0x7f090019
 			public const int text = 2131296281;
 			
 			// aapt resource value: 0x7f09001a
 			public const int text2 = 2131296282;
 			
-			// aapt resource value: 0x7f0900b0
-			public const int textName = 2131296432;
+			// aapt resource value: 0x7f0900ad
+			public const int textName = 2131296429;
 			
 			// aapt resource value: 0x7f090069
 			public const int textSpacerNoButtons = 2131296361;
@@ -3701,14 +3692,14 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090068
 			public const int textSpacerNoTitle = 2131296360;
 			
-			// aapt resource value: 0x7f0900b1
-			public const int textTeam = 2131296433;
-			
 			// aapt resource value: 0x7f0900ae
-			public const int textWelcome = 2131296430;
+			public const int textTeam = 2131296430;
 			
-			// aapt resource value: 0x7f0900ad
-			public const int text_input_password_toggle = 2131296429;
+			// aapt resource value: 0x7f0900ab
+			public const int textWelcome = 2131296427;
+			
+			// aapt resource value: 0x7f0900aa
+			public const int text_input_password_toggle = 2131296426;
 			
 			// aapt resource value: 0x7f090014
 			public const int textinput_counter = 2131296276;
@@ -3716,11 +3707,11 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090015
 			public const int textinput_error = 2131296277;
 			
-			// aapt resource value: 0x7f0900b6
-			public const int thunderImage = 2131296438;
+			// aapt resource value: 0x7f0900b3
+			public const int thunderImage = 2131296435;
 			
-			// aapt resource value: 0x7f0900df
-			public const int time = 2131296479;
+			// aapt resource value: 0x7f0900dc
+			public const int time = 2131296476;
 			
 			// aapt resource value: 0x7f09001b
 			public const int title = 2131296283;
@@ -3737,8 +3728,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09006d
 			public const int topPanel = 2131296365;
 			
-			// aapt resource value: 0x7f0900a4
-			public const int touch_outside = 2131296420;
+			// aapt resource value: 0x7f0900a1
+			public const int touch_outside = 2131296417;
 			
 			// aapt resource value: 0x7f09000f
 			public const int transition_current_scene = 2131296271;
@@ -3761,8 +3752,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090009
 			public const int up = 2131296265;
 			
-			// aapt resource value: 0x7f0900e9
-			public const int updatePwdBtn = 2131296489;
+			// aapt resource value: 0x7f0900e6
+			public const int updatePwdBtn = 2131296486;
 			
 			// aapt resource value: 0x7f090025
 			public const int useLogo = 2131296293;
@@ -3770,11 +3761,11 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090016
 			public const int view_offset_helper = 2131296278;
 			
-			// aapt resource value: 0x7f0900f3
-			public const int visible = 2131296499;
+			// aapt resource value: 0x7f0900f0
+			public const int visible = 2131296496;
 			
-			// aapt resource value: 0x7f0900cc
-			public const int volume_item_container = 2131296460;
+			// aapt resource value: 0x7f0900c9
+			public const int volume_item_container = 2131296457;
 			
 			// aapt resource value: 0x7f09008a
 			public const int webview = 2131296394;
@@ -3782,8 +3773,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09003b
 			public const int withText = 2131296315;
 			
-			// aapt resource value: 0x7f0900b3
-			public const int workoutImgBtn = 2131296435;
+			// aapt resource value: 0x7f0900b0
+			public const int workoutImgBtn = 2131296432;
 			
 			// aapt resource value: 0x7f09002d
 			public const int wrap_content = 2131296301;
