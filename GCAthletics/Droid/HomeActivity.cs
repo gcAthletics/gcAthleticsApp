@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using System.Data.SqlClient;
 using Newtonsoft.Json;
+using Xamarin.Forms;
 
 namespace GCAthletics.Droid
 {
@@ -58,6 +59,24 @@ namespace GCAthletics.Droid
                 Console.WriteLine(ex);
             }
 
+
+            nameTxt.Click += (sender, e) =>
+            {
+                Android.App.AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                AlertDialog alert = dialog.Create();
+                alert.SetTitle("Logout");
+                alert.SetMessage("Would you like to logout?");
+                alert.SetButton("No", (c, ev) =>
+                {
+                    alert.Hide();
+                });
+                alert.SetButton2("Yes", (c, ev) =>
+                {
+                    var intent = new Intent(this, typeof(MainActivity));
+                    StartActivity(intent);
+                });
+                alert.Show();
+            };
 
             // when calendarButton is clicked, open up CalendarScreen.axml
             // also start activity CalendarActivity.cs (activity controlling actions for the calendar screen)
