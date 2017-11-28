@@ -53,6 +53,8 @@ namespace GCAthletics.Droid
                     DButility dbu = new DButility();
                     SqlConnection connection = dbu.createConnection();
 
+                    RegexUtilities RegUtil = new RegexUtilities();
+
                     UserModel NewUsrModel = dbu.getUserByEmail(email.ToString());
 
                     NewUsrModel.Name = InsNameText.Text;
@@ -62,14 +64,45 @@ namespace GCAthletics.Droid
                     NewUsrModel.TeamID = teamID;
                     NewUsrModel.IsInitial = true;
 
-                    dbu.insertUser(NewUsrModel);
+                    if (InsNameText.Text.Equals("") || InsPhoneText.Text.Equals("") || InsEmailText.Text.Equals(""))
+                    {
+                        string toast = "One or more fields blank";
+                        Toast.MakeText(this, toast, ToastLength.Long).Show();
+                    }
+                    else
+                    {
+                        if (RegUtil.IsValidEmail(NewUsrModel.Email))
+                        {
+                            if (RegUtil.IsValidPhone(NewUsrModel.Phone))
+                            {
+                                dbu.insertUser(NewUsrModel);
 
-                    string toast = string.Format("Added user {0} to team", NewUsrModel.Name);
-                    Toast.MakeText(this, toast, ToastLength.Long).Show();
+                                string toast = string.Format("Added user {0} to team", NewUsrModel.Name);
+                                Toast.MakeText(this, toast, ToastLength.Long).Show();
+
+                                var intent = new Intent(this, typeof(RosterActivity));
+                                usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
+                                intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
+                                StartActivity(intent);
+                            }
+                            else
+                            {
+                                string toast = "Invalid Phone Number";
+                                Toast.MakeText(this, toast, ToastLength.Long).Show();
+                            }
+                        }
+                        else
+                        {
+                            string toast = "Invalid Email";
+                            Toast.MakeText(this, toast, ToastLength.Long).Show();
+                        }
+                    }
                 }
                 catch(SqlException ex)
                 {
                     Console.WriteLine(ex);
+                    string toast = "Unable to add player, please wait and try again";
+                    Toast.MakeText(this, toast, ToastLength.Long).Show();
                 }
             };
         }
@@ -83,7 +116,7 @@ namespace GCAthletics.Droid
 
         public override void OnBackPressed()
         {
-            var intent = new Intent(this, typeof(HomeActivity));
+            var intent = new Intent(this, typeof(RosterActivity));
             usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
             intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
             StartActivity(intent);

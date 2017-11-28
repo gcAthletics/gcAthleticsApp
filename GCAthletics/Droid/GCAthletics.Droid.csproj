@@ -181,6 +181,7 @@
     <Compile Include="HomeActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="PasswordActivity.cs" />
+    <Compile Include="RegexUtilities.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RosterActivity.cs" />
