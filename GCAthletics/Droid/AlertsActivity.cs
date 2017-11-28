@@ -19,6 +19,7 @@ using CustomRowView;
 using BuiltInViews;
 using System.Data.SqlClient;
 using System.Globalization;
+using Newtonsoft.Json;
 
 namespace GCAthletics.Droid
 {
@@ -31,12 +32,16 @@ namespace GCAthletics.Droid
         string email = null;
         int teamID = -1;
 
+        UserModel usrModel = new UserModel();
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            email = Intent.Extras.GetString("email");
-            teamID = Intent.Extras.GetInt("teamID");
+            usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
+
+            email = usrModel.Email;
+            teamID = usrModel.TeamID;
 
             SetContentView(Resource.Layout.AlertsScreen);
 
@@ -50,8 +55,6 @@ namespace GCAthletics.Droid
                 DButility dbu = new DButility();
                 SqlConnection connection = dbu.createConnection();
 
-                UserModel usrModel = dbu.getUserByEmail(email);
-
                 if(usrModel.Role.Equals("coach", StringComparison.InvariantCultureIgnoreCase))
                 {
                     newAlertBtn.Visibility = ViewStates.Visible;
@@ -59,7 +62,8 @@ namespace GCAthletics.Droid
 
                 List<AnnouncementsModel> sqlList = dbu.getAllAnnouncements().ToList();
 
-                foreach(var announcement in sqlList){
+                foreach(var announcement in sqlList)
+                {
                     DateTime dt;
                     if (DateTime.TryParse(announcement.DateTime.ToString(), CultureInfo.CreateSpecificCulture("en-US"), DateTimeStyles.AssumeLocal, out dt))
                         Console.WriteLine("successfully converted date");
@@ -77,8 +81,7 @@ namespace GCAthletics.Droid
             newAlertBtn.Click += (sender, e) =>
             {
                 var intent = new Intent(this, typeof(AddAlertActivity));
-                intent.PutExtra("email", email);
-                intent.PutExtra("teamID", teamID);
+                intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
                 StartActivity(intent);
             };
 
@@ -96,8 +99,8 @@ namespace GCAthletics.Droid
         public override void OnBackPressed()
         {
             var intent = new Intent(this, typeof(HomeActivity));
-            intent.PutExtra("email", email);
-            intent.PutExtra("teamID", teamID);
+            usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
+            intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
             StartActivity(intent);
         }
     }

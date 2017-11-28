@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
 
 namespace GCAthletics.Droid
 {
@@ -16,14 +17,18 @@ namespace GCAthletics.Droid
     public class CalendarActivity : Activity
     {
         string email = null;
-        int teamID = -1;        
+        int teamID = -1;
+
+        UserModel usrModel = new UserModel();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            email = Intent.Extras.GetString("email");
-            teamID = Intent.Extras.GetInt("teamID");
+            usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
+
+            email = usrModel.Email;
+            teamID = usrModel.TeamID;
 
             SetContentView(Resource.Layout.CalendarScreen);
             // Create your application here
@@ -33,8 +38,8 @@ namespace GCAthletics.Droid
         public override void OnBackPressed()
         {
             var intent = new Intent(this, typeof(HomeActivity));
-            Intent.PutExtra("email", email);
-            Intent.PutExtra("teamID", teamID);
+            usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
+            intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
             StartActivity(intent);
         }
     }

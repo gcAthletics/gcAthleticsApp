@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using System.Data.SqlClient;
+using Newtonsoft.Json;
 
 namespace GCAthletics.Droid
 {
@@ -19,12 +20,17 @@ namespace GCAthletics.Droid
         string role;
         string email = null;
         int teamID = -1;
+
+        UserModel usrModel = new UserModel();
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            email = Intent.Extras.GetString("email");
-            teamID = Intent.Extras.GetInt("teamID");
+            usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
+
+            email = usrModel.Email;
+            teamID = usrModel.TeamID;
 
             SetContentView(Resource.Layout.AddPlayerLayout);
 
@@ -47,18 +53,18 @@ namespace GCAthletics.Droid
                     DButility dbu = new DButility();
                     SqlConnection connection = dbu.createConnection();
 
-                    UserModel usrModel = dbu.getUserByEmail(email.ToString());
+                    UserModel NewUsrModel = dbu.getUserByEmail(email.ToString());
 
-                    usrModel.Name = InsNameText.Text;
-                    usrModel.Phone = InsPhoneText.Text;
-                    usrModel.Email = InsEmailText.Text;
-                    usrModel.Role = role;
-                    usrModel.TeamID = teamID;
-                    usrModel.IsInitial = true;
+                    NewUsrModel.Name = InsNameText.Text;
+                    NewUsrModel.Phone = InsPhoneText.Text;
+                    NewUsrModel.Email = InsEmailText.Text;
+                    NewUsrModel.Role = role;
+                    NewUsrModel.TeamID = teamID;
+                    NewUsrModel.IsInitial = true;
 
-                    dbu.insertUser(usrModel);
+                    dbu.insertUser(NewUsrModel);
 
-                    string toast = string.Format("Added user {0} to team", usrModel.Name);
+                    string toast = string.Format("Added user {0} to team", NewUsrModel.Name);
                     Toast.MakeText(this, toast, ToastLength.Long).Show();
                 }
                 catch(SqlException ex)
@@ -78,8 +84,8 @@ namespace GCAthletics.Droid
         public override void OnBackPressed()
         {
             var intent = new Intent(this, typeof(HomeActivity));
-            intent.PutExtra("email", email);
-            intent.PutExtra("teamID", teamID);
+            usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
+            intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
             StartActivity(intent);
         }
     }

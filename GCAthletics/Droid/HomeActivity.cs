@@ -10,18 +10,24 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using System.Data.SqlClient;
+using Newtonsoft.Json;
 
 namespace GCAthletics.Droid
 {
     [Activity(Label = "Home", MainLauncher = false)]
     public class HomeActivity : Activity
     {
+        UserModel usrModel = new UserModel();
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            var email = Intent.Extras.GetString("email");
-            int teamID = Intent.Extras.GetInt("teamID");
+            usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
+            var email = usrModel.Email;
+            int teamID = usrModel.TeamID;
+
+
 
             SetContentView(Resource.Layout.HomeScreen);
             // Create your application here
@@ -42,7 +48,6 @@ namespace GCAthletics.Droid
                 DButility dbu = new DButility();
                 SqlConnection connection = dbu.createConnection();
 
-                UserModel usrModel = dbu.getUserByEmail(email.ToString());
                 TeamModel teamModel = dbu.getTeamById(usrModel.TeamID);
 
                 nameTxt.Text = usrModel.Name;
@@ -59,8 +64,7 @@ namespace GCAthletics.Droid
             calendarButton.Click += (sender, e) =>
             {
                 var intent = new Intent(this, typeof(CalendarActivity));
-                intent.PutExtra("email", email);
-                intent.PutExtra("teamID", teamID);
+                intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
                 StartActivity(intent);
             };
 
@@ -69,8 +73,7 @@ namespace GCAthletics.Droid
             alertsButton.Click += (sender, e) =>
             {
                 var intent = new Intent(this, typeof(AlertsActivity));
-                intent.PutExtra("email", email);
-                intent.PutExtra("teamID", teamID);
+                intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
                 StartActivity(intent);
             };
 
@@ -79,8 +82,7 @@ namespace GCAthletics.Droid
             rosterButton.Click += (sender, e) =>
             {
                 var intent = new Intent(this, typeof(RosterActivity));
-                intent.PutExtra("email", email);
-                intent.PutExtra("TeamID", teamID);
+                intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
                 StartActivity(intent);
             };
         }

@@ -60,8 +60,7 @@ namespace GCAthletics.Droid
                         {
                             intent = new Intent(this, typeof(HomeActivity));
                         }
-                        intent.PutExtra("email", email);
-                        intent.PutExtra("teamID", usrModel.TeamID);
+                        intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
                         StartActivity(intent);
                     }
                     //if login isn't successful, display toast error message
