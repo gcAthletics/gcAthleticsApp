@@ -56,6 +56,11 @@ namespace GCAthletics.Droid
                     dbu.insertAnnouncement(announcement);
 
                     Toast.MakeText(this, "Announcement posted", ToastLength.Long).Show();
+
+                    var intent = new Intent(this, typeof(AlertsActivity));
+                    usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
+                    intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
+                    StartActivity(intent);
                 }
                 catch (SqlException ex)
                 {

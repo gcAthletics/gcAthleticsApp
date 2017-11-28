@@ -6,19 +6,33 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="GC Athletics" android:theme="@android:style/Theme.Material.Light" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+<<<<<<< HEAD
     <activity android:label="Add Announcement" android:name="md54c61d7f9d6d8760dbd5882c38448fb16.AddAlertActivity" />
     <activity android:label="Add Player" android:name="md54c61d7f9d6d8760dbd5882c38448fb16.AddPlayerActivity" />
     <activity android:label="Announcements" android:name="md54c61d7f9d6d8760dbd5882c38448fb16.AlertsActivity" />
     <activity android:label="Calendar" android:name="md54c61d7f9d6d8760dbd5882c38448fb16.CalendarActivity" />
     <activity android:label="Home" android:name="md54c61d7f9d6d8760dbd5882c38448fb16.HomeActivity" />
     <activity android:icon="@mipmap/icon" android:label="GC Athletics" android:name="md54c61d7f9d6d8760dbd5882c38448fb16.MainActivity">
+=======
+    <activity android:label="Add Announcement" android:name="md59b03a65ed3cd2966af11659504f3c008.AddAlertActivity" />
+    <activity android:label="Add Player" android:name="md59b03a65ed3cd2966af11659504f3c008.AddPlayerActivity" />
+    <activity android:label="Announcements" android:name="md59b03a65ed3cd2966af11659504f3c008.AlertsActivity" />
+    <activity android:label="Calendar" android:name="md59b03a65ed3cd2966af11659504f3c008.CalendarActivity" />
+    <activity android:label="Home" android:name="md59b03a65ed3cd2966af11659504f3c008.HomeActivity" />
+    <activity android:icon="@mipmap/icon" android:label="GC Athletics" android:name="md59b03a65ed3cd2966af11659504f3c008.MainActivity">
+>>>>>>> 1534a4aafb96ce022a8129e5438380992389c461
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+<<<<<<< HEAD
     <activity android:label="Change Password" android:name="md54c61d7f9d6d8760dbd5882c38448fb16.PasswordActivity" />
     <activity android:label="Roster" android:name="md54c61d7f9d6d8760dbd5882c38448fb16.RosterActivity" />
+=======
+    <activity android:label="Change Password" android:name="md59b03a65ed3cd2966af11659504f3c008.PasswordActivity" />
+    <activity android:label="Roster" android:name="md59b03a65ed3cd2966af11659504f3c008.RosterActivity" />
+>>>>>>> 1534a4aafb96ce022a8129e5438380992389c461
     <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.FormAuthenticatorActivity" />
     <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorActivity" />
     <activity android:label="Web Authenticator Native Broswer" android:launchMode="singleTop" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorNativeBrowserActivity" />

@@ -75,6 +75,11 @@ namespace GCAthletics.Droid
                 }               
             };
         }
+
+        public override void OnBackPressed()
+        {
+            Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+        }
     }
 }
 

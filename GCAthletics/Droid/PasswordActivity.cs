@@ -44,7 +44,7 @@ namespace GCAthletics.Droid
                     DButility dbu = new DButility();
                     SqlConnection connection = dbu.createConnection();
 
-                    if (changePwdText.Text.Equals(confirmPwdText.Text))
+                    if (changePwdText.Text.Equals(confirmPwdText.Text) && !confirmPwdText.Text.Equals(""))
                     {
                         dbu.changePassword(confirmPwdText.Text, email);
                         var intent = new Intent(this, typeof(HomeActivity));
@@ -53,7 +53,7 @@ namespace GCAthletics.Droid
                     }
                     else
                     {
-                        Toast.MakeText(this, "Passwords do not match", ToastLength.Long).Show();
+                        Toast.MakeText(this, "Passwords do not match or are blank", ToastLength.Long).Show();
                     }
                 }
                 catch (SqlException ex)
