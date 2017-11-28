@@ -68,13 +68,14 @@ namespace GCAthletics.Droid
 
             listView.Adapter = new RosterActivityAdapter(this, tableItems);
 
+            listView.ItemClick += OnListItemClick;
+
             addPlayerBtn.Click += (sender, e) =>
             {
                 var intent = new Intent(this, typeof(AddPlayerActivity));
                 intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
                 StartActivity(intent);
             };
-            
         }
 
         public override void OnBackPressed()
@@ -83,6 +84,43 @@ namespace GCAthletics.Droid
             usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
             intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
             StartActivity(intent);
+        }
+
+        protected void OnListItemClick(object sender, Android.Widget.AdapterView.ItemClickEventArgs e)
+        {
+            var listView = sender as ListView;
+            var item = tableItems[e.Position];
+
+            usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
+
+            if (usrModel.Role.Equals("coach", StringComparison.InvariantCultureIgnoreCase))
+            {
+                Android.App.AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                AlertDialog alert = dialog.Create();
+                alert.SetTitle("Remove Player");
+                alert.SetMessage("Would you like to remove " + item.Heading + " from the team?");
+                alert.SetButton("No", (c, ev) =>
+                {
+                    alert.Hide();
+                });
+                alert.SetButton2("Yes", (c, ev) =>
+                {
+                    try
+                    {
+                        DButility dbu = new DButility();
+                        UserModel rmvModel = dbu.getUserByEmail(item.SubHeading);
+                        dbu.removeUser(rmvModel.ID);
+
+                        string toast = "Successfully removed user " + item.Heading + " from the team.";
+                        Toast.MakeText(this, toast, ToastLength.Long).Show();
+                    }
+                    catch (SqlException ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+                });
+                alert.Show();
+            }
         }
     }
 }

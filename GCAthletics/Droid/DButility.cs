@@ -470,6 +470,36 @@ namespace GCAthletics.Droid
             }
         }
 
+        public void removeUser(int userID)
+        {
+            StringBuilder queryBuilder = new StringBuilder();
+            queryBuilder.Append("DELETE FROM Users ");
+            queryBuilder.Append("WHERE UserID = ");
+            queryBuilder.Append(userID);
+            queryBuilder.Append(";");
+
+            string query = queryBuilder.ToString();
+
+            if(connection.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+            else if(connection.State == System.Data.ConnectionState.Open)
+            {
+                using (command = new SqlCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
         public void changePassword(string pwd, string email)
         {
             String hashPassword = passwordHash(pwd);
