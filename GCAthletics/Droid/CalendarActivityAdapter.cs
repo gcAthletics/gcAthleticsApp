@@ -37,12 +37,12 @@ namespace GCAthletics.Droid
             var item = items[position];
             View view = convertView;
             if (view == null) // no view to re-use, create new
-                view = context.LayoutInflater.Inflate(Resource.Layout.AlertLayout, null);
-            var text1 = view.FindViewById<TextView>(Resource.Id.headerTxt);
+                view = context.LayoutInflater.Inflate(Resource.Layout.EventLayout, null);
+            var text1 = view.FindViewById<TextView>(Resource.Id.headerTxt1);
             text1.Text = item.Heading;
-            var text2 = view.FindViewById<TextView>(Resource.Id.bodyTxt);
+            var text2 = view.FindViewById<TextView>(Resource.Id.bodyTxt1);
             text2.Text = item.SubHeading;
-            var text3 = view.FindViewById<TextView>(Resource.Id.dateTxt);
+            var text3 = view.FindViewById<TextView>(Resource.Id.dateTxt1);
             text3.Text = item.DateHeading;
 
             return view;

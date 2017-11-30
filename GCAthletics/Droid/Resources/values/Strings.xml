@@ -9,6 +9,9 @@
   <string-array name="role_array">
     <item>Player</item>
     <item>Coach</item>
-    <item>AsstCoach</item>
+  </string-array>
+  <string name="team_prompt">Assign Players</string>
+  <string-array name="team_array">
+    
   </string-array>
 </resources>

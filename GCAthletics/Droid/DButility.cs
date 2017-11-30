@@ -624,16 +624,62 @@ namespace GCAthletics.Droid
             return rc;
         }
 
+        public IEnumerable<EventModel> getAllEventsByTeamIDAndDate(int TeamID, DateTime dt)
+        {
+            StringBuilder queryBuilder = new StringBuilder();
+            queryBuilder.Append("SELECT EventID, Name, Description, DateTime, SendAlert FROM Events ");
+            queryBuilder.Append("WHERE TeamID = " + TeamID);
+            queryBuilder.Append(" AND DateTime > '" + dt + "'");
+            queryBuilder.Append(" AND DateTime < '" + dt.AddDays(1));
+            queryBuilder.Append("' ORDER BY DateTime ASC;");
+            string query = queryBuilder.ToString();
+            List<EventModel> rc = new List<EventModel>();
+            EventModel e = null;
+
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+            else if (connection.State == System.Data.ConnectionState.Open)
+            {
+                using (command = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            e = new EventModel();
+                            e.ID = reader.GetInt32(0);
+                            e.Name = reader.GetString(1);
+                            e.Description = reader.GetString(2);
+                            e.DateTime = reader.GetDateTime(3);
+                            e.SendAlert = reader.GetBoolean(4);
+                            rc.Add(e);
+                        }
+                    }
+                }
+            }
+
+            return rc;
+        }
         // Edit database to accept a teamId or a userId (cannot have both at the same time to reduce repetitive data)
         public void insertEventForUser(EventModel e, int userId)
         {
             StringBuilder queryBuilder = new StringBuilder();
-            queryBuilder.Append("INSERT INTO Events (Name, Description, DateTime, UserID, SendAlert) " +
+            queryBuilder.Append("INSERT INTO Events (Name, Description, DateTime, UserID, TeamID, SendAlert) " +
                                 "VALUES ('");
             queryBuilder.Append(e.Name + "', '");
-            queryBuilder.Append(e.Description + "', ");
-            queryBuilder.Append(e.DateTime + ", ");
+            queryBuilder.Append(e.Description + "', '");
+            queryBuilder.Append(e.DateTime + "', ");
             queryBuilder.Append(e.UserID + ", ");
+            queryBuilder.Append("0, ");
             if(e.SendAlert == true)
             {
                 queryBuilder.Append(1 + "); ");
@@ -672,8 +718,8 @@ namespace GCAthletics.Droid
             queryBuilder.Append("INSERT INTO Events (Name, Description, DateTime, TeamID, SendAlert) " +
                                 "VALUES ('");
             queryBuilder.Append(e.Name + "', '");
-            queryBuilder.Append(e.Description + "', ");
-            queryBuilder.Append(e.DateTime + ", ");
+            queryBuilder.Append(e.Description + "', '");
+            queryBuilder.Append(e.DateTime + "', ");
             queryBuilder.Append(e.TeamID + ", ");
             if (e.SendAlert == true)
             {

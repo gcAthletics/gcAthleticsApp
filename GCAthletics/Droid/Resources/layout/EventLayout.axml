@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout2">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/eventRelLayout"
+        android:paddingLeft="10dp">
+        <TextView
+            android:id="@+id/headerTxt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dip"
+            android:textStyle="bold"
+            android:text="Header" />
+        <TextView
+            android:id="@+id/dateTxt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dip"
+            android:text="Date"
+            android:layout_below="@id/headerTxt1" />
+        <TextView
+            android:id="@+id/bodyTxt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dateTxt1"
+            android:textSize="10dip"
+            android:text="Body" />
+    </RelativeLayout>
+</RelativeLayout>

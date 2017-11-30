@@ -172,11 +172,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddAlertActivity.cs" />
+    <Compile Include="AddEventActivity.cs" />
     <Compile Include="AddPlayerActivity.cs" />
+    <Compile Include="AddWorkoutActivity.cs" />
     <Compile Include="AlertsActivity.cs" />
     <Compile Include="AlertsActivityAdapter.cs" />
     <Compile Include="Android_SQL.cs" />
     <Compile Include="CalendarActivity.cs" />
+    <Compile Include="DatePickerFragment.cs" />
     <Compile Include="DButility.cs" />
     <Compile Include="HomeActivity.cs" />
     <Compile Include="MainActivity.cs" />
@@ -188,6 +191,7 @@
     <Compile Include="RosterActivityAdapter.cs" />
     <Compile Include="TableItem.cs" />
     <Compile Include="CalendarActivityAdapter.cs" />
+    <Compile Include="TimePickerFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -213,6 +217,15 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\AddAlertLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\EventLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AddEventScreen.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AddWorkoutScreen.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

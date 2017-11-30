@@ -3,6 +3,11 @@
     p1:layout_width="match_parent"
     p1:layout_height="wrap_content"
     p1:id="@+id/relativeLayout1">
+    <Button
+        p1:text="New Event"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/newEventBtn" />
     <CalendarView
         p1:layout_width="match_parent"
         p1:layout_height="300dp"

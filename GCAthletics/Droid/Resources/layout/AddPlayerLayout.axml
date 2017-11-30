@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/InsRoleSpinner"
-        android:prompt="@string/role_prompt"/>
+        android:prompt="@string/role_prompt" />
     <Button
         android:text="Add Player"
         android:layout_width="match_parent"

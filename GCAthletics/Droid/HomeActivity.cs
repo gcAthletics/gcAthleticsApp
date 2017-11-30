@@ -64,15 +64,21 @@ namespace GCAthletics.Droid
             {
                 Android.App.AlertDialog.Builder dialog = new AlertDialog.Builder(this);
                 AlertDialog alert = dialog.Create();
-                alert.SetTitle("Logout");
-                alert.SetMessage("Would you like to logout?");
-                alert.SetButton("No", (c, ev) =>
+                alert.SetTitle("Options");
+                alert.SetMessage("What would you like to do?");
+                alert.SetButton("Back", (c, ev) =>
                 {
                     alert.Hide();
                 });
-                alert.SetButton2("Yes", (c, ev) =>
+                alert.SetButton2("Logout", (c, ev) =>
                 {
                     var intent = new Intent(this, typeof(MainActivity));
+                    StartActivity(intent);
+                });
+                alert.SetButton3("Change Password", (c, ev) => 
+                {
+                    var intent = new Intent(this, typeof(PasswordActivity));
+                    intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
                     StartActivity(intent);
                 });
                 alert.Show();
