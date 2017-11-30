@@ -428,6 +428,50 @@ namespace GCAthletics.Droid
             return rc;
         }
 
+        public String[] getUsersByTeamId(int teamID)
+        {
+            StringBuilder queryBuilder = new StringBuilder();
+            queryBuilder.Append("SELECT Name ");
+            queryBuilder.Append("FROM Users ");
+            queryBuilder.Append("WHERE TeamID = " + teamID);
+
+            string query = queryBuilder.ToString();
+
+            String[] users = new String[50];
+
+            if(connection.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+            else if(connection.State == System.Data.ConnectionState.Open)
+            {
+                using (command = new SqlCommand(query, connection))
+                {
+                    Object result = command.ExecuteScalar();
+
+                    if(result != null)
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                users.Append(reader.GetString(0));
+                            } 
+                        }
+                    }
+                }
+            }
+
+            return users;
+        }
+
         public void insertUser(UserModel user)
         {
             StringBuilder queryBuilder = new StringBuilder();
@@ -730,6 +774,68 @@ namespace GCAthletics.Droid
             {
                 queryBuilder.Append(0 + ");");
             }
+
+            string query = queryBuilder.ToString();
+
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+            else if (connection.State == System.Data.ConnectionState.Open)
+            {
+                using (command = new SqlCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void insertWorkoutForTeam(WorkoutModel e, int teamId)
+        {
+            StringBuilder queryBuilder = new StringBuilder();
+            queryBuilder.Append("INSERT INTO Workouts (Date, Completed, TeamId) ");
+            queryBuilder.Append("VALUES ('");
+            queryBuilder.Append(e.Date + "', ");
+            queryBuilder.Append("0, ");
+            queryBuilder.Append(teamId + ");");
+            
+            string query = queryBuilder.ToString();
+
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+            else if (connection.State == System.Data.ConnectionState.Open)
+            {
+                using (command = new SqlCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void insertWorkoutForUser(WorkoutModel e, int userId)
+        {
+            StringBuilder queryBuilder = new StringBuilder();
+            queryBuilder.Append("INSERT INTO Workouts (Date, Completed, UserId) ");
+            queryBuilder.Append("VALUES ('");
+            queryBuilder.Append(e.Date + "', '");
+            queryBuilder.Append("0, ");
+            queryBuilder.Append(userId + ");");
 
             string query = queryBuilder.ToString();
 

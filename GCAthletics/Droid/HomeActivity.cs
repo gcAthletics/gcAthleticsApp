@@ -110,6 +110,23 @@ namespace GCAthletics.Droid
                 intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
                 StartActivity(intent);
             };
+
+            workoutsButton.Click += (sender, e) =>
+            {
+                var intent = new Intent();
+
+                if (usrModel.Role.Equals("coach", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    intent = new Intent(this, typeof(AddWorkoutActivity));
+                }
+                else
+                {
+                    intent = new Intent(this, typeof(AddWorkoutActivity));
+                }
+                
+                intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
+                StartActivity(intent);
+            };
         }
     }
 }

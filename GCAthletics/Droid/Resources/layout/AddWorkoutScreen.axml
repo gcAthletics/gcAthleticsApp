@@ -18,23 +18,17 @@
             android:id="@+id/InsWorkText"
             android:hint="Input workout details"
             android:height="100dp" />
-        <Switch
+        <Button
+            android:text="Choose date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/InsWorkText"
-            android:id="@+id/teamSwitch"
-            android:text="Whole Team" />
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/teamSpinner"
-            android:prompt="@string/team_prompt"
-            android:layout_below="@id/teamSwitch" />
+            android:id="@+id/InsWorkDateBtn"
+            android:layout_below="@id/InsWorkText" />
         <Button
             android:text="Assign Workout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/InsWorkBtn"
-            android:layout_below="@id/teamSpinner" />
+            android:layout_below="@id/InsWorkDateBtn" />
     </RelativeLayout>
 </RelativeLayout>
