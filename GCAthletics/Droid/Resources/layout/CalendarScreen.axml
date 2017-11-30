@@ -5,7 +5,7 @@
     p1:id="@+id/relativeLayout1">
     <CalendarView
         p1:layout_width="match_parent"
-        p1:layout_height="wrap_content"
+        p1:layout_height="300dp"
         p1:id="@+id/calendarView"
         p1:layout_centerHorizontal="true" />
     <LinearLayout
@@ -13,7 +13,8 @@
         p1:layout_width="match_parent"
         p1:layout_height="match_parent"
         p1:minWidth="25px"
-        p1:minHeight="25px">
+        p1:minHeight="25px"
+        p1:layout_below="@id/calendarView">
         <ListView
             p1:minWidth="25px"
             p1:minHeight="25px"

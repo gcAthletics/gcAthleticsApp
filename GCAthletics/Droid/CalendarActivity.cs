@@ -30,18 +30,15 @@ namespace GCAthletics.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.CalendarScreen);
 
             var calendar = FindViewById<CalendarView>(Resource.Id.calendarView);
-            calendar.DateChange += CalendarOnDateChange;
-
             usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
 
             email = usrModel.Email;
             teamID = usrModel.TeamID;
 
-            SetContentView(Resource.Layout.CalendarScreen);
-
-            listView = FindViewById<ListView>(Resource.Id.alertListView);
+            listView = FindViewById<ListView>(Resource.Id.eventListView);
 
             try
             {
@@ -69,13 +66,39 @@ namespace GCAthletics.Droid
             listView.Adapter = new CalendarActivityAdapter(this, tableItems);
 
             listView.ItemClick += OnListItemClick;
+
+            calendar.Click += (sender, e) =>
+            {
+                try
+                {
+                    DButility dbu = new DButility();
+                    SqlConnection connection = dbu.createConnection();
+
+                    var posixTime = DateTime.SpecifyKind(new DateTime(1970, 1, 1), DateTimeKind.Utc);
+                    var time = posixTime.AddMilliseconds(calendar.Date);
+
+                    List<EventModel> sqlList = dbu.getAllEventsByUserAndDate(usrModel.ID, time.Date).ToList();
+
+                    foreach (var ev in sqlList)
+                    {
+                        DateTime dt;
+                        if (DateTime.TryParse(ev.DateTime.ToString(), CultureInfo.CreateSpecificCulture("en-US"), DateTimeStyles.AssumeLocal, out dt))
+                            Console.WriteLine("successfully converted date");
+                        tableItems.Add(new TableItem() { Heading = ev.Name, SubHeading = ev.Description, DateHeading = dt.ToString() });
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            };
         }
 
-        private void CalendarOnDateChange(object sender, CalendarView.DateChangeEventArgs args)
+        /*private void CalendarOnDateChange(object sender, CalendarView.DateChangeEventArgs args)
         {
             var newdatetime = new DateTime(args.Year, args.Month, args.DayOfMonth);
 
-        }
+        }*/
 
         // when a list item is pressed
         protected void OnListItemClick(object sender, Android.Widget.AdapterView.ItemClickEventArgs e)

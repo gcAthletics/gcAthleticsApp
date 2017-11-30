@@ -581,7 +581,7 @@ namespace GCAthletics.Droid
         public IEnumerable<EventModel> getAllEventsByUserAndDate(int userId, DateTime dt)
         {
             StringBuilder queryBuilder = new StringBuilder();
-            queryBuilder.Append("SELECT EventID, Name, Description, DateTime, UserID, SendAlert FROM Events ");
+            queryBuilder.Append("SELECT EventID, Name, Description, DateTime, SendAlert FROM Events ");
             queryBuilder.Append("WHERE UserID = " + userId);
             queryBuilder.Append(" AND DateTime > '" + dt + "'");
             queryBuilder.Append(" AND DateTime < '" + dt.AddDays(1));
@@ -614,8 +614,7 @@ namespace GCAthletics.Droid
                             e.Name = reader.GetString(1);
                             e.Description = reader.GetString(2);
                             e.DateTime = reader.GetDateTime(3);
-                            e.UserID = reader.GetInt32(4);
-                            e.SendAlert = reader.GetBoolean(5);
+                            e.SendAlert = reader.GetBoolean(4);
                             rc.Add(e);
                         }
                     }
