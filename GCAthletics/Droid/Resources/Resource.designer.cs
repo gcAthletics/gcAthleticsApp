@@ -3428,8 +3428,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f0900c9
 			public const int loginButton = 2131296457;
 			
-			// aapt resource value: 0x7f090103
-			public const int masked = 2131296515;
+			// aapt resource value: 0x7f090104
+			public const int masked = 2131296516;
 			
 			// aapt resource value: 0x7f0900ea
 			public const int media_actions = 2131296490;
@@ -3812,8 +3812,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090016
 			public const int view_offset_helper = 2131296278;
 			
-			// aapt resource value: 0x7f090102
-			public const int visible = 2131296514;
+			// aapt resource value: 0x7f090103
+			public const int visible = 2131296515;
 			
 			// aapt resource value: 0x7f0900dc
 			public const int volume_item_container = 2131296476;
@@ -3832,6 +3832,9 @@ namespace GCAthletics.Droid
 			
 			// aapt resource value: 0x7f0900c3
 			public const int workoutImgBtn = 2131296451;
+			
+			// aapt resource value: 0x7f090102
+			public const int workoutListView = 2131296514;
 			
 			// aapt resource value: 0x7f09002d
 			public const int wrap_content = 2131296301;
@@ -4162,6 +4165,9 @@ namespace GCAthletics.Droid
 			
 			// aapt resource value: 0x7f040050
 			public const int tooltip = 2130968656;
+			
+			// aapt resource value: 0x7f040051
+			public const int WorkoutsScreen = 2130968657;
 			
 			static Layout()
 			{

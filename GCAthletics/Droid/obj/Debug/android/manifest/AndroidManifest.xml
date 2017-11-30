@@ -6,21 +6,22 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="GC Athletics" android:theme="@android:style/Theme.Material.Light" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
-    <activity android:label="Add Announcement" android:name="md53693b56ed4f9c2cd178e401d9186e6fe.AddAlertActivity" />
-    <activity android:label="Add Event" android:name="md53693b56ed4f9c2cd178e401d9186e6fe.AddEventActivity" />
-    <activity android:label="Add Player" android:name="md53693b56ed4f9c2cd178e401d9186e6fe.AddPlayerActivity" />
-    <activity android:label="Assign Workout" android:name="md53693b56ed4f9c2cd178e401d9186e6fe.AddWorkoutActivity" />
-    <activity android:label="Announcements" android:name="md53693b56ed4f9c2cd178e401d9186e6fe.AlertsActivity" />
-    <activity android:label="Calendar" android:name="md53693b56ed4f9c2cd178e401d9186e6fe.CalendarActivity" />
-    <activity android:label="Home" android:name="md53693b56ed4f9c2cd178e401d9186e6fe.HomeActivity" />
-    <activity android:icon="@mipmap/icon" android:label="GC Athletics" android:name="md53693b56ed4f9c2cd178e401d9186e6fe.MainActivity">
+    <activity android:label="Add Announcement" android:name="md5dc1c14a8f2be223b242bec5626fb6125.AddAlertActivity" />
+    <activity android:label="Add Event" android:name="md5dc1c14a8f2be223b242bec5626fb6125.AddEventActivity" />
+    <activity android:label="Add Player" android:name="md5dc1c14a8f2be223b242bec5626fb6125.AddPlayerActivity" />
+    <activity android:label="Assign Workout" android:name="md5dc1c14a8f2be223b242bec5626fb6125.AddWorkoutActivity" />
+    <activity android:label="Announcements" android:name="md5dc1c14a8f2be223b242bec5626fb6125.AlertsActivity" />
+    <activity android:label="Calendar" android:name="md5dc1c14a8f2be223b242bec5626fb6125.CalendarActivity" />
+    <activity android:label="Home" android:name="md5dc1c14a8f2be223b242bec5626fb6125.HomeActivity" />
+    <activity android:icon="@mipmap/icon" android:label="GC Athletics" android:name="md5dc1c14a8f2be223b242bec5626fb6125.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:label="Change Password" android:name="md53693b56ed4f9c2cd178e401d9186e6fe.PasswordActivity" />
-    <activity android:label="Roster" android:name="md53693b56ed4f9c2cd178e401d9186e6fe.RosterActivity" />
+    <activity android:label="Change Password" android:name="md5dc1c14a8f2be223b242bec5626fb6125.PasswordActivity" />
+    <activity android:label="Roster" android:name="md5dc1c14a8f2be223b242bec5626fb6125.RosterActivity" />
+    <activity android:label="Workouts" android:name="md5dc1c14a8f2be223b242bec5626fb6125.WorkoutActivity" />
     <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.FormAuthenticatorActivity" />
     <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorActivity" />
     <activity android:label="Web Authenticator Native Broswer" android:launchMode="singleTop" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorNativeBrowserActivity" />

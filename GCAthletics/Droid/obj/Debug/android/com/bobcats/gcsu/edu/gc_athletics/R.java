@@ -3446,7 +3446,7 @@ containing a value of this type.
         public static final int listView1=0x7f0900fa;
         public static final int list_item=0x7f090060;
         public static final int loginButton=0x7f0900c9;
-        public static final int masked=0x7f090103;
+        public static final int masked=0x7f090104;
         public static final int media_actions=0x7f0900ea;
         public static final int message=0x7f090101;
         public static final int middle=0x7f090030;
@@ -3574,13 +3574,14 @@ containing a value of this type.
         public static final int updatePwdBtn=0x7f0900f9;
         public static final int useLogo=0x7f090025;
         public static final int view_offset_helper=0x7f090016;
-        public static final int visible=0x7f090102;
+        public static final int visible=0x7f090103;
         public static final int volume_item_container=0x7f0900dc;
         public static final int webview=0x7f09008a;
         public static final int withText=0x7f09003b;
         public static final int workInnerLayout=0x7f09009d;
         public static final int workOuterLayout=0x7f09009c;
         public static final int workoutImgBtn=0x7f0900c3;
+        public static final int workoutListView=0x7f090102;
         public static final int wrap_content=0x7f09002d;
     }
     public static final class integer {
@@ -3684,6 +3685,7 @@ containing a value of this type.
         public static final int select_dialog_singlechoice_material=0x7f04004e;
         public static final int support_simple_spinner_dropdown_item=0x7f04004f;
         public static final int tooltip=0x7f040050;
+        public static final int workoutsscreen=0x7f040051;
     }
     public static final class mipmap {
         public static final int ccc=0x7f030000;

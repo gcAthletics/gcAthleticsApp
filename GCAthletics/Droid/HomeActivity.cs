@@ -121,7 +121,7 @@ namespace GCAthletics.Droid
                 }
                 else
                 {
-                    intent = new Intent(this, typeof(AddWorkoutActivity));
+                    intent = new Intent(this, typeof(WorkoutActivity));
                 }
                 
                 intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));

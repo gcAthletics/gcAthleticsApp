@@ -800,11 +800,12 @@ namespace GCAthletics.Droid
         public void insertWorkoutForTeam(WorkoutModel e, int teamId)
         {
             StringBuilder queryBuilder = new StringBuilder();
-            queryBuilder.Append("INSERT INTO Workouts (Date, Completed, TeamId) ");
+            queryBuilder.Append("INSERT INTO Workouts (Date, Completed, TeamId, Description) ");
             queryBuilder.Append("VALUES ('");
             queryBuilder.Append(e.Date + "', ");
             queryBuilder.Append("0, ");
-            queryBuilder.Append(teamId + ");");
+            queryBuilder.Append(teamId + ", '");
+            queryBuilder.Append(e.Description + "')");
             
             string query = queryBuilder.ToString();
 
@@ -927,6 +928,49 @@ namespace GCAthletics.Droid
                     command.ExecuteNonQuery();
                 }
             }
+        }
+
+        public IEnumerable<WorkoutModel> GetAllWorkoutsByTeamID(int teamID)
+        {
+            StringBuilder queryBuilder = new StringBuilder();
+            queryBuilder.Append("SELECT Date, Completed, Description, WorkoutID ");
+            queryBuilder.Append("FROM Workouts ");
+            queryBuilder.Append("WHERE TeamID = " + teamID + ";");
+            List<WorkoutModel> rc = new List<WorkoutModel>();
+            WorkoutModel e = null;
+
+            string query = queryBuilder.ToString();
+
+            if (connection.State == System.Data.ConnectionState.Closed){
+                try{
+                    connection.Open();
+                }
+                catch (SqlException ex){
+                    Console.WriteLine(ex);
+                }
+            }
+            else if (connection.State == System.Data.ConnectionState.Open){
+                using (command = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            e = new WorkoutModel();
+                            e.Date = reader.GetDateTime(0);
+                            if (reader.GetInt32(1) == 0)
+                                e.Completed = false;
+                            else
+                                e.Completed = true;
+                            e.Description = reader.GetString(2);
+                            e.WorkoutID = reader.GetInt32(3);
+                            rc.Add(e);
+                        }
+                    }
+                }
+            }
+
+            return rc;
         }
     }
 }

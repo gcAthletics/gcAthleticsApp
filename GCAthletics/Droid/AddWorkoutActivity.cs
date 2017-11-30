@@ -57,6 +57,7 @@ namespace GCAthletics.Droid
 
                     workModel.Completed = false;
                     workModel.TeamID = usrModel.TeamID;
+                    workModel.Description = detailsText.Text;
 
                     dbu.insertWorkoutForTeam(workModel, usrModel.TeamID);
 
