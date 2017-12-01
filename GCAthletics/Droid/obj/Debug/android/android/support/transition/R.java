@@ -3334,6 +3334,11 @@ containing a value of this type.
         public static final int InsNameText=0x7f090097;
         public static final int InsPhoneText=0x7f090098;
         public static final int InsPlayerBtn=0x7f09009b;
+        public static final int InsRegEmail=0x7f090100;
+        public static final int InsRegName=0x7f0900fe;
+        public static final int InsRegPhone=0x7f0900ff;
+        public static final int InsRegSport=0x7f090103;
+        public static final int InsRegTeamName=0x7f090102;
         public static final int InsRoleSpinner=0x7f09009a;
         public static final int InsWorkBtn=0x7f0900a0;
         public static final int InsWorkDateBtn=0x7f09009f;
@@ -3341,6 +3346,7 @@ containing a value of this type.
         public static final int META=0x7f090034;
         public static final int SHIFT=0x7f090035;
         public static final int SYM=0x7f090036;
+        public static final int accountText=0x7f0900fd;
         public static final int action0=0x7f0900e9;
         public static final int action_bar=0x7f09007b;
         public static final int action_bar_activity_content=0x7f090001;
@@ -3362,7 +3368,7 @@ containing a value of this type.
         public static final int actions=0x7f0900f6;
         public static final int activity_chooser_view_content=0x7f09005c;
         public static final int add=0x7f09002b;
-        public static final int addPlayerBtn=0x7f090101;
+        public static final int addPlayerBtn=0x7f090109;
         public static final int alertListView=0x7f0900a8;
         public static final int alertRelLayout=0x7f0900a3;
         public static final int alertTitle=0x7f09006f;
@@ -3408,7 +3414,7 @@ containing a value of this type.
         public static final int disableHome=0x7f09001f;
         public static final int edit_query=0x7f09007d;
         public static final int emailField=0x7f0900c8;
-        public static final int emailTxt=0x7f0900ff;
+        public static final int emailTxt=0x7f090107;
         public static final int end=0x7f09002f;
         public static final int end_padder=0x7f0900f8;
         public static final int enterAlways=0x7f09003e;
@@ -3446,9 +3452,9 @@ containing a value of this type.
         public static final int listView1=0x7f0900fc;
         public static final int list_item=0x7f090060;
         public static final int loginButton=0x7f0900ca;
-        public static final int masked=0x7f090106;
+        public static final int masked=0x7f09010e;
         public static final int media_actions=0x7f0900ec;
-        public static final int message=0x7f090103;
+        public static final int message=0x7f09010b;
         public static final int middle=0x7f090030;
         public static final int mini=0x7f090052;
         public static final int mr_art=0x7f0900d8;
@@ -3477,7 +3483,7 @@ containing a value of this type.
         public static final int mr_volume_item_icon=0x7f0900df;
         public static final int mr_volume_slider=0x7f0900e0;
         public static final int multiply=0x7f090026;
-        public static final int nameTxt=0x7f0900fe;
+        public static final int nameTxt=0x7f090106;
         public static final int navigation_header_container=0x7f0900b4;
         public static final int never=0x7f09003a;
         public static final int newAlertBtn=0x7f0900a7;
@@ -3493,13 +3499,14 @@ containing a value of this type.
         public static final int parentPanel=0x7f090064;
         public static final int parent_matrix=0x7f09000b;
         public static final int passwordField=0x7f0900c9;
-        public static final int phoneTxt=0x7f090100;
+        public static final int phoneTxt=0x7f090108;
         public static final int pin=0x7f09004c;
         public static final int postBtn=0x7f09008e;
         public static final int privateSwitch=0x7f090095;
         public static final int progress_circular=0x7f090006;
         public static final int progress_horizontal=0x7f090007;
         public static final int radio=0x7f090074;
+        public static final int registerTeamBtn=0x7f090104;
         public static final int registerText=0x7f0900cb;
         public static final int relativeLayout1=0x7f0900a2;
         public static final int relativeLayout2=0x7f0900ba;
@@ -3507,8 +3514,8 @@ containing a value of this type.
         public static final int right_icon=0x7f0900f4;
         public static final int right_side=0x7f0900f0;
         public static final int rosterImgBtn=0x7f0900c6;
-        public static final int rosterListView=0x7f090102;
-        public static final int rosterRelLayout=0x7f0900fd;
+        public static final int rosterListView=0x7f09010a;
+        public static final int rosterRelLayout=0x7f090105;
         public static final int save_image_matrix=0x7f09000c;
         public static final int save_non_transition_alpha=0x7f09000d;
         public static final int save_scale_type=0x7f09000e;
@@ -3547,6 +3554,7 @@ containing a value of this type.
         public static final int submenuarrow=0x7f090075;
         public static final int submit_area=0x7f090086;
         public static final int tabMode=0x7f09001e;
+        public static final int teamInfoText=0x7f090101;
         public static final int text=0x7f090019;
         public static final int text2=0x7f09001a;
         public static final int textName=0x7f0900c1;
@@ -3576,14 +3584,14 @@ containing a value of this type.
         public static final int useLogo=0x7f090025;
         public static final int viewWorkBtn=0x7f0900a1;
         public static final int view_offset_helper=0x7f090016;
-        public static final int visible=0x7f090105;
+        public static final int visible=0x7f09010d;
         public static final int volume_item_container=0x7f0900de;
         public static final int webview=0x7f09008a;
         public static final int withText=0x7f09003b;
         public static final int workInnerLayout=0x7f09009d;
         public static final int workOuterLayout=0x7f09009c;
         public static final int workoutImgBtn=0x7f0900c4;
-        public static final int workoutListView=0x7f090104;
+        public static final int workoutListView=0x7f09010c;
         public static final int wrap_content=0x7f09002d;
     }
     public static final class integer {

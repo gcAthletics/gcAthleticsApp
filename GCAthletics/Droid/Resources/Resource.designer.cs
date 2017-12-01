@@ -3092,6 +3092,21 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09009b
 			public const int InsPlayerBtn = 2131296411;
 			
+			// aapt resource value: 0x7f090100
+			public const int InsRegEmail = 2131296512;
+			
+			// aapt resource value: 0x7f0900fe
+			public const int InsRegName = 2131296510;
+			
+			// aapt resource value: 0x7f0900ff
+			public const int InsRegPhone = 2131296511;
+			
+			// aapt resource value: 0x7f090103
+			public const int InsRegSport = 2131296515;
+			
+			// aapt resource value: 0x7f090102
+			public const int InsRegTeamName = 2131296514;
+			
 			// aapt resource value: 0x7f09009a
 			public const int InsRoleSpinner = 2131296410;
 			
@@ -3112,6 +3127,9 @@ namespace GCAthletics.Droid
 			
 			// aapt resource value: 0x7f090036
 			public const int SYM = 2131296310;
+			
+			// aapt resource value: 0x7f0900fd
+			public const int accountText = 2131296509;
 			
 			// aapt resource value: 0x7f0900e9
 			public const int action0 = 2131296489;
@@ -3176,8 +3194,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09002b
 			public const int add = 2131296299;
 			
-			// aapt resource value: 0x7f090101
-			public const int addPlayerBtn = 2131296513;
+			// aapt resource value: 0x7f090109
+			public const int addPlayerBtn = 2131296521;
 			
 			// aapt resource value: 0x7f0900a8
 			public const int alertListView = 2131296424;
@@ -3314,8 +3332,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f0900c8
 			public const int emailField = 2131296456;
 			
-			// aapt resource value: 0x7f0900ff
-			public const int emailTxt = 2131296511;
+			// aapt resource value: 0x7f090107
+			public const int emailTxt = 2131296519;
 			
 			// aapt resource value: 0x7f09002f
 			public const int end = 2131296303;
@@ -3428,14 +3446,14 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f0900ca
 			public const int loginButton = 2131296458;
 			
-			// aapt resource value: 0x7f090106
-			public const int masked = 2131296518;
+			// aapt resource value: 0x7f09010e
+			public const int masked = 2131296526;
 			
 			// aapt resource value: 0x7f0900ec
 			public const int media_actions = 2131296492;
 			
-			// aapt resource value: 0x7f090103
-			public const int message = 2131296515;
+			// aapt resource value: 0x7f09010b
+			public const int message = 2131296523;
 			
 			// aapt resource value: 0x7f090030
 			public const int middle = 2131296304;
@@ -3521,8 +3539,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090026
 			public const int multiply = 2131296294;
 			
-			// aapt resource value: 0x7f0900fe
-			public const int nameTxt = 2131296510;
+			// aapt resource value: 0x7f090106
+			public const int nameTxt = 2131296518;
 			
 			// aapt resource value: 0x7f0900b4
 			public const int navigation_header_container = 2131296436;
@@ -3569,8 +3587,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f0900c9
 			public const int passwordField = 2131296457;
 			
-			// aapt resource value: 0x7f090100
-			public const int phoneTxt = 2131296512;
+			// aapt resource value: 0x7f090108
+			public const int phoneTxt = 2131296520;
 			
 			// aapt resource value: 0x7f09004c
 			public const int pin = 2131296332;
@@ -3589,6 +3607,9 @@ namespace GCAthletics.Droid
 			
 			// aapt resource value: 0x7f090074
 			public const int radio = 2131296372;
+			
+			// aapt resource value: 0x7f090104
+			public const int registerTeamBtn = 2131296516;
 			
 			// aapt resource value: 0x7f0900cb
 			public const int registerText = 2131296459;
@@ -3611,11 +3632,11 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f0900c6
 			public const int rosterImgBtn = 2131296454;
 			
-			// aapt resource value: 0x7f090102
-			public const int rosterListView = 2131296514;
+			// aapt resource value: 0x7f09010a
+			public const int rosterListView = 2131296522;
 			
-			// aapt resource value: 0x7f0900fd
-			public const int rosterRelLayout = 2131296509;
+			// aapt resource value: 0x7f090105
+			public const int rosterRelLayout = 2131296517;
 			
 			// aapt resource value: 0x7f09000c
 			public const int save_image_matrix = 2131296268;
@@ -3731,6 +3752,9 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f09001e
 			public const int tabMode = 2131296286;
 			
+			// aapt resource value: 0x7f090101
+			public const int teamInfoText = 2131296513;
+			
 			// aapt resource value: 0x7f090019
 			public const int text = 2131296281;
 			
@@ -3818,8 +3842,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f090016
 			public const int view_offset_helper = 2131296278;
 			
-			// aapt resource value: 0x7f090105
-			public const int visible = 2131296517;
+			// aapt resource value: 0x7f09010d
+			public const int visible = 2131296525;
 			
 			// aapt resource value: 0x7f0900de
 			public const int volume_item_container = 2131296478;
@@ -3839,8 +3863,8 @@ namespace GCAthletics.Droid
 			// aapt resource value: 0x7f0900c4
 			public const int workoutImgBtn = 2131296452;
 			
-			// aapt resource value: 0x7f090104
-			public const int workoutListView = 2131296516;
+			// aapt resource value: 0x7f09010c
+			public const int workoutListView = 2131296524;
 			
 			// aapt resource value: 0x7f09002d
 			public const int wrap_content = 2131296301;
