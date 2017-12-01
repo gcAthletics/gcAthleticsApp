@@ -37,13 +37,14 @@ namespace GCAthletics.Droid
             EditText detailsText = FindViewById<EditText>(Resource.Id.InsWorkText);
             Button dateBtn = FindViewById<Button>(Resource.Id.InsWorkDateBtn);
             Button assignBtn = FindViewById<Button>(Resource.Id.InsWorkBtn);
+            Button viewWorkBtn = FindViewById<Button>(Resource.Id.viewWorkBtn);
 
             dateBtn.Click += (sender, e) =>
             {
                 DatePickerFragment frag = DatePickerFragment.NewInstance(delegate (DateTime time)
                 {
                     workModel.Date = time;
-                    dateBtn.Text = time.ToString();
+                    dateBtn.Text = time.ToShortDateString();
                 });
                 frag.Show(FragmentManager, DatePickerFragment.TAG);
             };
@@ -64,7 +65,7 @@ namespace GCAthletics.Droid
                     string toast = "Assigned workout to teaam";
                     Toast.MakeText(this, toast, ToastLength.Long).Show();
 
-                    var intent = new Intent(this, typeof(HomeActivity));
+                    var intent = new Intent(this, typeof(WorkoutActivity));
                     usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
                     intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
                     StartActivity(intent);
@@ -73,6 +74,14 @@ namespace GCAthletics.Droid
                 {
                     Console.WriteLine(ex);
                 }
+            };
+
+            viewWorkBtn.Click += (sender, e) =>
+            {
+                var intent = new Intent(this, typeof(WorkoutActivity));
+                usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
+                intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
+                StartActivity(intent);
             };
         }
         

@@ -28,6 +28,7 @@ namespace GCAthletics.Droid
 
             var emailField = FindViewById<EditText>(Resource.Id.emailField);
             var passwordField = FindViewById<EditText>(Resource.Id.passwordField);
+            TextView registerText = FindViewById<TextView>(Resource.Id.registerText);
 
             // Get login button from the layout resource,
             // and attach an event to it
@@ -73,6 +74,12 @@ namespace GCAthletics.Droid
                 {
                     Console.WriteLine(ex.ToString());
                 }               
+            };
+
+            registerText.Click += (sender, e) =>
+            {
+                var intent = new Intent(this, typeof(RegisterActivity));
+                StartActivity(intent);
             };
         }
 

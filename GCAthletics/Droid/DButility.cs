@@ -135,11 +135,13 @@ namespace GCAthletics.Droid
             }
         }
 
-        public IEnumerable<AnnouncementsModel> getAllAnnouncements()
+        public IEnumerable<AnnouncementsModel> getAllAnnouncements(int teamID)
         {
+            DateTime sqlDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0);
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("SELECT AnnouncementID, Name, Description, DateTime, EventID FROM Announcements ");
-            queryBuilder.Append("ORDER BY DateTime DESC");
+            queryBuilder.Append("WHERE TeamID = '" + teamID + "' ");
+            queryBuilder.Append("ORDER BY DateTime DESC;");
 
             string query = queryBuilder.ToString();
             List<AnnouncementsModel> rc = new List<AnnouncementsModel>();
@@ -930,12 +932,15 @@ namespace GCAthletics.Droid
             }
         }
 
-        public IEnumerable<WorkoutModel> GetAllWorkoutsByTeamID(int teamID)
+        public IEnumerable<WorkoutModel> GetAllCurrentWorkoutsByTeamID(int teamID)
         {
+            DateTime sqlDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0);
+
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("SELECT Date, Completed, Description, WorkoutID ");
             queryBuilder.Append("FROM Workouts ");
-            queryBuilder.Append("WHERE TeamID = " + teamID + ";");
+            queryBuilder.Append("WHERE TeamID = " + teamID);
+            queryBuilder.Append("AND Date > '" + sqlDate + "';");
             List<WorkoutModel> rc = new List<WorkoutModel>();
             WorkoutModel e = null;
 
@@ -958,10 +963,10 @@ namespace GCAthletics.Droid
                         {
                             e = new WorkoutModel();
                             e.Date = reader.GetDateTime(0);
-                            if (reader.GetInt32(1) == 0)
-                                e.Completed = false;
-                            else
+                            if (reader.GetBoolean(1))
                                 e.Completed = true;
+                            else
+                                e.Completed = false;
                             e.Description = reader.GetString(2);
                             e.WorkoutID = reader.GetInt32(3);
                             rc.Add(e);

@@ -20,15 +20,21 @@
             android:height="100dp" />
         <Button
             android:text="Choose date"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/InsWorkDateBtn"
             android:layout_below="@id/InsWorkText" />
         <Button
             android:text="Assign Workout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/InsWorkBtn"
             android:layout_below="@id/InsWorkDateBtn" />
+        <Button
+            android:text="View Current Workouts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/InsWorkBtn"
+            android:id="@+id/viewWorkBtn" />
     </RelativeLayout>
 </RelativeLayout>

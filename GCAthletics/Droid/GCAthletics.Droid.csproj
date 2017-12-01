@@ -185,6 +185,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="PasswordActivity.cs" />
     <Compile Include="RegexUtilities.cs" />
+    <Compile Include="RegisterActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RosterActivity.cs" />
@@ -230,6 +231,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\WorkoutsScreen.axml" />
+    <AndroidResource Include="Resources\layout\RegisterScreen.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">

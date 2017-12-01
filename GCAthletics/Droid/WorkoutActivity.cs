@@ -46,10 +46,10 @@ namespace GCAthletics.Droid
                 DButility dbu = new DButility();
                 SqlConnection connection = dbu.createConnection();
 
-                List<WorkoutModel> sqlList = dbu.GetAllWorkoutsByTeamID(teamID).ToList();
+                List<WorkoutModel> sqlList = dbu.GetAllCurrentWorkoutsByTeamID(teamID).ToList();
 
                 foreach(var workout in sqlList){
-                    tableItems.Add(new TableItem() { Heading = "Workout", SubHeading = workout.Description, DateHeading = workout.Date.ToString() });
+                    tableItems.Add(new TableItem() { Heading = "Workout", SubHeading = workout.Description, DateHeading = workout.Date.ToShortDateString() });
                 }
             }
             catch (SqlException ex)

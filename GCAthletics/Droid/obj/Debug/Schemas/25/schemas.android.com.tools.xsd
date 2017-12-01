@@ -2,7 +2,7 @@
 <xs:schema xmlns:tools="http://schemas.android.com/tools" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/tools" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>11/30/2017 3:07:41 AM</xs:documentation>
+    <xs:documentation>11/30/2017 8:05:48 PM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="layout">
     <xs:annotation>
@@ -86,6 +86,7 @@
             <xs:enumeration value="@layout/notification_template_part_chronometer" />
             <xs:enumeration value="@layout/notification_template_part_time" />
             <xs:enumeration value="@layout/passwordlayout" />
+            <xs:enumeration value="@layout/registerscreen" />
             <xs:enumeration value="@layout/rosterlayout" />
             <xs:enumeration value="@layout/rosterscreen" />
             <xs:enumeration value="@layout/select_dialog_item_material" />
@@ -93,6 +94,7 @@
             <xs:enumeration value="@layout/select_dialog_singlechoice_material" />
             <xs:enumeration value="@layout/support_simple_spinner_dropdown_item" />
             <xs:enumeration value="@layout/tooltip" />
+            <xs:enumeration value="@layout/workoutsscreen" />
             <xs:enumeration value="@android:layout/activity_list_item" />
             <xs:enumeration value="@android:layout/browser_link_context_header" />
             <xs:enumeration value="@android:layout/expandable_list_content" />
@@ -215,6 +217,7 @@
             <xs:enumeration value="@layout/notification_template_part_chronometer" />
             <xs:enumeration value="@layout/notification_template_part_time" />
             <xs:enumeration value="@layout/passwordlayout" />
+            <xs:enumeration value="@layout/registerscreen" />
             <xs:enumeration value="@layout/rosterlayout" />
             <xs:enumeration value="@layout/rosterscreen" />
             <xs:enumeration value="@layout/select_dialog_item_material" />
@@ -222,6 +225,7 @@
             <xs:enumeration value="@layout/select_dialog_singlechoice_material" />
             <xs:enumeration value="@layout/support_simple_spinner_dropdown_item" />
             <xs:enumeration value="@layout/tooltip" />
+            <xs:enumeration value="@layout/workoutsscreen" />
             <xs:enumeration value="@android:layout/activity_list_item" />
             <xs:enumeration value="@android:layout/browser_link_context_header" />
             <xs:enumeration value="@android:layout/expandable_list_content" />
@@ -344,6 +348,7 @@
             <xs:enumeration value="@layout/notification_template_part_chronometer" />
             <xs:enumeration value="@layout/notification_template_part_time" />
             <xs:enumeration value="@layout/passwordlayout" />
+            <xs:enumeration value="@layout/registerscreen" />
             <xs:enumeration value="@layout/rosterlayout" />
             <xs:enumeration value="@layout/rosterscreen" />
             <xs:enumeration value="@layout/select_dialog_item_material" />
@@ -351,6 +356,7 @@
             <xs:enumeration value="@layout/select_dialog_singlechoice_material" />
             <xs:enumeration value="@layout/support_simple_spinner_dropdown_item" />
             <xs:enumeration value="@layout/tooltip" />
+            <xs:enumeration value="@layout/workoutsscreen" />
             <xs:enumeration value="@android:layout/activity_list_item" />
             <xs:enumeration value="@android:layout/browser_link_context_header" />
             <xs:enumeration value="@android:layout/expandable_list_content" />
@@ -473,6 +479,7 @@
             <xs:enumeration value="@layout/notification_template_part_chronometer" />
             <xs:enumeration value="@layout/notification_template_part_time" />
             <xs:enumeration value="@layout/passwordlayout" />
+            <xs:enumeration value="@layout/registerscreen" />
             <xs:enumeration value="@layout/rosterlayout" />
             <xs:enumeration value="@layout/rosterscreen" />
             <xs:enumeration value="@layout/select_dialog_item_material" />
@@ -480,6 +487,7 @@
             <xs:enumeration value="@layout/select_dialog_singlechoice_material" />
             <xs:enumeration value="@layout/support_simple_spinner_dropdown_item" />
             <xs:enumeration value="@layout/tooltip" />
+            <xs:enumeration value="@layout/workoutsscreen" />
             <xs:enumeration value="@android:layout/activity_list_item" />
             <xs:enumeration value="@android:layout/browser_link_context_header" />
             <xs:enumeration value="@android:layout/expandable_list_content" />

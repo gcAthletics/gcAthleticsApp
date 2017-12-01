@@ -60,7 +60,7 @@ namespace GCAthletics.Droid
                     newAlertBtn.Visibility = ViewStates.Visible;
                 }
 
-                List<AnnouncementsModel> sqlList = dbu.getAllAnnouncements().ToList();
+                List<AnnouncementsModel> sqlList = dbu.getAllAnnouncements(teamID).ToList();
 
                 foreach(var announcement in sqlList)
                 {
