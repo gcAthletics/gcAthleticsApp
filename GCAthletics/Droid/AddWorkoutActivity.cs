@@ -19,7 +19,7 @@ namespace GCAthletics.Droid
     {
         string email = null;
         int teamID = -1;
-        int selectedUser;
+        
         UserModel usrModel = new UserModel();
        
 

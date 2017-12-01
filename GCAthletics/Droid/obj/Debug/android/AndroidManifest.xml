@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.bobcats.gcsu.edu.GC_Athletics" android:installLocation="auto">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="15" />
+  <uses-permission android:name="android.permission.CALL_PHONE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:label="GC Athletics" android:theme="@android:style/Theme.Material.Light" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="Add Announcement" android:name="md577493f92a1a5163e5d139a2bb682cfaf.AddAlertActivity" />
+    <activity android:label="Add Event" android:name="md577493f92a1a5163e5d139a2bb682cfaf.AddEventActivity" />
+    <activity android:label="Add Player" android:name="md577493f92a1a5163e5d139a2bb682cfaf.AddPlayerActivity" />
+    <activity android:label="Assign Workout" android:name="md577493f92a1a5163e5d139a2bb682cfaf.AddWorkoutActivity" />
+    <activity android:label="Announcements" android:name="md577493f92a1a5163e5d139a2bb682cfaf.AlertsActivity" />
+    <activity android:label="Calendar" android:name="md577493f92a1a5163e5d139a2bb682cfaf.CalendarActivity" />
+    <activity android:label="Home" android:name="md577493f92a1a5163e5d139a2bb682cfaf.HomeActivity" />
+    <activity android:label="GC Athletics" android:name="md577493f92a1a5163e5d139a2bb682cfaf.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="Change Password" android:name="md577493f92a1a5163e5d139a2bb682cfaf.PasswordActivity" />
+    <activity android:label="Register Team" android:name="md577493f92a1a5163e5d139a2bb682cfaf.RegisterActivity" />
+    <activity android:label="Roster" android:name="md577493f92a1a5163e5d139a2bb682cfaf.RosterActivity" />
+    <activity android:label="Workouts" android:name="md577493f92a1a5163e5d139a2bb682cfaf.WorkoutActivity" />
+    <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.FormAuthenticatorActivity" />
+    <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorActivity" />
+    <activity android:label="Web Authenticator Native Broswer" android:launchMode="singleTop" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorNativeBrowserActivity" />
+    <activity android:name="com.microsoft.windowsazure.mobileservices.authentication.RedirectUrlActivity" />
+    <service android:name="md59f70a99687498e7ba187118950981d26.KeepAliveService" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.bobcats.gcsu.edu.GC_Athletics.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.bobcats.gcsu.edu.GC_Athletics" />
+      </intent-filter>
+    </receiver>
+    <meta-data android:name="android.support.VERSION" android:value="26.0.2" />
+  </application>
+</manifest>

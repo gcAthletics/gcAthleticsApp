@@ -474,6 +474,82 @@ namespace GCAthletics.Droid
             return users;
         }
 
+        public int RegisterTeam(TeamModel teamModel)
+        {
+            StringBuilder queryBuilder = new StringBuilder();
+            queryBuilder.Append("INSERT INTO Team (Name, Wins, Losses, Coach, Sport) ");
+            queryBuilder.Append("VALUES ('");
+            queryBuilder.Append(teamModel.Name + "', ");
+            queryBuilder.Append(teamModel.Wins + ", ");
+            queryBuilder.Append(teamModel.Losses + ", '");
+            queryBuilder.Append(teamModel.Coach + "', '");
+            queryBuilder.Append(teamModel.Sport + "');");
+            string query = queryBuilder.ToString();
+
+            StringBuilder queryBuilder2 = new StringBuilder();
+            queryBuilder2.Append("SELECT TeamID FROM Team ");
+            queryBuilder2.Append("WHERE Name = '" + teamModel.Name + "' ");
+            queryBuilder2.Append("AND Wins = " + teamModel.Wins + " ");
+            queryBuilder2.Append("AND Losses = " + teamModel.Losses + " ");
+            queryBuilder2.Append("AND Coach = '" + teamModel.Coach + "' ");
+            queryBuilder2.Append("AND Sport = '" + teamModel.Sport + "';");
+            string query2 = queryBuilder2.ToString();
+
+
+            int teamID = 0;
+
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+            else if (connection.State == System.Data.ConnectionState.Open)
+            {
+                using (command = new SqlCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+            else if (connection.State == System.Data.ConnectionState.Open)
+            {
+                using (command = new SqlCommand(query2, connection))
+                {
+                    Object result = command.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                teamID = reader.GetInt32(0);
+                            }
+                        }
+                    }
+                }
+            }
+
+            return teamID;
+        }
+
         public void insertUser(UserModel user)
         {
             StringBuilder queryBuilder = new StringBuilder();

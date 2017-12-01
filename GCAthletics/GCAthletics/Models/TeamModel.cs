@@ -10,6 +10,7 @@ namespace GCAthletics
         public int Wins { get; set; }
         public int Losses { get; set; }
         public string Sport { get; set; }
+        public string Coach { get; set; }
 
         public override string ToString()
         {

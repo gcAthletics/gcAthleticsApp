@@ -9,9 +9,9 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android;
+using System.Data.SqlClient;
 
-namespace GCAthletics.Droids
+namespace GCAthletics.Droid
 {
     [Activity(Label = "Register Team")]
     public class RegisterActivity : Activity
@@ -31,9 +31,66 @@ namespace GCAthletics.Droids
 
             regButton.Click += (sender, e) =>
             {
+                RegexUtilities rx = new RegexUtilities();
 
+                UserModel usrModel = new UserModel();
+                TeamModel teamModel = new TeamModel();
+                if(regNameText.Text != "" && regPhoneText.Text != "" && regEmailText.Text != ""
+                    && regTeamNameText.Text != "" && regSportText.Text != "")
+                {
+                    usrModel.Name = regNameText.Text;
+                    if (rx.IsValidEmail(regEmailText.Text))
+                    {
+                        usrModel.Email = regEmailText.Text;
+                        if (rx.IsValidPhone(regPhoneText.Text))
+                        {
+                            teamModel.Name = regTeamNameText.Text;
+                            teamModel.Sport = regSportText.Text;
+                            teamModel.Wins = 0;
+                            teamModel.Losses = 0;
+                            teamModel.Coach = regNameText.Text;
+                            usrModel.Phone = regPhoneText.Text;
+                            usrModel.IsInitial = true;
+                            usrModel.Role = "coach";
+
+                            try
+                            {
+                                DButility dbu = new DButility();
+                                SqlConnection connection = dbu.createConnection();
+
+                                usrModel.TeamID = dbu.RegisterTeam(teamModel);
+                                dbu.insertUser(usrModel);
+
+                                string toast = "Registered new team " + teamModel.Name;
+                                Toast.MakeText(this, toast, ToastLength.Long).Show();
+
+                                var intent = new Intent(this, typeof(MainActivity));
+                                StartActivity(intent);
+                            }
+                            catch(SqlException ex)
+                            {
+                                Console.WriteLine(ex);
+                            }
+                        }
+                        else
+                        {
+                            string toast = "Invalid Phone number";
+                            Toast.MakeText(this, toast, ToastLength.Long).Show();
+                        }
+                    }
+                    else
+                    {
+                        string toast = "Invalid email";
+                        Toast.MakeText(this, toast, ToastLength.Long).Show();
+                    }
+                }
+                else
+                {
+                    string toast = "One or more fields blank";
+                    Toast.MakeText(this, toast, ToastLength.Long).Show();
+                }
             };
-
         }
     }
 }
+

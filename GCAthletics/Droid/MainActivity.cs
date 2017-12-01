@@ -13,7 +13,7 @@ using Android.Accounts;
 
 namespace GCAthletics.Droid
 {
-    [Activity(Label = "GC Athletics", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "GC Athletics", MainLauncher = true)]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

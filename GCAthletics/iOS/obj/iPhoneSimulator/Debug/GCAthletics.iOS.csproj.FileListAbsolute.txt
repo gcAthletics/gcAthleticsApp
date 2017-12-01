@@ -1,0 +1,13 @@
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\iOS\bin\iPhoneSimulator\Debug\gcAthletics.iOS.exe
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\iOS\bin\iPhoneSimulator\Debug\gcAthletics.iOS.pdb
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\iOS\bin\iPhoneSimulator\Debug\GCAthletics.dll
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\iOS\bin\iPhoneSimulator\Debug\GCAthletics.pdb
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\iOS\bin\iPhoneSimulator\Debug\GCAthletics.dll.mdb
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\iOS\obj\iPhoneSimulator\Debug\GCAthletics.iOS.csprojResolveAssemblyReference.cache
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\iOS\obj\iPhoneSimulator\Debug\GCAthletics.iOS.csproj.CoreCompileInputs.cache
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\iOS\obj\iPhoneSimulator\Debug\gcAthletics.iOS.exe
+C:\Users\Max\Documents\Codes\GCathApp\gcAthleticsApp\GCAthletics\iOS\obj\iPhoneSimulator\Debug\gcAthletics.iOS.pdb
