@@ -81,47 +81,54 @@ namespace GCAthletics.Droid
             {
                 DateTime insDate = new DateTime(inputdate.Year, inputdate.Month, inputdate.Day, inputtime.Hour, inputtime.Minute, inputtime.Second);
 
-                try
+                if (descriptionText.Text == "" || titleText.Text == "")
                 {
-                    DButility dbu = new DButility();
-                    SqlConnection connection = dbu.createConnection();
-
-                    EventModel eventModel = new EventModel();
-                    eventModel.DateTime = insDate;
-                    eventModel.Description = descriptionText.Text;
-                    eventModel.Name = titleText.Text;
-                    eventModel.TeamID = usrModel.TeamID;
-                    eventModel.UserID = usrModel.ID;
-                    eventModel.SendAlert = false;
-
-                    if (privateSwitchisSelected)
-                    {
-                        dbu.insertEventForUser(eventModel, usrModel.ID);
-
-                        string toast = "Added private event to calendar";
-                        Toast.MakeText(this, toast, ToastLength.Long).Show();
-                    }
-                    else
-                    {
-                        eventModel.SendAlert = true;
-                        dbu.insertEventForTeam(eventModel, teamID);
-
-                        string toast = "Added team event to calendar";
-                        Toast.MakeText(this, toast, ToastLength.Long).Show();
-                    }
-                    
+                    string toast = "One or more fields left blank";
+                    Toast.MakeText(this, toast, ToastLength.Long).Show();
                 }
-                catch (SqlException ex)
+                else
                 {
-                    Console.WriteLine(ex);
+                    try
+                    {
+                        DButility dbu = new DButility();
+                        SqlConnection connection = dbu.createConnection();
+
+                        EventModel eventModel = new EventModel();
+                        eventModel.DateTime = insDate;
+                        eventModel.Description = descriptionText.Text;
+                        eventModel.Name = titleText.Text;
+                        eventModel.TeamID = usrModel.TeamID;
+                        eventModel.UserID = usrModel.ID;
+                        eventModel.SendAlert = false;
+
+                        if (privateSwitchisSelected)
+                        {
+                            dbu.insertEventForUser(eventModel, usrModel.ID);
+
+                            string toast = "Added private event to calendar";
+                            Toast.MakeText(this, toast, ToastLength.Long).Show();
+                        }
+                        else
+                        {
+                            eventModel.SendAlert = true;
+                            dbu.insertEventForTeam(eventModel, teamID);
+
+                            string toast = "Added team event to calendar";
+                            Toast.MakeText(this, toast, ToastLength.Long).Show();
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+
+                    //string toast = "Added event to calendar";
+                    //Toast.MakeText(this, toast, ToastLength.Long).Show();
+
+                    var intent = new Intent(this, typeof(CalendarActivity));
+                    intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
+                    StartActivity(intent);
                 }
-
-                //string toast = "Added event to calendar";
-                //Toast.MakeText(this, toast, ToastLength.Long).Show();
-
-                var intent = new Intent(this, typeof(CalendarActivity));
-                intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
-                StartActivity(intent);
             };
         }
     }

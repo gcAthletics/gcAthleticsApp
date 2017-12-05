@@ -41,26 +41,34 @@ namespace GCAthletics.Droid
             {
                 try
                 {
-                    DButility dbu = new DButility();
-                    SqlConnection connection = dbu.createConnection();
+                    if(titleText.Text == "" || descriptionText.Text == "")
+                    {
+                        string toast = "One or more fields blank";
+                        Toast.MakeText(this, toast, ToastLength.Long).Show();
+                    }
+                    else
+                    {
+                        DButility dbu = new DButility();
+                        SqlConnection connection = dbu.createConnection();
 
-                    AnnouncementsModel announcement = new AnnouncementsModel();
-                    DateTime now = DateTime.Now;
-                    announcement.Name = titleText.Text;
-                    announcement.Description = descriptionText.Text;
-                    announcement.DateTime = DateTime.SpecifyKind(now, DateTimeKind.Local);
-                    announcement.TeamID = teamID;
-                    //TODO: change this to reflect an actual ID
-                    announcement.EventID = 3;
+                        AnnouncementsModel announcement = new AnnouncementsModel();
+                        DateTime now = DateTime.Now;
+                        announcement.Name = titleText.Text;
+                        announcement.Description = descriptionText.Text;
+                        announcement.DateTime = DateTime.SpecifyKind(now, DateTimeKind.Local);
+                        announcement.TeamID = teamID;
+                        //TODO: change this to reflect an actual ID
+                        announcement.EventID = 3;
 
-                    dbu.insertAnnouncement(announcement);
+                        dbu.insertAnnouncement(announcement);
 
-                    Toast.MakeText(this, "Announcement posted", ToastLength.Long).Show();
+                        Toast.MakeText(this, "Announcement posted", ToastLength.Long).Show();
 
-                    var intent = new Intent(this, typeof(AlertsActivity));
-                    usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
-                    intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
-                    StartActivity(intent);
+                        var intent = new Intent(this, typeof(AlertsActivity));
+                        usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
+                        intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
+                        StartActivity(intent);
+                    }
                 }
                 catch (SqlException ex)
                 {

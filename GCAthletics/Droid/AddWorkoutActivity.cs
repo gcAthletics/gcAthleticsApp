@@ -51,28 +51,36 @@ namespace GCAthletics.Droid
 
             assignBtn.Click += (sender, e) =>
             {
-                try
+                if (detailsText.Text == "")
                 {
-                    DButility dbu = new DButility();
-                    SqlConnection connection = dbu.createConnection();
-
-                    workModel.Completed = false;
-                    workModel.TeamID = usrModel.TeamID;
-                    workModel.Description = detailsText.Text;
-
-                    dbu.insertWorkoutForTeam(workModel, usrModel.TeamID);
-
-                    string toast = "Assigned workout to teaam";
+                    String toast = "Please enter workout details";
                     Toast.MakeText(this, toast, ToastLength.Long).Show();
-
-                    var intent = new Intent(this, typeof(WorkoutActivity));
-                    usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
-                    intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
-                    StartActivity(intent);
                 }
-                catch (SqlException ex)
+                else
                 {
-                    Console.WriteLine(ex);
+                    try
+                    {
+                        DButility dbu = new DButility();
+                        SqlConnection connection = dbu.createConnection();
+
+                        workModel.Completed = false;
+                        workModel.TeamID = usrModel.TeamID;
+                        workModel.Description = detailsText.Text;
+
+                        dbu.insertWorkoutForTeam(workModel, usrModel.TeamID);
+
+                        string toast = "Assigned workout to teaam";
+                        Toast.MakeText(this, toast, ToastLength.Long).Show();
+
+                        var intent = new Intent(this, typeof(WorkoutActivity));
+                        usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
+                        intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
+                        StartActivity(intent);
+                    }
+                    catch (SqlException ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
                 }
             };
 

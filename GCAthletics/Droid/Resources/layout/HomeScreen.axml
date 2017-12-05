@@ -11,7 +11,7 @@
         android:id="@+id/textWelcome"
         android:layout_centerHorizontal="true"
         android:paddingTop="8dp"
-        android:textSize="35dp" />
+        android:textSize="55dp" />
     <ImageView
         android:src="@mipmap/user"
         android:layout_width="100dp"
@@ -32,7 +32,7 @@
         android:layout_below="@id/avatarImgBtn"
         android:id="@+id/textName"
         android:layout_centerHorizontal="true"
-        android:textSize="18dp" />
+        android:textSize="28dp" />
     <TextView
         android:text="@string/team"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -41,7 +41,7 @@
         android:layout_below="@id/textName"
         android:id="@+id/textTeam"
         android:layout_centerHorizontal="true"
-        android:textSize="15dp" />
+        android:textSize="25dp" />
     <RelativeLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
@@ -51,31 +51,27 @@
         android:paddingTop="15dp">
         <ImageButton
             android:src="@mipmap/megaphone"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/alertsImgBtn"
-            android:scaleType="fitCenter" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/alertsImgBtn" />
         <ImageButton
             android:src="@mipmap/dumbell"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_toRightOf="@id/alertsImgBtn"
-            android:id="@+id/workoutImgBtn"
-            android:scaleType="fitCenter" />
+            android:id="@+id/workoutImgBtn" />
         <ImageButton
             android:src="@mipmap/ccc"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_below="@id/alertsImgBtn"
-            android:id="@+id/calendarImgBtn"
-            android:scaleType="fitCenter" />
+            android:id="@+id/calendarImgBtn" />
         <ImageButton
             android:src="@mipmap/people"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_toRightOf="@id/calendarImgBtn"
             android:id="@+id/rosterImgBtn"
-            android:layout_below="@id/workoutImgBtn"
-            android:scaleType="fitCenter" />
+            android:layout_below="@id/workoutImgBtn" />
     </RelativeLayout>
 </RelativeLayout>

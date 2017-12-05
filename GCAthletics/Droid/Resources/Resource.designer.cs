@@ -4222,7 +4222,7 @@ namespace GCAthletics.Droid
 			public const int dumbell = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Icon = 2130903042;
+			public const int icon = 2130903042;
 			
 			// aapt resource value: 0x7f030003
 			public const int megaphone = 2130903043;

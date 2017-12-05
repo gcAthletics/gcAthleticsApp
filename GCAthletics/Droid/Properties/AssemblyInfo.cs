@@ -6,13 +6,14 @@ using Android.App;
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle("GCAthletics.Droid")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("This app was created for educational purposes for Georgia College and State University")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("GCSU")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("${AuthorCopyright}")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: Application(Icon = "@mipmap/icon", Debuggable = false)]
 
 // The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".
 // The form "{Major}.{Minor}.*" will automatically update the build and revision,

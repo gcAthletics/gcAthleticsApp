@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.bobcats.gcsu.edu.GC_Athletics" android:installLocation="auto" android:versionName="1.0.9" android:versionCode="9">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="15" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-feature android:name="android.hardware.screen.portrait" android:required="true" />
+  <uses-feature android:name="android.hardware.screen.landscape" android:required="false" />
+  <application android:label="GC Athletics" android:theme="@android:style/Theme.Material.Light" android:debuggable="false" android:icon="@mipmap/icon" android:name="android.app.Application" android:allowBackup="true">
+    <activity android:label="Add Announcement" android:name="md597c615ddabd2fb75633b9d0450529a34.AddAlertActivity" />
+    <activity android:label="Add Event" android:name="md597c615ddabd2fb75633b9d0450529a34.AddEventActivity" />
+    <activity android:label="Add Player" android:name="md597c615ddabd2fb75633b9d0450529a34.AddPlayerActivity" />
+    <activity android:label="Assign Workout" android:name="md597c615ddabd2fb75633b9d0450529a34.AddWorkoutActivity" />
+    <activity android:label="Announcements" android:name="md597c615ddabd2fb75633b9d0450529a34.AlertsActivity" />
+    <activity android:label="Calendar" android:name="md597c615ddabd2fb75633b9d0450529a34.CalendarActivity" />
+    <activity android:label="Home" android:name="md597c615ddabd2fb75633b9d0450529a34.HomeActivity" />
+    <activity android:label="GC Athletics" android:name="md597c615ddabd2fb75633b9d0450529a34.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="Change Password" android:name="md597c615ddabd2fb75633b9d0450529a34.PasswordActivity" />
+    <activity android:label="Register Team" android:name="md597c615ddabd2fb75633b9d0450529a34.RegisterActivity" />
+    <activity android:label="Roster" android:name="md597c615ddabd2fb75633b9d0450529a34.RosterActivity" />
+    <activity android:label="Workouts" android:name="md597c615ddabd2fb75633b9d0450529a34.WorkoutActivity" />
+    <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.FormAuthenticatorActivity" />
+    <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorActivity" />
+    <activity android:label="Web Authenticator Native Broswer" android:launchMode="singleTop" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorNativeBrowserActivity" />
+    <activity android:name="com.microsoft.windowsazure.mobileservices.authentication.RedirectUrlActivity" />
+    <service android:name="md59f70a99687498e7ba187118950981d26.KeepAliveService" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.bobcats.gcsu.edu.GC_Athletics.mono.MonoRuntimeProvider.__mono_init__" />
+    <meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT" />
+    <meta-data android:name="android.support.VERSION" android:value="26.1.0" />
+  </application>
+  <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:resizeable="true" />
+</manifest>
