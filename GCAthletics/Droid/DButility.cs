@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * This class contains all need methods to connect to the database and run queries on it.
+ * It will need to be instantiated as an object, and then call DButility.createConnection()
+ * Then any queries can be run on the database.
+ */ 
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,11 +18,14 @@ namespace GCAthletics.Droid
     {
         public DButility() { }
 
+        //connection string builder
         private SqlConnectionStringBuilder sqlConBuilder = new SqlConnectionStringBuilder();
 
         static SqlConnection connection = null;
         private SqlCommand command = null;
 
+        //add connection string information
+        //returnn SqlConnection object tied to database.
         public SqlConnection createConnection()
         {
             sqlConBuilder.DataSource = "den1.mssql2.gear.host";
@@ -37,10 +46,13 @@ namespace GCAthletics.Droid
             return connection;
         }
 
+        //returns true if input email and password match a email and corresponding password hash
+        //first parameter is an email string, second is a password string
         public bool appLogin(string email, string password)
         {
             bool authenticated = false;
 
+            //query to select a user and password hash by input email
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("SELECT Email, PasswordHash FROM Users ");
             queryBuilder.Append("WHERE Email = '");
@@ -48,6 +60,7 @@ namespace GCAthletics.Droid
             queryBuilder.Append("';");
             string query = queryBuilder.ToString();
 
+            //check to see if connected to a database.
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -59,16 +72,20 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex.ToString());
                 }
             }
+            //if connected, compare password hashes
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     Object result = command.ExecuteScalar();
-
+                    
+                    //check if anything was returned, if not no emails match a user in the database
                     if (result != null)
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
+                            //compare the returned password hash with the hash of the input password
+                            //if true, then the method will return true
                             reader.Read();
                             if (reader.GetString(1).Equals(passwordHash(password), StringComparison.InvariantCultureIgnoreCase))
                             {
@@ -86,6 +103,9 @@ namespace GCAthletics.Droid
             return authenticated;
         }
 
+        //computes the SHA256 hash of an input string
+        //returns the hash value
+        //takes a string value
         private string passwordHash(string password)
         {
             StringBuilder builder = new StringBuilder();
@@ -102,8 +122,11 @@ namespace GCAthletics.Droid
             return builder.ToString();
         }
 
+        //inserts announcement into database
+        //takes an AnnouncementModel object
         public void insertAnnouncement(AnnouncementsModel announcement)
         {
+            //query to insert announcement into database
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("INSERT INTO Announcements (Name, Description, DateTime, EventID, TeamID)" +
                                 "VALUES ('");
@@ -115,6 +138,7 @@ namespace GCAthletics.Droid
 
             string query = queryBuilder.ToString();
 
+            //check if database connection is closed, if so open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -126,6 +150,7 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if connection is open, execute query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
@@ -135,9 +160,15 @@ namespace GCAthletics.Droid
             }
         }
 
+        //Gets all announcements by teamID and current date
+        //takes an int value that should be a teamID
+        //returns list of AnnouncementModels
         public IEnumerable<AnnouncementsModel> getAllAnnouncements(int teamID)
         {
+            //get current date
             DateTime sqlDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0);
+
+            //query to get all anouncements that have a date greater than the current date and match the input teamID
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("SELECT AnnouncementID, Name, Description, DateTime, EventID FROM Announcements ");
             queryBuilder.Append("WHERE TeamID = '" + teamID + "' ");
@@ -146,6 +177,7 @@ namespace GCAthletics.Droid
             string query = queryBuilder.ToString();
             List<AnnouncementsModel> rc = new List<AnnouncementsModel>();
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -157,6 +189,7 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if connection state is open, execute query 
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
@@ -164,7 +197,9 @@ namespace GCAthletics.Droid
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
-                        {
+                        {   
+                            //create new AnnouncementModel for each query result
+                            //add AnnouncementModel to list
                             AnnouncementsModel announcement = new AnnouncementsModel();
                             announcement.ID = reader.GetInt32(0);
                             announcement.Name = reader.GetString(1);
@@ -180,8 +215,11 @@ namespace GCAthletics.Droid
             return rc;
         }
 
+        //inserts a team to the database
+        //takes a TeamModel object as its only parameter
         public void insertTeam(TeamModel team)
-        {
+        {   
+            //query to insert team
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("INSERT INTO Teams (Name, Wins, Losses, Sport) " +
                                 "VALUES ('");
@@ -192,6 +230,7 @@ namespace GCAthletics.Droid
 
             string query = queryBuilder.ToString();
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -203,6 +242,7 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if connection state is open, run query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
@@ -212,8 +252,11 @@ namespace GCAthletics.Droid
             }
         }
 
+        //this get's a team information by matching a teamID
+        //takes an int value as a teamID as its only parameter
         public TeamModel getTeamById(int id)
         {
+            //query to get a team by teamID
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("SELECT TeamID, Name, Wins, Losses, Sport FROM Team ");
             queryBuilder.Append("WHERE TeamID = " + id.ToString() + ";");
@@ -221,6 +264,7 @@ namespace GCAthletics.Droid
             string query = queryBuilder.ToString();
             TeamModel rc = new TeamModel();
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -232,6 +276,7 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if database connection is open, run query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
@@ -241,7 +286,8 @@ namespace GCAthletics.Droid
                     if (result != null)
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
-                        {
+                        {   
+                            //populate TeamModel from query result
                             reader.Read();
                             rc.ID = reader.GetInt32(0);
                             rc.Name = reader.GetString(1);
@@ -256,8 +302,11 @@ namespace GCAthletics.Droid
             return rc;
         }
 
+        //this method updates a team's information in the database
+        //its only parameter is a TeamModel object
         public void updateTeam(TeamModel team)
-        {
+        {   
+            //query to update team by matching teamID
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("UPDATE Team SET ");
             queryBuilder.Append("Name = '" + team.Name + "', ");
@@ -268,6 +317,7 @@ namespace GCAthletics.Droid
 
             string query = queryBuilder.ToString();
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -279,6 +329,7 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if database connection is open, execute query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
@@ -288,8 +339,12 @@ namespace GCAthletics.Droid
             }
         }
 
+        //this method gets all users on the same team by using the teamID
+        //Takes in an int value as a TeamID
+        //returns a list of UserModel objects
         public IEnumerable<UserModel> getAllUsersByTeamID(int id)
         {
+            //query to get all users by teamID
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("SELECT UserId, Phone, Email, Role, Name, TeamID, IsInitial FROM Users ");
             queryBuilder.Append("WHERE TeamID = " + id + ";");
@@ -298,6 +353,7 @@ namespace GCAthletics.Droid
             List<UserModel> rc = new List<UserModel>();
             UserModel user = new UserModel();
 
+            //if databaseconnection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -309,16 +365,19 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if database connection is open, run query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
                 {
                     Object result = command.ExecuteScalar();
-
+                    //check to see if results are empty, if so, there are no users with a matching TeamID
                     if (result != null)
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
+                            //for each query result, create a new UserModel,
+                            //populate it with the query result, and add it to the list
                             while (reader.Read())
                             {
                                 user = new UserModel();
@@ -338,8 +397,12 @@ namespace GCAthletics.Droid
             return rc;
         }
 
+        //gets a user by their email
+        //takes an email string as its parameter
+        //returns a UserModel object
         public UserModel getUserByEmail(string email)
         {
+            //query to get user by email
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("SELECT UserId, Phone, Email, Role, Name, TeamID, IsInitial FROM Users ");
             queryBuilder.Append("WHERE Email = '" + email + "';");
@@ -347,6 +410,7 @@ namespace GCAthletics.Droid
             string query = queryBuilder.ToString();
             UserModel rc = new UserModel();
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -358,16 +422,18 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if connection is open, run query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using(command = new SqlCommand(query, connection))
                 {
                     Object result = command.ExecuteScalar();
-
+                    //check if results are empty, if so there is no matching user
                     if(result != null)
                     {
                         using(SqlDataReader reader = command.ExecuteReader())
-                        {
+                        {   
+                            //create a nenw UserModel and populate it with the query results
                             reader.Read();
                             rc.ID = reader.GetInt32(0);
                             rc.Phone = reader.GetString(1);
@@ -384,8 +450,12 @@ namespace GCAthletics.Droid
             return rc;
         }
 
+        //gets a user by a user ID
+        //takes in an int value as a userID
+        //returns a UserModel object
         public UserModel getUserById(int id)
         {
+            //query to get a user by UserID
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("SELECT UserID, Phone, Email, Role, Name, TeamID, IsInitial FROM Users ");
             queryBuilder.Append("WHERE UserID = " + id + ";");
@@ -393,6 +463,7 @@ namespace GCAthletics.Droid
             string query = queryBuilder.ToString();
             UserModel rc = null;
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -404,16 +475,18 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if databse connection is open, run query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
                 {
                     Object result = command.ExecuteScalar();
-
+                    //check to see if results are empty, if so there is no matching user
                     if (result != null)
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
+                            //create a new UserModel object and populate it with the query results
                             reader.Read();
                             rc.ID = reader.GetInt32(0);
                             rc.Phone = reader.GetString(1);
@@ -430,8 +503,11 @@ namespace GCAthletics.Droid
             return rc;
         }
 
+        //gets all user's names by teamID
+        //returns a string list of user's names
         public String[] getUsersByTeamId(int teamID)
         {
+            //query to get Names of all users by teamID
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("SELECT Name ");
             queryBuilder.Append("FROM Users ");
@@ -441,6 +517,7 @@ namespace GCAthletics.Droid
 
             String[] users = new String[50];
 
+            //if database connection is closed, open it
             if(connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -452,16 +529,18 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if databse connection is open, run query
             else if(connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
                 {
                     Object result = command.ExecuteScalar();
-
+                    //check to see if results are empty, if so there are no users with matching teamID
                     if(result != null)
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
+                            //add each query result to the list to be returned
                             while (reader.Read())
                             {
                                 users.Append(reader.GetString(0));
@@ -474,8 +553,12 @@ namespace GCAthletics.Droid
             return users;
         }
 
+        //adds a new team to the database
+        //takes a TeamModel object as a parameter
+        //returns an int value which is the newly added team's teamID
         public int RegisterTeam(TeamModel teamModel)
         {
+            //query to insert new team
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("INSERT INTO Team (Name, Wins, Losses, Coach, Sport) ");
             queryBuilder.Append("VALUES ('");
@@ -486,6 +569,7 @@ namespace GCAthletics.Droid
             queryBuilder.Append(teamModel.Sport + "');");
             string query = queryBuilder.ToString();
 
+            //query to get new team's teamID
             StringBuilder queryBuilder2 = new StringBuilder();
             queryBuilder2.Append("SELECT TeamID FROM Team ");
             queryBuilder2.Append("WHERE Name = '" + teamModel.Name + "' ");
@@ -497,7 +581,7 @@ namespace GCAthletics.Droid
 
 
             int teamID = 0;
-
+            //if database connection state is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -509,6 +593,7 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if database connection is open, run first query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
@@ -517,6 +602,7 @@ namespace GCAthletics.Droid
                 }
             }
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -528,6 +614,7 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if database connection is oopen, run second query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query2, connection))
@@ -550,6 +637,9 @@ namespace GCAthletics.Droid
             return teamID;
         }
 
+        //inserts a new user to the database
+        //sets the new user's passwordHash to be the SHA256 hash value of "gobobcats1" without quotes
+        //takes a UserModel as its only parameter
         public void insertUser(UserModel user)
         {
             StringBuilder queryBuilder = new StringBuilder();
@@ -560,6 +650,7 @@ namespace GCAthletics.Droid
             else
                 initial = 0;
 
+            //query to insert user
             queryBuilder.Append("INSERT INTO Users (Name, PasswordHash, Phone, Email, Role, TeamID, IsInitial) " +
                                 "VALUES ('");
             queryBuilder.Append(user.Name + "', '");
@@ -572,6 +663,7 @@ namespace GCAthletics.Droid
 
             string query = queryBuilder.ToString();
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -583,6 +675,7 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if database connection is open, run the query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
@@ -592,8 +685,11 @@ namespace GCAthletics.Droid
             }
         }
 
+        //removes a user that has a matching userID
+        //takes an int value as a userID as its only parameter
         public void removeUser(int userID)
         {
+            //query for removing a user by UserID
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("DELETE FROM Users ");
             queryBuilder.Append("WHERE UserID = ");
@@ -602,6 +698,7 @@ namespace GCAthletics.Droid
 
             string query = queryBuilder.ToString();
 
+            //if database connection is closed, open it
             if(connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -613,6 +710,7 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if database connection is open, run query
             else if(connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
@@ -622,10 +720,15 @@ namespace GCAthletics.Droid
             }
         }
 
+        //changes a users password
+        //takes in a string to calculate the new passwordHash
+        //takes in a string to find the user by email
         public void changePassword(string pwd, string email)
         {
+            //calculate SHA256 hash value of input password string
             String hashPassword = passwordHash(pwd);
 
+            //query to update passwordHash by matching email
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("UPDATE Users ");
             queryBuilder.Append("SET PasswordHash = '");
@@ -636,6 +739,7 @@ namespace GCAthletics.Droid
 
             string query = queryBuilder.ToString();
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -647,6 +751,7 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if database connection is open, run query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
@@ -656,15 +761,19 @@ namespace GCAthletics.Droid
             }
         }
 
-        // waiting on DB change to include TeamId
+        //get all announcements by teamID
+        //takes in an int value as a teamID
+        //returns a list of AnnouncementsModel objects
         public IEnumerable<AnnouncementsModel> getAnnouncementsByTeamId(int teamId)
         {
+            //query to get all anouncements by matching teamID
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("SELECT AnnouncementID, Name, Description, DateTime, TeamID, EventID FROM Announcements ");
             queryBuilder.Append("WHERE TeamID = " + teamId + " ORDER BY DateTime DESC;");
             string query = queryBuilder.ToString();
             List<AnnouncementsModel> rc = new List<AnnouncementsModel>();
 
+            //if databse connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -676,12 +785,15 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if database connection is open, run query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
+                        //for each query result, create a new AnnouncementsModel object
+                        //then add the object to the list to be returned
                         while (reader.Read())
                         {
                             AnnouncementsModel announcement = new AnnouncementsModel();
@@ -700,8 +812,12 @@ namespace GCAthletics.Droid
             return rc;
         }
 
+        //gets all events by userID and Date/gets all private events for selected date
+        //takes an int value as a UserID and a DateTime object
+        //returns a list of EventModel objects
         public IEnumerable<EventModel> getAllEventsByUserAndDate(int userId, DateTime dt)
         {
+            //query for getting all events greater than input date and have a matching userID
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("SELECT EventID, Name, Description, DateTime, SendAlert FROM Events ");
             queryBuilder.Append("WHERE UserID = " + userId);
@@ -712,6 +828,7 @@ namespace GCAthletics.Droid
             List<EventModel> rc = new List<EventModel>();
             EventModel e = null;
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -723,12 +840,17 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+
+            //if database connection is open, run query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
+                        //for each query result, create a new EventModel object
+                        //populate the EventModel object with the query results
+                        //add the object to the list to be returned
                         while (reader.Read())
                         {
                             e = new EventModel();
@@ -746,8 +868,12 @@ namespace GCAthletics.Droid
             return rc;
         }
 
+        //gets all events by teamID and date/gets all public events for selected date
+        //takes an int value as a teamID and a DateTime object
+        //returns a list of EventModel objects
         public IEnumerable<EventModel> getAllEventsByTeamIDAndDate(int TeamID, DateTime dt)
         {
+            //query to get all events with matching teamID and matching date
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("SELECT EventID, Name, Description, DateTime, SendAlert FROM Events ");
             queryBuilder.Append("WHERE TeamID = " + TeamID);
@@ -758,6 +884,7 @@ namespace GCAthletics.Droid
             List<EventModel> rc = new List<EventModel>();
             EventModel e = null;
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -769,12 +896,16 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if databse connection is open, run query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
+                        //for each query result, create a new EventModel object
+                        //populate the object with the query result
+                        //add the object to the list to be returned
                         while (reader.Read())
                         {
                             e = new EventModel();
@@ -791,9 +922,12 @@ namespace GCAthletics.Droid
 
             return rc;
         }
-        // Edit database to accept a teamId or a userId (cannot have both at the same time to reduce repetitive data)
+        
+        //inserts private event into database
+        //takes an EventModel object and an int value as a userID
         public void insertEventForUser(EventModel e, int userId)
         {
+            //query to insert event with a userID into the database
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("INSERT INTO Events (Name, Description, DateTime, UserID, TeamID, SendAlert) " +
                                 "VALUES ('");
@@ -813,6 +947,7 @@ namespace GCAthletics.Droid
 
             string query = queryBuilder.ToString();
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -824,6 +959,7 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if database connection is open, run query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
@@ -833,9 +969,11 @@ namespace GCAthletics.Droid
             }
         }
 
-        // Edit database to accept a teamId or a userId (cannot have both at the same time to reduce repetitive data)
+        //inserts public event into database
+        //takes an EventModel object and an int value as a teamID
         public void insertEventForTeam(EventModel e, int teamId)
-        {
+        {   
+            //query to isnert event into database with a teamID
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("INSERT INTO Events (Name, Description, DateTime, TeamID, SendAlert) " +
                                 "VALUES ('");
@@ -855,6 +993,7 @@ namespace GCAthletics.Droid
 
             string query = queryBuilder.ToString();
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -866,6 +1005,7 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if database connection is open, execute query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
@@ -875,8 +1015,11 @@ namespace GCAthletics.Droid
             }
         }
 
+        //inserts a workout for a team into the database
+        //takes a WorkoutModel object and an int value as a teamID
         public void insertWorkoutForTeam(WorkoutModel e, int teamId)
         {
+            //query to insert workout with teamID
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("INSERT INTO Workouts (Date, Completed, TeamId, Description) ");
             queryBuilder.Append("VALUES ('");
@@ -887,6 +1030,7 @@ namespace GCAthletics.Droid
             
             string query = queryBuilder.ToString();
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -898,6 +1042,7 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if database connection is open, run query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
@@ -907,6 +1052,11 @@ namespace GCAthletics.Droid
             }
         }
 
+        /*
+         * Not yet working or implemented, dont use.
+         * 
+         * Will insert a workout into the database for a specific user
+         */ 
         public void insertWorkoutForUser(WorkoutModel e, int userId)
         {
             StringBuilder queryBuilder = new StringBuilder();
@@ -938,8 +1088,11 @@ namespace GCAthletics.Droid
             }
         }
 
+        //updates an event in the database
+        //takes an EventModel object
         public void updateEvent(EventModel e)
         {
+            //query to update an event with a matching EventID
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("UPDATE Events SET ");
             queryBuilder.Append("Name = '" + e.Name + "', ");
@@ -958,6 +1111,7 @@ namespace GCAthletics.Droid
 
             string query = queryBuilder.ToString();
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -969,6 +1123,7 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if database connection is open, run query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
@@ -978,8 +1133,11 @@ namespace GCAthletics.Droid
             }
         }
 
+        //deletes an event from the database
+        //takes an EventModel object
         public void deleteEvent(EventModel e)
         {
+            //Query to remove an event with a matching EventID
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("DELETE FROM Events WHERE EventID = " + e.ID);
             if(e.SendAlert == true)
@@ -988,6 +1146,7 @@ namespace GCAthletics.Droid
             }
             string query = queryBuilder.ToString();
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 try
@@ -999,6 +1158,7 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if database connection is open, run query
             else if (connection.State == System.Data.ConnectionState.Open)
             {
                 using (command = new SqlCommand(query, connection))
@@ -1008,10 +1168,15 @@ namespace GCAthletics.Droid
             }
         }
 
+        //gets all workouts by teamID
+        //takes an int value as a teamID
+        //returns a list of WorkoutModel objects
         public IEnumerable<WorkoutModel> GetAllCurrentWorkoutsByTeamID(int teamID)
         {
+            //current date but midnight
             DateTime sqlDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0);
 
+            //query to get all workouts by matching teamID and have a date greater than sqlDate
             StringBuilder queryBuilder = new StringBuilder();
             queryBuilder.Append("SELECT Date, Completed, Description, WorkoutID ");
             queryBuilder.Append("FROM Workouts ");
@@ -1022,6 +1187,7 @@ namespace GCAthletics.Droid
 
             string query = queryBuilder.ToString();
 
+            //if database connection is closed, open it
             if (connection.State == System.Data.ConnectionState.Closed){
                 try{
                     connection.Open();
@@ -1030,11 +1196,15 @@ namespace GCAthletics.Droid
                     Console.WriteLine(ex);
                 }
             }
+            //if database connection is open, run query
             else if (connection.State == System.Data.ConnectionState.Open){
                 using (command = new SqlCommand(query, connection))
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
+                        //for each query result, create a new WorkoutModel object
+                        //populate the WorkoutModel object with the query result
+                        //add the object to the list to be returned
                         while (reader.Read())
                         {
                             e = new WorkoutModel();

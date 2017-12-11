@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * This is the class that controls the listView inside of AlertsScreen.axml
+ * It works by populating a view made from AlertLayout.axml and an announcement's information
+ * The view is then added to the listView from AlertsScreen.axml
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,6 +43,7 @@ namespace BuiltInViews {
             get { return items.Count; } 
         }
 
+        //set contents of the view to be whatever is passed in
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             var item = items[position];
@@ -49,7 +56,6 @@ namespace BuiltInViews {
             text2.Text = item.SubHeading;
             var text3 = view.FindViewById<TextView>(GCAthletics.Droid.Resource.Id.dateTxt);
             text3.Text = item.DateHeading;
-            //sview.FindViewById<ImageView>(GCAthletics.Droid.Resource.Id.Image).SetImageResource(item.ImageResourceId);
             return view;
         }
     }

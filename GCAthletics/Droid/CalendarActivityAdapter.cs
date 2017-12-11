@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * This is the class that controls the listView inside of CalendarScreen.axml
+ * It works by populating a view made from AlertLayout.axml and an event's information
+ * The view is then added to the listView from CalendarScreen.axml
+ */
+
+using System;
 using System.Collections.Generic;
 using Android.App;
 using Android.Views;

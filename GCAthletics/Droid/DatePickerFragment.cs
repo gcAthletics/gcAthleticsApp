@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * This code was borrowed from
+ * https://developer.xamarin.com/guides/android/user_interface/controls/pickers/date-picker/
+ * It is used to display a date picker object
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

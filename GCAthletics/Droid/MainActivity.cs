@@ -1,4 +1,8 @@
-﻿using Android.App;
+﻿/*
+ * This is the class that controls the functionality of the Login Page on the app. It uses the components from Resource.Layout.Main.axml 
+ */
+
+using Android.App;
 using Android.Widget;
 using Android.OS;
 using Android.Content;
@@ -23,12 +27,14 @@ namespace GCAthletics.Droid
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
+            //get all contents from layout resource
             var imageView = FindViewById<ImageView>(Resource.Id.thunderImage);
-            imageView.SetImageResource(Resource.Mipmap.thunder);
-
             var emailField = FindViewById<EditText>(Resource.Id.emailField);
             var passwordField = FindViewById<EditText>(Resource.Id.passwordField);
             TextView registerText = FindViewById<TextView>(Resource.Id.registerText);
+
+            //set imageView's image to thunder.png
+            imageView.SetImageResource(Resource.Mipmap.thunder);
 
             // Get login button from the layout resource,
             // and attach an event to it
@@ -37,13 +43,15 @@ namespace GCAthletics.Droid
             // when login button is clicked, open up HomeScreen.axml (the app home screen)
             // also start activity HomeActivity.cs (activity controlling actions for the app home screen)
             loginButton.Click += (sender, e) =>
-            {    
+            {
 
+                //get email and password input from user
                 var email = emailField.Text;
                 var password = passwordField.Text;
 
                 try
                 {
+                    //connect to database
                     DButility dbu = new DButility();
                     SqlConnection connection = dbu.createConnection();
 
@@ -61,6 +69,7 @@ namespace GCAthletics.Droid
                         {
                             intent = new Intent(this, typeof(HomeActivity));
                         }
+                        //send data for the user to the next screen
                         intent.PutExtra("user", JsonConvert.SerializeObject(usrModel));
                         StartActivity(intent);
                     }
@@ -76,6 +85,7 @@ namespace GCAthletics.Droid
                 }               
             };
 
+            //if registerText is clicked, it it will open up the Register Screen
             registerText.Click += (sender, e) =>
             {
                 var intent = new Intent(this, typeof(RegisterActivity));
@@ -83,6 +93,7 @@ namespace GCAthletics.Droid
             };
         }
 
+        //if the back button is pressed, the app will be closed
         public override void OnBackPressed()
         {
             Android.OS.Process.KillProcess(Android.OS.Process.MyPid());

@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * This code was borrowed from:
+ *  https://docs.microsoft.com/en-us/dotnet/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format
+ * It is used to check if values from input fields are correctly formatted
+ */
+
+using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
 

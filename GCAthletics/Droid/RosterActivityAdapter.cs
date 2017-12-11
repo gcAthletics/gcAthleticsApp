@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * This is the class that controls the listView inside of RosterScreen.axml
+ * It works by populating a view made from RoserLayout.axml and a user's information
+ * The view is then added to the listView from RosterScreen.axml
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,6 +45,7 @@ namespace GCAthletics.Droid
             get { return items.Count;  }
         }
 
+        //set contents to input data
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             var item = items[position];

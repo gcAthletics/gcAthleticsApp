@@ -1,7 +1,5 @@
 ﻿/*
- *  Check this out
- *  https://developer.xamarin.com/guides/android/user_interface/layouts/list-view/part-3-customizing-list-view-appearance/
- * 
+ * This is the class that controls the functionality of the Alerts Page on the app. It uses the components from Resource.Layout.AlertsScreen.axml 
  */
 
 using System;
@@ -26,42 +24,51 @@ namespace GCAthletics.Droid
     [Activity(Label = "Announcements", MainLauncher = false)]
     public class AlertsActivity : Activity
     {
+        //holds the different announcements to view
         List<TableItem> tableItems = new List<TableItem>();
         ListView listView;
 
+        //holds current user's data
         string email = null;
         int teamID = -1;
-
         UserModel usrModel = new UserModel();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
+            //get current user's data
             usrModel = JsonConvert.DeserializeObject<UserModel>(Intent.GetStringExtra("user"));
-
             email = usrModel.Email;
             teamID = usrModel.TeamID;
 
+            //set view to AlertsScreen.axml
             SetContentView(Resource.Layout.AlertsScreen);
 
+            //get contents from resource layout
             Button newAlertBtn = FindViewById<Button>(Resource.Id.newAlertBtn);
-            newAlertBtn.Visibility = ViewStates.Gone;
-
             listView = FindViewById<ListView>(Resource.Id.alertListView);
+
+            //hide newAlertBtn, will be enabled if account is has role of coach
+            newAlertBtn.Visibility = ViewStates.Gone;
 
             try
             {
+                //connect to database
                 DButility dbu = new DButility();
                 SqlConnection connection = dbu.createConnection();
 
+                //if current user has role coach, show/unhide newAlertBtn
                 if(usrModel.Role.Equals("coach", StringComparison.InvariantCultureIgnoreCase))
                 {
                     newAlertBtn.Visibility = ViewStates.Visible;
                 }
 
+                //get all announcements for current user's team
                 List<AnnouncementsModel> sqlList = dbu.getAllAnnouncements(teamID).ToList();
 
+                //convert time of each announcement to the current user's local date and time format
+                //add each announcement to tableItems so they can be viewed properly
                 foreach(var announcement in sqlList)
                 {
                     DateTime dt;
@@ -74,10 +81,10 @@ namespace GCAthletics.Droid
                 Console.WriteLine(ex.ToString());
             }
 
+            //attach AlertsActivityAdapter to the listView, this will populate the listView
             listView.Adapter = new AlertsActivityAdapter(this, tableItems);
 
-            listView.ItemClick += OnListItemClick;
-
+            //when newAlertBtn is clicked, go to the Add Alert Screen and send the current user's data
             newAlertBtn.Click += (sender, e) =>
             {
                 var intent = new Intent(this, typeof(AddAlertActivity));
@@ -87,15 +94,8 @@ namespace GCAthletics.Droid
 
         }
 
-        protected void OnListItemClick(object sender, Android.Widget.AdapterView.ItemClickEventArgs e)
-        {
-            var listView = sender as ListView;
-            var item = tableItems[e.Position];
-            Android.Widget.Toast.MakeText(this, item.Heading, Android.Widget.ToastLength.Short).Show();
-            Console.WriteLine("Clicked on " + item.Heading);
-        }
-
         //when back button is pressed, go to home screen
+        //send the current user's data
         public override void OnBackPressed()
         {
             var intent = new Intent(this, typeof(HomeActivity));

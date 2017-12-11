@@ -1,3 +1,10 @@
+/*
+ * This class can be used to build different layouts in listViews
+ * An object of this class is added to a list, and each object in
+ * the list is added to a screen's listview. Not all elements of this
+ * class need to be instantiated, only the ones that will be used.
+ */ 
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
